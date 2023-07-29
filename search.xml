@@ -331,9 +331,8 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 <p><img src="/images/CreateRepository.png" alt=""></p>
 <h3 id="配置ssh密钥">配置SSH密钥</h3>
 <p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步。</p>
-<ol>
-<li>创建SSH密钥：在第一次新建的文件夹里面 Git Bash Here 输入以下命令：</li>
-</ol>
+<h4 id="1-创建ssh密钥">1. 创建SSH密钥</h4>
+<p>在第一次新建的文件夹里面 Git Bash Here 输入以下命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;email@example.com&quot;</span><br><span class="line">//引号里面填写自己的邮箱地址</span><br></pre></td></tr></table></figure>
 <p>之后会出现：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa):</span><br><span class="line">//到这里可以直接回车将密钥按默认文件进行存储</span><br></pre></td></tr></table></figure>
@@ -343,16 +342,12 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">这里是各种字母数字组成的字符串，结尾是你的邮箱</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">这里也是各种字母数字符号组成的字符串</span><br></pre></td></tr></table></figure>
 <p>运行以下命令，将公钥的内容复制到系统粘贴板上：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>在Github账户添加自己的公钥：</li>
-</ol>
+<h4 id="2-在github账户添加自己的公钥">2. 在Github账户添加自己的公钥</h4>
 <p><img src="/images/CreateSSH_1.png" alt=""><br>
 <img src="/images/CreateSSH_2.png" alt=""><br>
 <img src="/images/CreateSSH_3.png" alt=""><br>
 <img src="/images/CreateSSH_456.png" alt=""></p>
-<ol start="3">
-<li>测试公钥</li>
-</ol>
+<h4 id="3-测试公钥">3. 测试公钥</h4>
 <p>输入以下命令，注意: git@github.com不要做任何更改！</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现如下图所示信息，则表示配置成功！</p>
@@ -362,6 +357,16 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>
 <h3 id="将本地文件更新到github库中">将本地文件更新到Github库中</h3>
+<h4 id="1-打开自己创建的仓库-ins-yourname-github-io-ins">1. 打开自己创建的仓库<ins>yourname.github.io</ins></h4>
+<h4 id="2-复制ssh地址">2. 复制SSH地址</h4>
+<p><img src="/images/CopySSH.png" alt=""></p>
+<h4 id="3-修改配置文件：打开你创建的-hexo-文件夹-右键用记事本打开该文件夹下的-config-yml文件-找到deployment代码部分-按照如下代码修改配置文件">3. 修改配置文件：打开你创建的 Hexo 文件夹，右键用记事本打开该文件夹下的 <em>_config.yml</em>文件，找到Deployment代码部分，按照如下代码修改配置文件。</h4>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:YxxNorman/YxxNorman.github.io.git</span>    <span class="comment"># 刚刚复制的SSH地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-部署博客：运行以下命令-博客就会部署到github上了">4. 部署博客：运行以下命令，博客就会部署到Github上了。</h4>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<h4 id="5-查看博客：你的博客地址：-ins-https-你的用户名-github-io-ins-现在每个人都可以通过此链接访问你的博客了">5. 查看博客：你的博客地址：<ins><a href="https://xn--6qqv7i14ofosyrb.github.io">https://你的用户名.github.io</a></ins>。现在每个人都可以通过此链接访问你的博客了。</h4>
 ]]></content>
   </entry>
 </search>
