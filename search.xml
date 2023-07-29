@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/07/28/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>测试数学公式</title>
     <url>/2023/07/28/%E6%B5%8B%E8%AF%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<h1>考点</h1>
@@ -269,66 +288,47 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/07/28/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>从零搭建自己的博客教程</title>
     <url>/2023/07/29/%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1>搭建教程</h1>
 <h2 id="前期准备">前期准备</h2>
 <h3 id="安装node-js">安装Node.js</h3>
 <p>前往<a href="https://nodejs.org/en/download">官网</a>下载，选择合适的版本，按照默认安装即可。</p>
-<p>![](/images/Nodejs Download.png)</p>
+<p><img src="../images/NodejsDownload.png" alt=""></p>
 <h3 id="安装git">安装Git</h3>
 <p>前往<a href="https://git-scm.com/download/win">官网</a>下载，选择合适的版本，按照默认安装即可。</p>
-<p>![](/images/Git Download.png)</p>
+<p><img src="../images/GitDownload.png" alt=""></p>
 <h3 id="检验软件是否安装成功">检验软件是否安装成功</h3>
 <p>同时按下 Win + R 键打开运行窗口，输入 cmd ，然后输入以下命令，有相应版本信息显示则安装成功，若不正确可以卸载软件重新安装。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ $node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<p>![](/images/Test Version.png)</p>
+<p><img src="../images/TestVersion.png" alt=""></p>
 <p>此外，若Git安装成功，则在鼠标右键菜单中会出现Git GUI Here 和 Git Bash Here两个选项。其中，Git GUI Here 是图形界面的Git操作，Git Bash Here 命令行终端。</p>
-<p>![](/images/Right Key Menu.png)</p>
+<p><img src="../images/RightKeyMenu.png" alt=""></p>
 <h2 id="开始搭建">开始搭建</h2>
 <h3 id="安装hexo">安装Hexo</h3>
 <p>选择一个新建的文件夹，右键点击 Git Bash Here 打开命令行终端。输入以下命令即可安装Hexo，第一个命令表示安装 hexo，第二个命令表示安装 hexo 部署到 git page 的 deployer，如图所示即为安装成功。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo-deployer-git -S</span><br></pre></td></tr></table></figure>
-<p>![](/images/Hexo Download.png)</p>
+<p><img src="../images/HexoDownload.png" alt=""></p>
 <h3 id="初始化hexo配置">初始化Hexo配置</h3>
 <p>在刚才新建的文件夹里面再次新建一个 Hexo 文件夹，进入该 Hexo 文件夹右键鼠标，点击 Git Bash Here，输入以下命令，如图所示则安装成功</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>![](/images/Hexo Init.png)</p>
+<p><img src="../images/HexoInit.png" alt=""></p>
 <p>Hexo 安装完成后，将会在指定文件夹中新建所需要的文件，Hexo 文件夹下的目录如下：</p>
-<p>![](/images/Hexo Files Content.png)</p>
+<p><img src="../images/HexoFilesContent.png" alt=""></p>
 <h3 id="本地查看效果">本地查看效果</h3>
 <p>运行以下命令即可登录<a href="http://localhost:4000/">localhost:4000/</a>查看效果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>显示如下信息表示操作成功。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 <p>登录<a href="http://localhost:4000/">localhost:4000/</a>查看效果：</p>
-<p><img src="/images/Hexo.png" alt=""></p>
+<p><img src="../images/Hexo.png" alt=""></p>
 <h2 id="部署至github-pages">部署至Github Pages</h2>
 <p>到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到 Github Pages 上。</p>
 <h3 id="注册-github-账户">注册 Github 账户</h3>
 <p>访问<a href="https://github.com/">Github</a>官网，点击Sign Up注册账户。</p>
 <h3 id="创建-github-pages-仓库">创建 Github Pages 仓库</h3>
 <p>点击 New repository 开始创建，步骤如下图：</p>
-<p>![](/images/Create Repository.png)</p>
+<p><img src="../images/CreateRepository.png" alt=""></p>
 <h3 id="配置ssh密钥">配置SSH密钥</h3>
 <p>只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步。</p>
 <ol>
@@ -346,17 +346,17 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 <ol start="2">
 <li>在Github账户添加自己的公钥：</li>
 </ol>
-<p>![](/images/Create SSH_1.png)<br>
-![](/images/Create SSH_2.png)<br>
-![](/images/Create SSH_3.png)<br>
-![](/images/Create SSH_456.png)</p>
+<p><img src="../images/CreateSSH_1.png" alt=""><br>
+<img src="../images/CreateSSH_2.png" alt=""><br>
+<img src="../images/CreateSSH_3.png" alt=""><br>
+<img src="../images/CreateSSH_456.png" alt=""></p>
 <ol start="3">
 <li>测试公钥</li>
 </ol>
 <p>输入以下命令，注意: git@github.com不要做任何更改！</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现如下图所示信息，则表示配置成功！</p>
-<p>![](/images/SSH test.png)</p>
+<p><img src="../images/SSHtest.png" alt=""></p>
 <h3 id="配置git个人信息">配置Git个人信息</h3>
 <p>Git 会根据用户的名字和邮箱来记录提交，GitHub 也是用这些信息来做权限的处理，输入以下命令进行个人信息的设置，把名称和邮箱替换成自己的。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
