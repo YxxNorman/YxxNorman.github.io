@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta name="description" content="一个博客笔记" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>计算方法考点 |  Norman&#39;s Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <script src="https://cdn.staticfile.org/mermaid/8.14.0/mermaid.min.js"></script>
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Norman's Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-计算方法考点"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  计算方法考点
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/" class="article-date">
+  <time datetime="2023-07-30T07:32:51.000Z" itemprop="datePublished">2023-07-30</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">计算方法</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">98</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h1><h2 id="1-有效数字"><a href="#1-有效数字" class="headerlink" title="1. 有效数字"></a>1. 有效数字</h2><p>由变量的有效数字求出函数的有效数字</p>
+<h3 id="对于一元函数"><a href="#对于一元函数" class="headerlink" title="对于一元函数"></a>对于一元函数</h3><script type="math/tex; mode=display">e(y) = f'(x)(x^* - x) = f'(x)e(x)</script><h3 id="对于二元函数"><a href="#对于二元函数" class="headerlink" title="对于二元函数"></a>对于二元函数</h3><script type="math/tex; mode=display">e(y) = \frac{\partial f(x_1, x_2)}{\partial x_1}e(x_1) + \frac{\partial f(x_1, x_2)}{\partial x_2}e(x_2)</script><h2 id="2-方程求根"><a href="#2-方程求根" class="headerlink" title="2. 方程求根"></a>2. 方程求根</h2><h3 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h3><script type="math/tex; mode=display">x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}</script><h3 id="牛顿迭代大范围收敛"><a href="#牛顿迭代大范围收敛" class="headerlink" title="牛顿迭代大范围收敛"></a>牛顿迭代大范围收敛</h3><ol>
+<li><script type="math/tex; mode=display">f(a)f(b)<0</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b],f'(x) \ne 0</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b],f''(x)\text{保号}</script></li>
+<li><script type="math/tex; mode=display">a - \frac{f(a)}{f'(a)} \le b, b - \frac{f(b)}{f'(b)} \ge a</script></li>
+</ol>
+<p>满足以上条件牛顿迭代格式在$[a, b]$收敛</p>
+<h3 id="不动点迭代法"><a href="#不动点迭代法" class="headerlink" title="不动点迭代法"></a>不动点迭代法</h3><script type="math/tex; mode=display">x_{k+1} = \varphi(x_k)</script><p>收敛条件：</p>
+<ol>
+<li><script type="math/tex; mode=display">x \in [a, b], \varphi(x) \in [a, b]</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b], |\varphi'(x)| \le L < 1</script></li>
+</ol>
+<h2 id="3-线性方程组解法"><a href="#3-线性方程组解法" class="headerlink" title="3. 线性方程组解法"></a>3. 线性方程组解法</h2><h3 id="列主元高斯消去法"><a href="#列主元高斯消去法" class="headerlink" title="列主元高斯消去法"></a>列主元高斯消去法</h3><h3 id="雅可比迭代法-amp-高斯赛德尔迭代法"><a href="#雅可比迭代法-amp-高斯赛德尔迭代法" class="headerlink" title="雅可比迭代法&amp;高斯赛德尔迭代法"></a>雅可比迭代法&amp;高斯赛德尔迭代法</h3><ol>
+<li>雅可比迭代格式</li>
+</ol>
+<script type="math/tex; mode=display">
+\left \{\begin{matrix}
+x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
+x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
+\vdots \\
+x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k)} - a_{n2}x_2^{(k)} - \cdots - a_{n,n-1}x_{n-1}^{(k)} + b_n)
+\end{matrix}\right.</script><p>特征方程：</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
+a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
+\vdots &\vdots &\ddots &\vdots\\
+a_{n1} &a_{n2} &\cdots &\lambda a_{nn}
+\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
+<ol>
+<li>高斯赛德尔迭代法</li>
+</ol>
+<script type="math/tex; mode=display">
+\left \{\begin{matrix}
+x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
+x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k+1)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
+\vdots \\
+x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots - a_{n,n-1}x_{n-1}^{(k+1)} + b_n)
+\end{matrix}\right.</script><p>特征方程：</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
+\lambda a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
+\vdots &\vdots &\ddots &\vdots\\
+\lambda a_{n1} &\lambda a_{n2} &\cdots &\lambda a_{nn}
+\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
+<blockquote>
+<p>对于严格对角占优矩阵，雅可比迭代法、高斯赛德尔迭代法均收敛<br>对于对称正定矩阵，高斯赛德尔迭代法收敛</p>
+</blockquote>
+<h2 id="4-插值"><a href="#4-插值" class="headerlink" title="4. 插值"></a>4. 插值</h2><h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h4><script type="math/tex; mode=display">R_{n}(x) = \frac{f^{n+1}(\xi)}{(n+1)!}W_{n+1}(x)</script><h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><script type="math/tex; mode=display">f(x) = f(x_{0}) + f[x_{0}, x_{1}](x-x_{0}) + \cdots + f[x_{0}, \cdots, x_{n}](x-x_{0})(x-x_{1})\cdots(x-x_{n-1})</script><h4 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>$x_{k}$</th>
+<th>$f(x_{k})$</th>
+<th>$f[x_{k}, x_{k+1}]$</th>
+<th>$f[x_{k}, x_{k+1}, x_{k+2}]$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>$x_{0}$</td>
+<td>$f(x_0)$</td>
+<td>$\frac{f(x_{1}) - f(x_{0})}{1-0}$</td>
+<td>$\frac{f[x_{1}, x_{2}] - f[x_{0}, x_{1}]}{2-0}$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$x_{1}$</td>
+<td>$f(x_1)$</td>
+<td>$\frac{f(x_{2}) - f(x_{1})}{2-1}$</td>
+<td>$\frac{f[x_{2}, x_{3}] - f[x_{1}, x_{2}]}{3-1}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">f[x_{0}, \cdots, x_{k}] = \frac{f^{(k)}(\eta)}{k!}</script><h3 id="三次样条插值"><a href="#三次样条插值" class="headerlink" title="三次样条插值"></a>三次样条插值</h3><h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><ol>
+<li><script type="math/tex; mode=display">\left \{\begin{matrix} S(x_{j} - 0) = S(x_{j} + 0)\\ S'(x_{j} - 0) = S'(x_{j} + 0) &j = 1, 2, \cdots, n-1\\ S''(x_{j} - 0) = S''(x_{j} + 0)\end{matrix}\right.</script></li>
+<li><script type="math/tex; mode=display">S(x_{j}) = f(x_{j})\quad j = 0, 1, \cdots, n</script></li>
+<li>(1) <script type="math/tex">S'(x_{0}) = f'(x_{0}), \quad S'(x_{n}) = f'(x_{n})</script><br>(2)<script type="math/tex">S''(x_{0}) = f''(x_{0}), \quad S''(x_{n}) = f''(x_{n})</script></li>
+</ol>
+<h2 id="5-曲线拟合"><a href="#5-曲线拟合" class="headerlink" title="5. 曲线拟合"></a>5. 曲线拟合</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><script type="math/tex; mode=display">\begin{bmatrix}(\varphi_{0},\varphi_{0}) &(\varphi_{1},\varphi_{0}) &\cdots &(\varphi_{m},\varphi_{0}) \\ (\varphi_{0},\varphi_{1}) &(\varphi_{1},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{1}) \\ \vdots &\vdots &\ddots &\vdots \\ (\varphi_{m},\varphi_{1}) &(\varphi_{m},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{m})\end{bmatrix} \begin{bmatrix}a_{0} \\ a_{1} \\ \vdots \\ a_{m} \end{bmatrix} = \begin{bmatrix}(y, \varphi_{0}) \\ (y, \varphi_{1}) \\ \vdots \\ (y, \varphi_{m}) \end{bmatrix}</script><h3 id="超定方程组的最小二乘解"><a href="#超定方程组的最小二乘解" class="headerlink" title="超定方程组的最小二乘解"></a>超定方程组的最小二乘解</h3><script type="math/tex; mode=display">Ax = b \Longrightarrow A^{T}Ax = A^{T}b</script><h2 id="6-数值积分"><a href="#6-数值积分" class="headerlink" title="6. 数值积分"></a>6. 数值积分</h2><h3 id="插值型求积公式"><a href="#插值型求积公式" class="headerlink" title="插值型求积公式"></a>插值型求积公式</h3><ol>
+<li>梯形求积公式</li>
+</ol>
+<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script><ol>
+<li>辛普森求积公式</li>
+</ol>
+<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script><ol>
+<li>科斯特公式</li>
+</ol>
+<h3 id="复化求积公式"><a href="#复化求积公式" class="headerlink" title="复化求积公式"></a>复化求积公式</h3><ol>
+<li>复化梯形公式</li>
+</ol>
+<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script><ol>
+<li>复化辛普森公式</li>
+</ol>
+<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script><ol>
+<li><p>复化科斯特公式</p>
+</li>
+<li><p>联系</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">T_{2n}(f) = \frac{1}{2}T_{n}(f) + \frac{h}{2}\sum\limits_{i=0}^{n-1}f(x_{i+ \frac{1}{2}})</script><script type="math/tex; mode=display">S_{2n}(f) = \frac{4}{3}T_{2n}(f) - \frac{1}{3}T_{n}(f)</script><script type="math/tex; mode=display">C_{2n}(f) = \frac{16}{15}S_{2n}(f) - \frac{1}{15}S_{n}(f)</script><script type="math/tex; mode=display">R_{2n}(f) = \frac{64}{63}C_{2n}(f) - \frac{1}{63}C_{n}(f)</script><h2 id="7-数值微分"><a href="#7-数值微分" class="headerlink" title="7. 数值微分"></a>7. 数值微分</h2><h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><ol>
+<li>前进欧拉公式</li>
+</ol>
+<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script><ol>
+<li>后退欧拉公式</li>
+</ol>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script><ol>
+<li>梯形公式</li>
+</ol>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script><ol>
+<li>改进欧拉公式</li>
+</ol>
+<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script><ol>
+<li>误差</li>
+</ol>
+<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script><h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
+<li><p>内插公式</p>
+</li>
+<li><p>外推公式</p>
+</li>
+<li><p>预测校正阿当姆斯公式</p>
+</li>
+<li><p><strong>误差</strong></p>
+</li>
+</ol>
+<h2 id="8-偏微分"><a href="#8-偏微分" class="headerlink" title="8. 偏微分"></a>8. 偏微分</h2><h3 id="椭圆方程"><a href="#椭圆方程" class="headerlink" title="椭圆方程"></a>椭圆方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}-\left(\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}\right)= f(x, y) \\ u = \varphi(x, y)\end{matrix}\right.</script><p>五点差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix}-\left[\frac{1}{h_{1}^{2}}\left(u_{i+1,j} - 2u_{i,j} + u_{i-1,j}\right) + \frac{1}{h_{2}^{2}}(u_{i,j+1} -2u_{i,j} +u_{i,j-1})\right] = f(x_{i}, y_{j}) \\ u_{i,j} = \varphi(x_{i}, y_{j})\end{matrix}\right.</script><h3 id="抛物方程"><a href="#抛物方程" class="headerlink" title="抛物方程"></a>抛物方程</h3><script type="math/tex; mode=display">\left \{\begin{matrix}\frac{\partial u}{\partial t} - a\frac{\partial^{2}u}{\partial x^{2}} = f(x, t) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向前欧拉格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向后欧拉格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k} - u_{i}^{k-1}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>中心差商格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{2a}{h^{2}}\left[(u_{i+1}^{k+1}-2u_{i}^{k+1}+ u_{i-1}^{k+1})+(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k})\right] = f(x_{i}, t_{k+ \frac{1}{2}}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><h3 id="双曲方程"><a href="#双曲方程" class="headerlink" title="双曲方程"></a>双曲方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}\frac{\partial^{2}u}{\partial t^{2}} - c^{2}\frac{\partial^{2}u}{\partial x^{2}} =f(x,t) \\ u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>显示差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{0} - 2u_{i}^{0} + u_{i-1}^{0}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left(u_{i+1}^{k} -2u_{i}^{k} +u_{i-1}^{k}\right) = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>隐式差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{1} - 2u_{i}^{1} + u_{i-1}^{1}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left[(u_{i+1}^{k+1} -2u_{i}^{k+1} +u_{i-1}^{k+1})+(u_{i+1}^{k-1} -2u_{i}^{k-1} +u_{i-1}^{k-1})\right] = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" rel="tag">数值分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/07/30/Chapter8-Diodes/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Chapter8 Diodes</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> Norman
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Norman&#39;s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>
