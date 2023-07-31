@@ -1,6 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>02 远程仓库</title>
+    <url>/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="连接仓库"><a href="#连接仓库" class="headerlink" title="连接仓库"></a>连接仓库</h2><p>连接仓库有两种方法：</p>
+<ul>
+<li>通过Https协议连接仓库，需要用户名和密码（不推荐，现已失效）</li>
+<li>通过配置SSH密钥连接仓库</li>
+</ul>
+<h3 id="配置SSH密钥的方法"><a href="#配置SSH密钥的方法" class="headerlink" title="配置SSH密钥的方法"></a>配置SSH密钥的方法</h3><ol>
+<li><p>生成SSH密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;example@mail.com&quot;</span><br></pre></td></tr></table></figure>
+<p><code>example@mail.com</code>填入注册github的邮箱地址。</p>
+</li>
+<li><p>之后会要求确认路径和输入密码，如果是第一次生成的话，我们使用默认的一路回车就行。（已经生成过就需要改文件名）</p>
+</li>
+<li><p>如果成功的话，会在用户根目录<code>/User/username/.ssh/</code>下生成<code>id_rsa</code>文件。复制SSH公钥至剪切板：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在Github的Account —&gt; Settings —&gt; SSH and GPG keys中新建SSH keys，输入名称以及复制的SSH公钥，保存即可</p>
+</li>
+<li><p>验证是否成功，出现以下信息则表示配置成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">The authenticity of host &#x27;github.com (52.74.223.119)&#x27; can&#x27;t be established.</span><br><span class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes                   # 输入 yes</span><br><span class="line">Warning: Permanently added &#x27;github.com,52.74.223.119&#x27; (RSA) to the list of known hosts.</span><br><span class="line">Hi YxxNorman! You&#x27;ve successfully authenticated, but GitHub does not provide shell access. # 成功信息</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="关联本地仓库和远程仓库"><a href="#关联本地仓库和远程仓库" class="headerlink" title="关联本地仓库和远程仓库"></a>关联本地仓库和远程仓库</h2><p>添加远程仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git remote add &lt;remote-name&gt; &lt;remote-url&gt;</span><br></pre></td></tr></table></figure>
+<p>这里<code>remote-name</code>可以填<code>origin</code>为远程仓库的默认名称<br>查看远程仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
+<p>将本地仓库和远程仓库关联起来：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git pull -u origin main</span><br></pre></td></tr></table></figure>
+<h2 id="拉取和推送仓库文件"><a href="#拉取和推送仓库文件" class="headerlink" title="拉取和推送仓库文件"></a>拉取和推送仓库文件</h2><p>将本地仓库的文件更新到远程仓库中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<p>将远程仓库的文件更新至本地仓库中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">$ git pull origin &lt;branch-name&gt;    # 拉取远程仓库指定分支的内容</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01 Git入门教程</title>
+    <url>/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Git入门教程"><a href="#Git入门教程" class="headerlink" title="Git入门教程"></a>Git入门教程</h1><h2 id="初始化设置"><a href="#初始化设置" class="headerlink" title="初始化设置"></a>初始化设置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your name&quot;    # 配置用户名</span><br><span class="line">$ git config --global user.email &quot;norman@qq.com&quot;    # 配置邮箱</span><br></pre></td></tr></table></figure>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建仓库有两种方法，一种方法是在本地直接创建仓库，另一种方法是克隆远程仓库。</p>
+<ul>
+<li>本地创建仓库<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git init &lt;project-name&gt;    # &lt;project-name&gt;为空则在当前文件夹创建</span><br></pre></td></tr></table></figure></li>
+<li>克隆远程仓库<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="工作区域"><a href="#工作区域" class="headerlink" title="工作区域"></a>工作区域</h2>Git 分为四个区域：</li>
+<li>工作区（Working Directory）：就是在电脑⾥能实际看到的⽬录。</li>
+<li>暂存区（Stage/Index）：暂存区也叫索引，⽤来临时存放未提交的内容，⼀般在.git⽬录下的index中。</li>
+<li>本地仓库（Repository）：Git在本地的版本库，仓库信息存储在.git这个隐藏⽬录中。</li>
+<li>远程仓库（Remote Repository）：托管在远程服务器上的仓库。常⽤的有GitHub、GitLab、Gitee。<br>文件状态：</li>
+<li>main/master : 默认主分支</li>
+<li>Origin : 默认远程仓库</li>
+<li>HEAD : 当前版本指针</li>
+<li>HEAD^ : 上一个版本</li>
+<li>HEAD~ : 上四个版本<h2 id="添加与提交文件"><a href="#添加与提交文件" class="headerlink" title="添加与提交文件"></a>添加与提交文件</h2>在工作区新建的文件需要先添加至暂存区，再进行提交至本地仓库。<br>添加至暂存区：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git add &lt;filename&gt;</span><br><span class="line">$ git add .    # 添加所有文件</span><br></pre></td></tr></table></figure>
+提交至本地仓库：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;message&quot;    # message是填写每次提交的信息</span><br></pre></td></tr></table></figure>
+因此，文件有三种不同状态：</li>
+<li>未跟踪（Untrack）：新建文件的状态</li>
+<li>未修改（Unmodified）：被Git管理起来，但是未被修改的文件</li>
+<li>已修改（Modified）：已经修改过的文件，还未暂存</li>
+<li>已暂存（Staged）：修改后已保存到暂存区的文件</li>
+<li>已提交（Committed）：已经提交到本地仓库的文件<br>查看仓库的状态：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+查看仓库的提交记录：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git log</span><br><span class="line">$ git log --oneline    # 显示简洁模式</span><br></pre></td></tr></table></figure>
+<h2 id="撤销和恢复文件"><a href="#撤销和恢复文件" class="headerlink" title="撤销和恢复文件"></a>撤销和恢复文件</h2>移动文件位置：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git mv &lt;file&gt; &lt;new-file&gt;</span><br></pre></td></tr></table></figure>
+删除文件：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git rm &lt;file&gt;    # 删除工作区和暂存区的文件</span><br><span class="line">$ git rm -f &lt;file&gt;    # 强制删除工作区和暂存区已修改过的文件</span><br><span class="line">$ git rm --cached &lt;file&gt;    # 删除暂存区的文件，但保留工作区</span><br></pre></td></tr></table></figure>
+重置当前HEAD分支到某一提交版本，并且删除之后的所有提交：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git reset --soft &lt;commit-id&gt;    # 保留工作区和暂存区文件</span><br><span class="line">$ git reset --hard &lt;commit-id&gt;    # 重置工作区和暂存区文件</span><br><span class="line">$ git reset --mixed &lt;commit-id&gt;   # 重置暂存区文件，保留工作区</span><br></pre></td></tr></table></figure>
+<h2 id="比较差异"><a href="#比较差异" class="headerlink" title="比较差异"></a>比较差异</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git diff    # 比较工作区与暂存区的差异</span><br><span class="line">$ git diff HEAD    # 比较工作区+暂存区与本地仓库的差异</span><br><span class="line">$ git diff HEAD --cached/--staged    # 比较暂存区与本地仓库的差异</span><br><span class="line">$ git diff &lt;commit-id&gt; &lt;commit-id&gt;   # 比较提交版本之间的差异</span><br><span class="line">$ git diff HEAD~ HEAD    # 比较上一个提交版本与当前版本之间的差异</span><br><span class="line">$ git diff &lt;branch_name&gt; &lt;branch_name&gt;  # 比较分支之间的差异</span><br></pre></td></tr></table></figure>
+<h2 id="gitignore忽略文件"><a href="#gitignore忽略文件" class="headerlink" title=".gitignore忽略文件"></a>.gitignore忽略文件</h2>.gitignore文件的匹配规则：</li>
+<li>空行或者以<code>#</code>开头的行会被Git忽略。一般空行用于可读性的分隔，<code>#</code>一般用作注释</li>
+<li>星号<code>*</code>通配任意个字符</li>
+<li>问号<code>?</code>匹配单个字符</li>
+<li>中括号<code>[]</code>表示匹配列表中的单个字符，比如：<code>[abc]</code>表示a/b/c</li>
+<li>两个星号<code>**</code>表示匹配任意的中间目录</li>
+<li>中括号可以使用短中线连接，比如：<code>[0-9]</code>表示任意一位数字，<code>[a-z]</code>表示任意一位小写字母感叹号</li>
+<li><code>!</code>表示取反</li>
+</ul>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>03 分支</title>
+    <url>/2023/07/31/03-%E5%88%86%E6%94%AF/</url>
+    <content><![CDATA[<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>创建一个新的分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>查看分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch    # 查看所有本地分支，有*标记的代表当前所处的分支</span><br><span class="line">$ git branch -r    # 查看远程的分支</span><br><span class="line"># git branch -a    # 查看所有的分支</span><br></pre></td></tr></table></figure></p>
+<h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><p>切换分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git checkout &lt;branch-name&gt;</span><br><span class="line">$ git switch &lt;branch-name&gt;    # 推荐使用，不会产生歧义 </span><br></pre></td></tr></table></figure><br>创建新分支并立即切换到该分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git cheackout -b &lt;branch-name&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><p>将某个分支合并到当前分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git merge -m message &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>合并冲突解决方法：</p>
+<ol>
+<li>手工修改冲突文件，合并冲突内容</li>
+<li>添加暂存区<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br></pre></td></tr></table></figure></li>
+<li>提交修改<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;message&quot;</span><br></pre></td></tr></table></figure>
+如果想终止合并的话：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git merge --abort</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><p>删除已合并的分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch -d &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>强制删除指定分支：<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch -D &lt;branch-name&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chapter1 流体及其物理性质</title>
+    <url>/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/</url>
+    <content><![CDATA[<h1 id="Chapter1-流体及其物理性质"><a href="#Chapter1-流体及其物理性质" class="headerlink" title="Chapter1 流体及其物理性质"></a>Chapter1 流体及其物理性质</h1><h2 id="1-1-流体的定义和特征"><a href="#1-1-流体的定义和特征" class="headerlink" title="1.1 流体的定义和特征"></a>1.1 流体的定义和特征</h2><p>定义：流体是一种受任何<strong>微小剪切力作用</strong>都能<strong>连续变形</strong>的物质</p>
+<p>流体可以分为液体和气体</p>
+<h2 id="1-2-流体的连续介质假设"><a href="#1-2-流体的连续介质假设" class="headerlink" title="1.2 流体的连续介质假设"></a>1.2 流体的连续介质假设</h2><p>将流体视为由无数连续分布的流体质点所组成的<strong>连续介质</strong></p>
+<p>连续介质：由微观无穷大、宏观无穷小的流体质点组成的连续介质。</p>
+<h2 id="1-3-流体的可压缩性"><a href="#1-3-流体的可压缩性" class="headerlink" title="1.3 流体的可压缩性"></a>1.3 流体的可压缩性</h2><h3 id="1-3-1-流体的密度"><a href="#1-3-1-流体的密度" class="headerlink" title="1.3.1 流体的密度"></a>1.3.1 流体的密度</h3><p>绝对密度：</p>
+<script type="math/tex; mode=display">\rho = \frac{m}{V}</script><p>相对密度：</p>
+<script type="math/tex; mode=display">\begin{matrix}S_{l}= \frac{\rho_{l}}{\rho_{w_{0}}} \\ S_{g} = \frac{\rho_{g}}{\rho_{a_{0}}}\end{matrix}</script><h3 id="1-3-2-流体的压缩性"><a href="#1-3-2-流体的压缩性" class="headerlink" title="1.3.2 流体的压缩性"></a>1.3.2 流体的压缩性</h3><p>体积压缩系数$\beta_{p}$：单位压强增量所引起的流体体积变化率</p>
+<script type="math/tex; mode=display">\beta_{p} = - \frac{1}{\delta p}\frac{\delta V}{V}</script><p>体积模量：$K_{p}=\frac{1}{\beta_{p}}$</p>
+<h3 id="1-3-3-流体的膨胀性"><a href="#1-3-3-流体的膨胀性" class="headerlink" title="1.3.3 流体的膨胀性"></a>1.3.3 流体的膨胀性</h3><p>温度膨胀系数$\beta_{T}$：单位温度增量所引起的流体体积变化率</p>
+<script type="math/tex; mode=display">\beta_{T} = \frac{1}{\delta T}\frac{\delta V}{V}</script><h2 id="1-4-流体的黏性"><a href="#1-4-流体的黏性" class="headerlink" title="1.4 流体的黏性"></a>1.4 流体的黏性</h2><p>黏性：流体质点运动发生相对滑移时产生切向阻力</p>
+<h3 id="1-4-1-牛顿内摩擦定律"><a href="#1-4-1-牛顿内摩擦定律" class="headerlink" title="1.4.1 牛顿内摩擦定律"></a>1.4.1 牛顿内摩擦定律</h3><script type="math/tex; mode=display">F = \mu \frac{AV}{h}</script><p>F即为牛顿内摩擦力，A为流体与平板接触面积，h为运动平板与静止平板间的垂直距离，V为运动平板的移动速度，$\mu$为<strong>动力黏度</strong></p>
+<p>切向应力$\tau$：单位面积上的摩擦阻力</p>
+<script type="math/tex; mode=display">\tau = \frac{F}{A} = \mu \frac{V}{h} = \mu \frac{du}{dy}</script><p>动力黏度$\mu$：作用在流程上的切向应力与速度梯度成正比，其比例系数为流体的动力黏度</p>
+<script type="math/tex; mode=display">\mu = \frac{\tau}{du/dy}</script><h3 id="1-4-2-运动黏度"><a href="#1-4-2-运动黏度" class="headerlink" title="1.4.2 运动黏度"></a>1.4.2 运动黏度</h3><script type="math/tex; mode=display">v = \frac{\mu}{\rho}</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>流体力学</category>
+      </categories>
+      <tags>
+        <tag>力学</tag>
+        <tag>流体</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chapter1 绪论</title>
     <url>/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="Chapter1-绪论"><a href="#Chapter1-绪论" class="headerlink" title="Chapter1 绪论"></a>Chapter1 绪论</h1><h2 id="1-1-材料力学任务"><a href="#1-1-材料力学任务" class="headerlink" title="1.1 材料力学任务"></a>1.1 材料力学任务</h2><ol>
@@ -46,32 +188,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Chapter1 流体及其物理性质</title>
-    <url>/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/</url>
-    <content><![CDATA[<h1 id="Chapter1-流体及其物理性质"><a href="#Chapter1-流体及其物理性质" class="headerlink" title="Chapter1 流体及其物理性质"></a>Chapter1 流体及其物理性质</h1><h2 id="1-1-流体的定义和特征"><a href="#1-1-流体的定义和特征" class="headerlink" title="1.1 流体的定义和特征"></a>1.1 流体的定义和特征</h2><p>定义：流体是一种受任何<strong>微小剪切力作用</strong>都能<strong>连续变形</strong>的物质</p>
-<p>流体可以分为液体和气体</p>
-<h2 id="1-2-流体的连续介质假设"><a href="#1-2-流体的连续介质假设" class="headerlink" title="1.2 流体的连续介质假设"></a>1.2 流体的连续介质假设</h2><p>将流体视为由无数连续分布的流体质点所组成的<strong>连续介质</strong></p>
-<p>连续介质：由微观无穷大、宏观无穷小的流体质点组成的连续介质。</p>
-<h2 id="1-3-流体的可压缩性"><a href="#1-3-流体的可压缩性" class="headerlink" title="1.3 流体的可压缩性"></a>1.3 流体的可压缩性</h2><h3 id="1-3-1-流体的密度"><a href="#1-3-1-流体的密度" class="headerlink" title="1.3.1 流体的密度"></a>1.3.1 流体的密度</h3><p>绝对密度：</p>
-<script type="math/tex; mode=display">\rho = \frac{m}{V}</script><p>相对密度：</p>
-<script type="math/tex; mode=display">\begin{matrix}S_{l}= \frac{\rho_{l}}{\rho_{w_{0}}} \\ S_{g} = \frac{\rho_{g}}{\rho_{a_{0}}}\end{matrix}</script><h3 id="1-3-2-流体的压缩性"><a href="#1-3-2-流体的压缩性" class="headerlink" title="1.3.2 流体的压缩性"></a>1.3.2 流体的压缩性</h3><p>体积压缩系数$\beta_{p}$：单位压强增量所引起的流体体积变化率</p>
-<script type="math/tex; mode=display">\beta_{p} = - \frac{1}{\delta p}\frac{\delta V}{V}</script><p>体积模量：$K_{p}=\frac{1}{\beta_{p}}$</p>
-<h3 id="1-3-3-流体的膨胀性"><a href="#1-3-3-流体的膨胀性" class="headerlink" title="1.3.3 流体的膨胀性"></a>1.3.3 流体的膨胀性</h3><p>温度膨胀系数$\beta_{T}$：单位温度增量所引起的流体体积变化率</p>
-<script type="math/tex; mode=display">\beta_{T} = \frac{1}{\delta T}\frac{\delta V}{V}</script><h2 id="1-4-流体的黏性"><a href="#1-4-流体的黏性" class="headerlink" title="1.4 流体的黏性"></a>1.4 流体的黏性</h2><p>黏性：流体质点运动发生相对滑移时产生切向阻力</p>
-<h3 id="1-4-1-牛顿内摩擦定律"><a href="#1-4-1-牛顿内摩擦定律" class="headerlink" title="1.4.1 牛顿内摩擦定律"></a>1.4.1 牛顿内摩擦定律</h3><script type="math/tex; mode=display">F = \mu \frac{AV}{h}</script><p>F即为牛顿内摩擦力，A为流体与平板接触面积，h为运动平板与静止平板间的垂直距离，V为运动平板的移动速度，$\mu$为<strong>动力黏度</strong></p>
-<p>切向应力$\tau$：单位面积上的摩擦阻力</p>
-<script type="math/tex; mode=display">\tau = \frac{F}{A} = \mu \frac{V}{h} = \mu \frac{du}{dy}</script><p>动力黏度$\mu$：作用在流程上的切向应力与速度梯度成正比，其比例系数为流体的动力黏度</p>
-<script type="math/tex; mode=display">\mu = \frac{\tau}{du/dy}</script><h3 id="1-4-2-运动黏度"><a href="#1-4-2-运动黏度" class="headerlink" title="1.4.2 运动黏度"></a>1.4.2 运动黏度</h3><script type="math/tex; mode=display">v = \frac{\mu}{\rho}</script>]]></content>
-      <categories>
-        <category>学习</category>
-        <category>流体力学</category>
-      </categories>
-      <tags>
-        <tag>力学</tag>
-        <tag>流体</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Chapter2 拉伸和压缩</title>
     <url>/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/</url>
     <content><![CDATA[<h1 id="Chapter2-拉伸和压缩"><a href="#Chapter2-拉伸和压缩" class="headerlink" title="Chapter2 拉伸和压缩"></a>Chapter2 拉伸和压缩</h1><h2 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h2><p>杆件上外力合力的<strong>作用线与轴线重合</strong>，杆件变形是沿轴线方向的伸长或缩短</p>
@@ -104,17 +220,16 @@
 <p>而P型半导体中存在的极少量自由电子，N型半导体中存在的极少量空穴能够在内电场的作用下发生<strong>漂移运动</strong>，电子向N型半导体移动，空穴向N型半导体移动。</p>
 <h3 id="8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）"><a href="#8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）" class="headerlink" title="8.1.2 二极管的伏安特性（Volt-Ampere characteristic）"></a>8.1.2 二极管的伏安特性（Volt-Ampere characteristic）</h3><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png" class="" title="二极管曲线">
 <h3 id="8-1-3-二极管的三种模型"><a href="#8-1-3-二极管的三种模型" class="headerlink" title="8.1.3 二极管的三种模型"></a>8.1.3 二极管的三种模型</h3><ol>
-<li>实际模型</li>
-</ol>
+<li><p>实际模型</p>
 <img src="/2023/07/30/Chapter8-Diodes/%E5%AE%9E%E9%99%85%E6%A8%A1%E5%9E%8B.png" class="">
-<ol>
-<li>理想模型</li>
-</ol>
+</li>
+<li><p>理想模型</p>
 <img src="/2023/07/30/Chapter8-Diodes/%E7%90%86%E6%83%B3%E6%A8%A1%E5%9E%8B.png" class="">
-<ol>
-<li>恒压降低模型</li>
-</ol>
+</li>
+<li><p>恒压降低模型</p>
 <img src="/2023/07/30/Chapter8-Diodes/%E6%81%92%E5%8E%8B%E9%99%8D%E6%A8%A1%E5%9E%8B.png" class="">
+</li>
+</ol>
 <h2 id="8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）"><a href="#8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）" class="headerlink" title="8.2 二极管的图解法——负载线分析法（Load-line analysis method）"></a>8.2 二极管的图解法——负载线分析法（Load-line analysis method）</h2><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%94%B5%E8%B7%AF%E5%9B%BE.png" class="">
 <script type="math/tex; mode=display">V_{SS} = Ri_{D} + v_{D}</script><img src="/2023/07/30/Chapter8-Diodes/%E8%B4%9F%E8%BD%BD%E7%BA%BF%E5%88%86%E6%9E%90%E6%B3%95.png" class="">
 <h2 id="8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）"><a href="#8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）" class="headerlink" title="8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）"></a>8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）</h2><ol>
@@ -130,6 +245,149 @@
       </categories>
       <tags>
         <tag>模电</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算方法考点</title>
+    <url>/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/</url>
+    <content><![CDATA[<h1 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h1><h2 id="1-有效数字"><a href="#1-有效数字" class="headerlink" title="1. 有效数字"></a>1. 有效数字</h2><p>由变量的有效数字求出函数的有效数字</p>
+<h3 id="对于一元函数"><a href="#对于一元函数" class="headerlink" title="对于一元函数"></a>对于一元函数</h3><script type="math/tex; mode=display">e(y) = f'(x)(x^* - x) = f'(x)e(x)</script><h3 id="对于二元函数"><a href="#对于二元函数" class="headerlink" title="对于二元函数"></a>对于二元函数</h3><script type="math/tex; mode=display">e(y) = \frac{\partial f(x_1, x_2)}{\partial x_1}e(x_1) + \frac{\partial f(x_1, x_2)}{\partial x_2}e(x_2)</script><h2 id="2-方程求根"><a href="#2-方程求根" class="headerlink" title="2. 方程求根"></a>2. 方程求根</h2><h3 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h3><script type="math/tex; mode=display">x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}</script><h3 id="牛顿迭代大范围收敛"><a href="#牛顿迭代大范围收敛" class="headerlink" title="牛顿迭代大范围收敛"></a>牛顿迭代大范围收敛</h3><ol>
+<li><script type="math/tex; mode=display">f(a)f(b)<0</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b],f'(x) \ne 0</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b],f''(x)\text{保号}</script></li>
+<li><script type="math/tex; mode=display">a - \frac{f(a)}{f'(a)} \le b, b - \frac{f(b)}{f'(b)} \ge a</script></li>
+</ol>
+<p>满足以上条件牛顿迭代格式在$[a, b]$收敛</p>
+<h3 id="不动点迭代法"><a href="#不动点迭代法" class="headerlink" title="不动点迭代法"></a>不动点迭代法</h3><script type="math/tex; mode=display">x_{k+1} = \varphi(x_k)</script><p>收敛条件：</p>
+<ol>
+<li><script type="math/tex; mode=display">x \in [a, b], \varphi(x) \in [a, b]</script></li>
+<li><script type="math/tex; mode=display">x \in [a, b], |\varphi'(x)| \le L < 1</script></li>
+</ol>
+<h2 id="3-线性方程组解法"><a href="#3-线性方程组解法" class="headerlink" title="3. 线性方程组解法"></a>3. 线性方程组解法</h2><h3 id="列主元高斯消去法"><a href="#列主元高斯消去法" class="headerlink" title="列主元高斯消去法"></a>列主元高斯消去法</h3><h3 id="雅可比迭代法-amp-高斯赛德尔迭代法"><a href="#雅可比迭代法-amp-高斯赛德尔迭代法" class="headerlink" title="雅可比迭代法&amp;高斯赛德尔迭代法"></a>雅可比迭代法&amp;高斯赛德尔迭代法</h3><ol>
+<li><p>雅可比迭代格式</p>
+<script type="math/tex; mode=display">
+\left \{\begin{matrix}
+x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
+x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
+\vdots \\
+x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k)} - a_{n2}x_2^{(k)} - \cdots - a_{n,n-1}x_{n-1}^{(k)} + b_n)
+\end{matrix}\right.</script><p>特征方程：</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
+a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
+\vdots &\vdots &\ddots &\vdots\\
+a_{n1} &a_{n2} &\cdots &\lambda a_{nn}
+\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
+</li>
+<li><p>高斯赛德尔迭代法</p>
+<script type="math/tex; mode=display">
+\left \{\begin{matrix}
+x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
+x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k+1)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
+\vdots \\
+x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots - a_{n,n-1}x_{n-1}^{(k+1)} + b_n)
+\end{matrix}\right.</script><p>特征方程：</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
+\lambda a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
+\vdots &\vdots &\ddots &\vdots\\
+\lambda a_{n1} &\lambda a_{n2} &\cdots &\lambda a_{nn}
+\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
+</li>
+</ol>
+<blockquote>
+<p>对于严格对角占优矩阵，雅可比迭代法、高斯赛德尔迭代法均收敛<br>对于对称正定矩阵，高斯赛德尔迭代法收敛</p>
+</blockquote>
+<h2 id="4-插值"><a href="#4-插值" class="headerlink" title="4. 插值"></a>4. 插值</h2><h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h4><script type="math/tex; mode=display">R_{n}(x) = \frac{f^{n+1}(\xi)}{(n+1)!}W_{n+1}(x)</script><h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><script type="math/tex; mode=display">f(x) = f(x_{0}) + f[x_{0}, x_{1}](x-x_{0}) + \cdots + f[x_{0}, \cdots, x_{n}](x-x_{0})(x-x_{1})\cdots(x-x_{n-1})</script><h4 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>$x_{k}$</th>
+<th>$f(x_{k})$</th>
+<th>$f[x_{k}, x_{k+1}]$</th>
+<th>$f[x_{k}, x_{k+1}, x_{k+2}]$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>$x_{0}$</td>
+<td>$f(x_0)$</td>
+<td>$\frac{f(x_{1}) - f(x_{0})}{1-0}$</td>
+<td>$\frac{f[x_{1}, x_{2}] - f[x_{0}, x_{1}]}{2-0}$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$x_{1}$</td>
+<td>$f(x_1)$</td>
+<td>$\frac{f(x_{2}) - f(x_{1})}{2-1}$</td>
+<td>$\frac{f[x_{2}, x_{3}] - f[x_{1}, x_{2}]}{3-1}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="math/tex; mode=display">f[x_{0}, \cdots, x_{k}] = \frac{f^{(k)}(\eta)}{k!}</script><h3 id="三次样条插值"><a href="#三次样条插值" class="headerlink" title="三次样条插值"></a>三次样条插值</h3><h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><ol>
+<li><script type="math/tex; mode=display">\left \{\begin{matrix} S(x_{j} - 0) = S(x_{j} + 0)\\ S'(x_{j} - 0) = S'(x_{j} + 0) &j = 1, 2, \cdots, n-1\\ S''(x_{j} - 0) = S''(x_{j} + 0)\end{matrix}\right.</script></li>
+<li><script type="math/tex; mode=display">S(x_{j}) = f(x_{j})\quad j = 0, 1, \cdots, n</script></li>
+<li>(1) <script type="math/tex">S'(x_{0}) = f'(x_{0}), \quad S'(x_{n}) = f'(x_{n})</script><br>(2)<script type="math/tex">S''(x_{0}) = f''(x_{0}), \quad S''(x_{n}) = f''(x_{n})</script></li>
+</ol>
+<h2 id="5-曲线拟合"><a href="#5-曲线拟合" class="headerlink" title="5. 曲线拟合"></a>5. 曲线拟合</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><script type="math/tex; mode=display">\begin{bmatrix}(\varphi_{0},\varphi_{0}) &(\varphi_{1},\varphi_{0}) &\cdots &(\varphi_{m},\varphi_{0}) \\ (\varphi_{0},\varphi_{1}) &(\varphi_{1},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{1}) \\ \vdots &\vdots &\ddots &\vdots \\ (\varphi_{m},\varphi_{1}) &(\varphi_{m},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{m})\end{bmatrix} \begin{bmatrix}a_{0} \\ a_{1} \\ \vdots \\ a_{m} \end{bmatrix} = \begin{bmatrix}(y, \varphi_{0}) \\ (y, \varphi_{1}) \\ \vdots \\ (y, \varphi_{m}) \end{bmatrix}</script><h3 id="超定方程组的最小二乘解"><a href="#超定方程组的最小二乘解" class="headerlink" title="超定方程组的最小二乘解"></a>超定方程组的最小二乘解</h3><script type="math/tex; mode=display">Ax = b \Longrightarrow A^{T}Ax = A^{T}b</script><h2 id="6-数值积分"><a href="#6-数值积分" class="headerlink" title="6. 数值积分"></a>6. 数值积分</h2><h3 id="插值型求积公式"><a href="#插值型求积公式" class="headerlink" title="插值型求积公式"></a>插值型求积公式</h3><ol>
+<li><p>梯形求积公式</p>
+<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script></li>
+<li><p>辛普森求积公式</p>
+<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script></li>
+<li><p>科斯特公式</p>
+</li>
+</ol>
+<h3 id="复化求积公式"><a href="#复化求积公式" class="headerlink" title="复化求积公式"></a>复化求积公式</h3><ol>
+<li><p>复化梯形公式</p>
+<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script></li>
+<li><p>复化辛普森公式</p>
+<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script></li>
+<li><p>复化科斯特公式</p>
+</li>
+<li><p>联系</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">T_{2n}(f) = \frac{1}{2}T_{n}(f) + \frac{h}{2}\sum\limits_{i=0}^{n-1}f(x_{i+ \frac{1}{2}})</script><script type="math/tex; mode=display">S_{2n}(f) = \frac{4}{3}T_{2n}(f) - \frac{1}{3}T_{n}(f)</script><script type="math/tex; mode=display">C_{2n}(f) = \frac{16}{15}S_{2n}(f) - \frac{1}{15}S_{n}(f)</script><script type="math/tex; mode=display">R_{2n}(f) = \frac{64}{63}C_{2n}(f) - \frac{1}{63}C_{n}(f)</script><h2 id="7-数值微分"><a href="#7-数值微分" class="headerlink" title="7. 数值微分"></a>7. 数值微分</h2><h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><ol>
+<li><p>前进欧拉公式</p>
+<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script></li>
+<li><p>后退欧拉公式</p>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script></li>
+<li><p>梯形公式</p>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script></li>
+<li><p>改进欧拉公式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script></li>
+<li><p>误差</p>
+<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script></li>
+</ol>
+<h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
+<li><p>内插公式</p>
+</li>
+<li><p>外推公式</p>
+</li>
+<li><p>预测校正阿当姆斯公式</p>
+</li>
+<li><p><strong>误差</strong></p>
+</li>
+</ol>
+<h2 id="8-偏微分"><a href="#8-偏微分" class="headerlink" title="8. 偏微分"></a>8. 偏微分</h2><h3 id="椭圆方程"><a href="#椭圆方程" class="headerlink" title="椭圆方程"></a>椭圆方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}-\left(\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}\right)= f(x, y) \\ u = \varphi(x, y)\end{matrix}\right.</script><p>五点差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix}-\left[\frac{1}{h_{1}^{2}}\left(u_{i+1,j} - 2u_{i,j} + u_{i-1,j}\right) + \frac{1}{h_{2}^{2}}(u_{i,j+1} -2u_{i,j} +u_{i,j-1})\right] = f(x_{i}, y_{j}) \\ u_{i,j} = \varphi(x_{i}, y_{j})\end{matrix}\right.</script><h3 id="抛物方程"><a href="#抛物方程" class="headerlink" title="抛物方程"></a>抛物方程</h3><script type="math/tex; mode=display">\left \{\begin{matrix}\frac{\partial u}{\partial t} - a\frac{\partial^{2}u}{\partial x^{2}} = f(x, t) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向前欧拉格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向后欧拉格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k} - u_{i}^{k-1}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>中心差商格式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{2a}{h^{2}}\left[(u_{i+1}^{k+1}-2u_{i}^{k+1}+ u_{i-1}^{k+1})+(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k})\right] = f(x_{i}, t_{k+ \frac{1}{2}}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><h3 id="双曲方程"><a href="#双曲方程" class="headerlink" title="双曲方程"></a>双曲方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}\frac{\partial^{2}u}{\partial t^{2}} - c^{2}\frac{\partial^{2}u}{\partial x^{2}} =f(x,t) \\ u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>显示差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{0} - 2u_{i}^{0} + u_{i-1}^{0}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left(u_{i+1}^{k} -2u_{i}^{k} +u_{i-1}^{k}\right) = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>隐式差分格式</p>
+<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{1} - 2u_{i}^{1} + u_{i-1}^{1}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left[(u_{i+1}^{k+1} -2u_{i}^{k+1} +u_{i-1}^{k+1})+(u_{i+1}^{k-1} -2u_{i}^{k-1} +u_{i-1}^{k-1})\right] = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>计算方法</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -195,157 +453,8 @@
         <category>博客</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算方法考点</title>
-    <url>/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/</url>
-    <content><![CDATA[<h1 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h1><h2 id="1-有效数字"><a href="#1-有效数字" class="headerlink" title="1. 有效数字"></a>1. 有效数字</h2><p>由变量的有效数字求出函数的有效数字</p>
-<h3 id="对于一元函数"><a href="#对于一元函数" class="headerlink" title="对于一元函数"></a>对于一元函数</h3><script type="math/tex; mode=display">e(y) = f'(x)(x^* - x) = f'(x)e(x)</script><h3 id="对于二元函数"><a href="#对于二元函数" class="headerlink" title="对于二元函数"></a>对于二元函数</h3><script type="math/tex; mode=display">e(y) = \frac{\partial f(x_1, x_2)}{\partial x_1}e(x_1) + \frac{\partial f(x_1, x_2)}{\partial x_2}e(x_2)</script><h2 id="2-方程求根"><a href="#2-方程求根" class="headerlink" title="2. 方程求根"></a>2. 方程求根</h2><h3 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h3><script type="math/tex; mode=display">x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}</script><h3 id="牛顿迭代大范围收敛"><a href="#牛顿迭代大范围收敛" class="headerlink" title="牛顿迭代大范围收敛"></a>牛顿迭代大范围收敛</h3><ol>
-<li><script type="math/tex; mode=display">f(a)f(b)<0</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b],f'(x) \ne 0</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b],f''(x)\text{保号}</script></li>
-<li><script type="math/tex; mode=display">a - \frac{f(a)}{f'(a)} \le b, b - \frac{f(b)}{f'(b)} \ge a</script></li>
-</ol>
-<p>满足以上条件牛顿迭代格式在$[a, b]$收敛</p>
-<h3 id="不动点迭代法"><a href="#不动点迭代法" class="headerlink" title="不动点迭代法"></a>不动点迭代法</h3><script type="math/tex; mode=display">x_{k+1} = \varphi(x_k)</script><p>收敛条件：</p>
-<ol>
-<li><script type="math/tex; mode=display">x \in [a, b], \varphi(x) \in [a, b]</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b], |\varphi'(x)| \le L < 1</script></li>
-</ol>
-<h2 id="3-线性方程组解法"><a href="#3-线性方程组解法" class="headerlink" title="3. 线性方程组解法"></a>3. 线性方程组解法</h2><h3 id="列主元高斯消去法"><a href="#列主元高斯消去法" class="headerlink" title="列主元高斯消去法"></a>列主元高斯消去法</h3><h3 id="雅可比迭代法-amp-高斯赛德尔迭代法"><a href="#雅可比迭代法-amp-高斯赛德尔迭代法" class="headerlink" title="雅可比迭代法&amp;高斯赛德尔迭代法"></a>雅可比迭代法&amp;高斯赛德尔迭代法</h3><ol>
-<li>雅可比迭代格式</li>
-</ol>
-<script type="math/tex; mode=display">
-\left \{\begin{matrix}
-x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
-x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
-\vdots \\
-x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k)} - a_{n2}x_2^{(k)} - \cdots - a_{n,n-1}x_{n-1}^{(k)} + b_n)
-\end{matrix}\right.</script><p>特征方程：</p>
-<script type="math/tex; mode=display">
-\begin{vmatrix}
-\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
-a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
-\vdots &\vdots &\ddots &\vdots\\
-a_{n1} &a_{n2} &\cdots &\lambda a_{nn}
-\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
-<ol>
-<li>高斯赛德尔迭代法</li>
-</ol>
-<script type="math/tex; mode=display">
-\left \{\begin{matrix}
-x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
-x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k+1)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
-\vdots \\
-x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots - a_{n,n-1}x_{n-1}^{(k+1)} + b_n)
-\end{matrix}\right.</script><p>特征方程：</p>
-<script type="math/tex; mode=display">
-\begin{vmatrix}
-\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
-\lambda a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
-\vdots &\vdots &\ddots &\vdots\\
-\lambda a_{n1} &\lambda a_{n2} &\cdots &\lambda a_{nn}
-\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
-<blockquote>
-<p>对于严格对角占优矩阵，雅可比迭代法、高斯赛德尔迭代法均收敛<br>对于对称正定矩阵，高斯赛德尔迭代法收敛</p>
-</blockquote>
-<h2 id="4-插值"><a href="#4-插值" class="headerlink" title="4. 插值"></a>4. 插值</h2><h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h4><script type="math/tex; mode=display">R_{n}(x) = \frac{f^{n+1}(\xi)}{(n+1)!}W_{n+1}(x)</script><h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><script type="math/tex; mode=display">f(x) = f(x_{0}) + f[x_{0}, x_{1}](x-x_{0}) + \cdots + f[x_{0}, \cdots, x_{n}](x-x_{0})(x-x_{1})\cdots(x-x_{n-1})</script><h4 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>k</th>
-<th>$x_{k}$</th>
-<th>$f(x_{k})$</th>
-<th>$f[x_{k}, x_{k+1}]$</th>
-<th>$f[x_{k}, x_{k+1}, x_{k+2}]$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>$x_{0}$</td>
-<td>$f(x_0)$</td>
-<td>$\frac{f(x_{1}) - f(x_{0})}{1-0}$</td>
-<td>$\frac{f[x_{1}, x_{2}] - f[x_{0}, x_{1}]}{2-0}$</td>
-</tr>
-<tr>
-<td>1</td>
-<td>$x_{1}$</td>
-<td>$f(x_1)$</td>
-<td>$\frac{f(x_{2}) - f(x_{1})}{2-1}$</td>
-<td>$\frac{f[x_{2}, x_{3}] - f[x_{1}, x_{2}]}{3-1}$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<script type="math/tex; mode=display">f[x_{0}, \cdots, x_{k}] = \frac{f^{(k)}(\eta)}{k!}</script><h3 id="三次样条插值"><a href="#三次样条插值" class="headerlink" title="三次样条插值"></a>三次样条插值</h3><h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><ol>
-<li><script type="math/tex; mode=display">\left \{\begin{matrix} S(x_{j} - 0) = S(x_{j} + 0)\\ S'(x_{j} - 0) = S'(x_{j} + 0) &j = 1, 2, \cdots, n-1\\ S''(x_{j} - 0) = S''(x_{j} + 0)\end{matrix}\right.</script></li>
-<li><script type="math/tex; mode=display">S(x_{j}) = f(x_{j})\quad j = 0, 1, \cdots, n</script></li>
-<li>(1) <script type="math/tex">S'(x_{0}) = f'(x_{0}), \quad S'(x_{n}) = f'(x_{n})</script><br>(2)<script type="math/tex">S''(x_{0}) = f''(x_{0}), \quad S''(x_{n}) = f''(x_{n})</script></li>
-</ol>
-<h2 id="5-曲线拟合"><a href="#5-曲线拟合" class="headerlink" title="5. 曲线拟合"></a>5. 曲线拟合</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><script type="math/tex; mode=display">\begin{bmatrix}(\varphi_{0},\varphi_{0}) &(\varphi_{1},\varphi_{0}) &\cdots &(\varphi_{m},\varphi_{0}) \\ (\varphi_{0},\varphi_{1}) &(\varphi_{1},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{1}) \\ \vdots &\vdots &\ddots &\vdots \\ (\varphi_{m},\varphi_{1}) &(\varphi_{m},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{m})\end{bmatrix} \begin{bmatrix}a_{0} \\ a_{1} \\ \vdots \\ a_{m} \end{bmatrix} = \begin{bmatrix}(y, \varphi_{0}) \\ (y, \varphi_{1}) \\ \vdots \\ (y, \varphi_{m}) \end{bmatrix}</script><h3 id="超定方程组的最小二乘解"><a href="#超定方程组的最小二乘解" class="headerlink" title="超定方程组的最小二乘解"></a>超定方程组的最小二乘解</h3><script type="math/tex; mode=display">Ax = b \Longrightarrow A^{T}Ax = A^{T}b</script><h2 id="6-数值积分"><a href="#6-数值积分" class="headerlink" title="6. 数值积分"></a>6. 数值积分</h2><h3 id="插值型求积公式"><a href="#插值型求积公式" class="headerlink" title="插值型求积公式"></a>插值型求积公式</h3><ol>
-<li>梯形求积公式</li>
-</ol>
-<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script><ol>
-<li>辛普森求积公式</li>
-</ol>
-<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script><ol>
-<li>科斯特公式</li>
-</ol>
-<h3 id="复化求积公式"><a href="#复化求积公式" class="headerlink" title="复化求积公式"></a>复化求积公式</h3><ol>
-<li>复化梯形公式</li>
-</ol>
-<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script><ol>
-<li>复化辛普森公式</li>
-</ol>
-<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script><ol>
-<li><p>复化科斯特公式</p>
-</li>
-<li><p>联系</p>
-</li>
-</ol>
-<script type="math/tex; mode=display">T_{2n}(f) = \frac{1}{2}T_{n}(f) + \frac{h}{2}\sum\limits_{i=0}^{n-1}f(x_{i+ \frac{1}{2}})</script><script type="math/tex; mode=display">S_{2n}(f) = \frac{4}{3}T_{2n}(f) - \frac{1}{3}T_{n}(f)</script><script type="math/tex; mode=display">C_{2n}(f) = \frac{16}{15}S_{2n}(f) - \frac{1}{15}S_{n}(f)</script><script type="math/tex; mode=display">R_{2n}(f) = \frac{64}{63}C_{2n}(f) - \frac{1}{63}C_{n}(f)</script><h2 id="7-数值微分"><a href="#7-数值微分" class="headerlink" title="7. 数值微分"></a>7. 数值微分</h2><h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><ol>
-<li>前进欧拉公式</li>
-</ol>
-<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script><ol>
-<li>后退欧拉公式</li>
-</ol>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script><ol>
-<li>梯形公式</li>
-</ol>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script><ol>
-<li>改进欧拉公式</li>
-</ol>
-<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script><ol>
-<li>误差</li>
-</ol>
-<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script><h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
-<li><p>内插公式</p>
-</li>
-<li><p>外推公式</p>
-</li>
-<li><p>预测校正阿当姆斯公式</p>
-</li>
-<li><p><strong>误差</strong></p>
-</li>
-</ol>
-<h2 id="8-偏微分"><a href="#8-偏微分" class="headerlink" title="8. 偏微分"></a>8. 偏微分</h2><h3 id="椭圆方程"><a href="#椭圆方程" class="headerlink" title="椭圆方程"></a>椭圆方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}-\left(\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}\right)= f(x, y) \\ u = \varphi(x, y)\end{matrix}\right.</script><p>五点差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix}-\left[\frac{1}{h_{1}^{2}}\left(u_{i+1,j} - 2u_{i,j} + u_{i-1,j}\right) + \frac{1}{h_{2}^{2}}(u_{i,j+1} -2u_{i,j} +u_{i,j-1})\right] = f(x_{i}, y_{j}) \\ u_{i,j} = \varphi(x_{i}, y_{j})\end{matrix}\right.</script><h3 id="抛物方程"><a href="#抛物方程" class="headerlink" title="抛物方程"></a>抛物方程</h3><script type="math/tex; mode=display">\left \{\begin{matrix}\frac{\partial u}{\partial t} - a\frac{\partial^{2}u}{\partial x^{2}} = f(x, t) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向前欧拉格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向后欧拉格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k} - u_{i}^{k-1}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>中心差商格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{2a}{h^{2}}\left[(u_{i+1}^{k+1}-2u_{i}^{k+1}+ u_{i-1}^{k+1})+(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k})\right] = f(x_{i}, t_{k+ \frac{1}{2}}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><h3 id="双曲方程"><a href="#双曲方程" class="headerlink" title="双曲方程"></a>双曲方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}\frac{\partial^{2}u}{\partial t^{2}} - c^{2}\frac{\partial^{2}u}{\partial x^{2}} =f(x,t) \\ u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>显示差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{0} - 2u_{i}^{0} + u_{i-1}^{0}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left(u_{i+1}^{k} -2u_{i}^{k} +u_{i-1}^{k}\right) = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>隐式差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{1} - 2u_{i}^{1} + u_{i-1}^{1}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left[(u_{i+1}^{k+1} -2u_{i}^{k+1} +u_{i-1}^{k+1})+(u_{i+1}^{k-1} -2u_{i}^{k-1} +u_{i-1}^{k-1})\right] = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script>]]></content>
-      <categories>
-        <category>学习</category>
-        <category>计算方法</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-        <tag>数学</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>

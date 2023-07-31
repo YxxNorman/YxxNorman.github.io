@@ -130,8 +130,7 @@
 <li><script type="math/tex; mode=display">x \in [a, b], |\varphi'(x)| \le L < 1</script></li>
 </ol>
 <h2 id="3-线性方程组解法"><a href="#3-线性方程组解法" class="headerlink" title="3. 线性方程组解法"></a>3. 线性方程组解法</h2><h3 id="列主元高斯消去法"><a href="#列主元高斯消去法" class="headerlink" title="列主元高斯消去法"></a>列主元高斯消去法</h3><h3 id="雅可比迭代法-amp-高斯赛德尔迭代法"><a href="#雅可比迭代法-amp-高斯赛德尔迭代法" class="headerlink" title="雅可比迭代法&amp;高斯赛德尔迭代法"></a>雅可比迭代法&amp;高斯赛德尔迭代法</h3><ol>
-<li>雅可比迭代格式</li>
-</ol>
+<li><p>雅可比迭代格式</p>
 <script type="math/tex; mode=display">
 \left \{\begin{matrix}
 x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
@@ -146,9 +145,8 @@ a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
 \vdots &\vdots &\ddots &\vdots\\
 a_{n1} &a_{n2} &\cdots &\lambda a_{nn}
 \end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
-<ol>
-<li>高斯赛德尔迭代法</li>
-</ol>
+</li>
+<li><p>高斯赛德尔迭代法</p>
 <script type="math/tex; mode=display">
 \left \{\begin{matrix}
 x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
@@ -163,6 +161,8 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 \vdots &\vdots &\ddots &\vdots\\
 \lambda a_{n1} &\lambda a_{n2} &\cdots &\lambda a_{nn}
 \end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
+</li>
+</ol>
 <blockquote>
 <p>对于严格对角占优矩阵，雅可比迭代法、高斯赛德尔迭代法均收敛<br>对于对称正定矩阵，高斯赛德尔迭代法收敛</p>
 </blockquote>
@@ -201,42 +201,36 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 <li>(1) <script type="math/tex">S'(x_{0}) = f'(x_{0}), \quad S'(x_{n}) = f'(x_{n})</script><br>(2)<script type="math/tex">S''(x_{0}) = f''(x_{0}), \quad S''(x_{n}) = f''(x_{n})</script></li>
 </ol>
 <h2 id="5-曲线拟合"><a href="#5-曲线拟合" class="headerlink" title="5. 曲线拟合"></a>5. 曲线拟合</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><script type="math/tex; mode=display">\begin{bmatrix}(\varphi_{0},\varphi_{0}) &(\varphi_{1},\varphi_{0}) &\cdots &(\varphi_{m},\varphi_{0}) \\ (\varphi_{0},\varphi_{1}) &(\varphi_{1},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{1}) \\ \vdots &\vdots &\ddots &\vdots \\ (\varphi_{m},\varphi_{1}) &(\varphi_{m},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{m})\end{bmatrix} \begin{bmatrix}a_{0} \\ a_{1} \\ \vdots \\ a_{m} \end{bmatrix} = \begin{bmatrix}(y, \varphi_{0}) \\ (y, \varphi_{1}) \\ \vdots \\ (y, \varphi_{m}) \end{bmatrix}</script><h3 id="超定方程组的最小二乘解"><a href="#超定方程组的最小二乘解" class="headerlink" title="超定方程组的最小二乘解"></a>超定方程组的最小二乘解</h3><script type="math/tex; mode=display">Ax = b \Longrightarrow A^{T}Ax = A^{T}b</script><h2 id="6-数值积分"><a href="#6-数值积分" class="headerlink" title="6. 数值积分"></a>6. 数值积分</h2><h3 id="插值型求积公式"><a href="#插值型求积公式" class="headerlink" title="插值型求积公式"></a>插值型求积公式</h3><ol>
-<li>梯形求积公式</li>
-</ol>
-<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script><ol>
-<li>辛普森求积公式</li>
-</ol>
-<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script><ol>
-<li>科斯特公式</li>
+<li><p>梯形求积公式</p>
+<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script></li>
+<li><p>辛普森求积公式</p>
+<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script></li>
+<li><p>科斯特公式</p>
+</li>
 </ol>
 <h3 id="复化求积公式"><a href="#复化求积公式" class="headerlink" title="复化求积公式"></a>复化求积公式</h3><ol>
-<li>复化梯形公式</li>
-</ol>
-<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script><ol>
-<li>复化辛普森公式</li>
-</ol>
-<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script><ol>
+<li><p>复化梯形公式</p>
+<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script></li>
+<li><p>复化辛普森公式</p>
+<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script></li>
 <li><p>复化科斯特公式</p>
 </li>
 <li><p>联系</p>
 </li>
 </ol>
 <script type="math/tex; mode=display">T_{2n}(f) = \frac{1}{2}T_{n}(f) + \frac{h}{2}\sum\limits_{i=0}^{n-1}f(x_{i+ \frac{1}{2}})</script><script type="math/tex; mode=display">S_{2n}(f) = \frac{4}{3}T_{2n}(f) - \frac{1}{3}T_{n}(f)</script><script type="math/tex; mode=display">C_{2n}(f) = \frac{16}{15}S_{2n}(f) - \frac{1}{15}S_{n}(f)</script><script type="math/tex; mode=display">R_{2n}(f) = \frac{64}{63}C_{2n}(f) - \frac{1}{63}C_{n}(f)</script><h2 id="7-数值微分"><a href="#7-数值微分" class="headerlink" title="7. 数值微分"></a>7. 数值微分</h2><h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><ol>
-<li>前进欧拉公式</li>
+<li><p>前进欧拉公式</p>
+<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script></li>
+<li><p>后退欧拉公式</p>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script></li>
+<li><p>梯形公式</p>
+<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script></li>
+<li><p>改进欧拉公式</p>
+<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script></li>
+<li><p>误差</p>
+<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script></li>
 </ol>
-<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script><ol>
-<li>后退欧拉公式</li>
-</ol>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script><ol>
-<li>梯形公式</li>
-</ol>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script><ol>
-<li>改进欧拉公式</li>
-</ol>
-<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script><ol>
-<li>误差</li>
-</ol>
-<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script><h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
+<h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
 <li><p>内插公式</p>
 </li>
 <li><p>外推公式</p>
@@ -328,6 +322,15 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 
    
   <nav class="article-nav">
+    
+      <a href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            01 Git入门教程
+          
+        </div>
+      </a>
     
     
       <a href="/2023/07/30/Chapter8-Diodes/" class="article-nav-link">

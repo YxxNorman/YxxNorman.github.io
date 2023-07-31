@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives |  Norman&#39;s Blog</title>
+      <title>01 Git入门教程 |  Norman&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -60,236 +60,206 @@
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-01-Git入门教程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  01 Git入门教程
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2023-07-31T09:23:23.000Z" itemprop="datePublished">2023-07-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
+  </div>
   
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">895</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">3 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Git入门教程"><a href="#Git入门教程" class="headerlink" title="Git入门教程"></a>Git入门教程</h1><h2 id="初始化设置"><a href="#初始化设置" class="headerlink" title="初始化设置"></a>初始化设置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your name&quot;    # 配置用户名</span><br><span class="line">$ git config --global user.email &quot;norman@qq.com&quot;    # 配置邮箱</span><br></pre></td></tr></table></figure>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建仓库有两种方法，一种方法是在本地直接创建仓库，另一种方法是克隆远程仓库。</p>
+<ul>
+<li>本地创建仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init &lt;project-name&gt;    # &lt;project-name&gt;为空则在当前文件夹创建</span><br></pre></td></tr></table></figure></li>
+<li>克隆远程仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="工作区域"><a href="#工作区域" class="headerlink" title="工作区域"></a>工作区域</h2>Git 分为四个区域：</li>
+<li>工作区（Working Directory）：就是在电脑⾥能实际看到的⽬录。</li>
+<li>暂存区（Stage/Index）：暂存区也叫索引，⽤来临时存放未提交的内容，⼀般在.git⽬录下的index中。</li>
+<li>本地仓库（Repository）：Git在本地的版本库，仓库信息存储在.git这个隐藏⽬录中。</li>
+<li>远程仓库（Remote Repository）：托管在远程服务器上的仓库。常⽤的有GitHub、GitLab、Gitee。<br>文件状态：</li>
+<li>main/master : 默认主分支</li>
+<li>Origin : 默认远程仓库</li>
+<li>HEAD : 当前版本指针</li>
+<li>HEAD^ : 上一个版本</li>
+<li>HEAD~ : 上四个版本<h2 id="添加与提交文件"><a href="#添加与提交文件" class="headerlink" title="添加与提交文件"></a>添加与提交文件</h2>在工作区新建的文件需要先添加至暂存区，再进行提交至本地仓库。<br>添加至暂存区：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;filename&gt;</span><br><span class="line">$ git add .    # 添加所有文件</span><br></pre></td></tr></table></figure>
+提交至本地仓库：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;message&quot;    # message是填写每次提交的信息</span><br></pre></td></tr></table></figure>
+因此，文件有三种不同状态：</li>
+<li>未跟踪（Untrack）：新建文件的状态</li>
+<li>未修改（Unmodified）：被Git管理起来，但是未被修改的文件</li>
+<li>已修改（Modified）：已经修改过的文件，还未暂存</li>
+<li>已暂存（Staged）：修改后已保存到暂存区的文件</li>
+<li>已提交（Committed）：已经提交到本地仓库的文件<br>查看仓库的状态：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+查看仓库的提交记录：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">$ git log --oneline    # 显示简洁模式</span><br></pre></td></tr></table></figure>
+<h2 id="撤销和恢复文件"><a href="#撤销和恢复文件" class="headerlink" title="撤销和恢复文件"></a>撤销和恢复文件</h2>移动文件位置：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mv &lt;file&gt; &lt;new-file&gt;</span><br></pre></td></tr></table></figure>
+删除文件：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;file&gt;    # 删除工作区和暂存区的文件</span><br><span class="line">$ git rm -f &lt;file&gt;    # 强制删除工作区和暂存区已修改过的文件</span><br><span class="line">$ git rm --cached &lt;file&gt;    # 删除暂存区的文件，但保留工作区</span><br></pre></td></tr></table></figure>
+重置当前HEAD分支到某一提交版本，并且删除之后的所有提交：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --soft &lt;commit-id&gt;    # 保留工作区和暂存区文件</span><br><span class="line">$ git reset --hard &lt;commit-id&gt;    # 重置工作区和暂存区文件</span><br><span class="line">$ git reset --mixed &lt;commit-id&gt;   # 重置暂存区文件，保留工作区</span><br></pre></td></tr></table></figure>
+<h2 id="比较差异"><a href="#比较差异" class="headerlink" title="比较差异"></a>比较差异</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git diff    # 比较工作区与暂存区的差异</span><br><span class="line">$ git diff HEAD    # 比较工作区+暂存区与本地仓库的差异</span><br><span class="line">$ git diff HEAD --cached/--staged    # 比较暂存区与本地仓库的差异</span><br><span class="line">$ git diff &lt;commit-id&gt; &lt;commit-id&gt;   # 比较提交版本之间的差异</span><br><span class="line">$ git diff HEAD~ HEAD    # 比较上一个提交版本与当前版本之间的差异</span><br><span class="line">$ git diff &lt;branch_name&gt; &lt;branch_name&gt;  # 比较分支之间的差异</span><br></pre></td></tr></table></figure>
+<h2 id="gitignore忽略文件"><a href="#gitignore忽略文件" class="headerlink" title=".gitignore忽略文件"></a>.gitignore忽略文件</h2>.gitignore文件的匹配规则：</li>
+<li>空行或者以<code>#</code>开头的行会被Git忽略。一般空行用于可读性的分隔，<code>#</code>一般用作注释</li>
+<li>星号<code>*</code>通配任意个字符</li>
+<li>问号<code>?</code>匹配单个字符</li>
+<li>中括号<code>[]</code>表示匹配列表中的单个字符，比如：<code>[abc]</code>表示a/b/c</li>
+<li>两个星号<code>**</code>表示匹配任意的中间目录</li>
+<li>中括号可以使用短中线连接，比如：<code>[0-9]</code>表示任意一位数字，<code>[a-z]</code>表示任意一位小写字母感叹号</li>
+<li><code>!</code>表示取反</li>
 </ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">Archives</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/31/03-%E5%88%86%E6%94%AF/" class="archive-article-date">
-  <time datetime="2023-07-31T09:26:50.000Z" itemprop="datePublished">07/31</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/31/03-%E5%88%86%E6%94%AF/"
-    >03 分支</a> 
-</h2>
  
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="archive-article-date">
-  <time datetime="2023-07-31T09:25:15.000Z" itemprop="datePublished">07/31</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"
-    >02 远程仓库</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2023-07-31T09:23:23.000Z" itemprop="datePublished">07/31</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"
-    >01 Git入门教程</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/" class="archive-article-date">
-  <time datetime="2023-07-30T07:32:51.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/"
-    >计算方法考点</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/Chapter8-Diodes/" class="archive-article-date">
-  <time datetime="2023-07-30T03:50:09.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/Chapter8-Diodes/"
-    >Chapter8 Diodes</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/" class="archive-article-date">
-  <time datetime="2023-07-30T03:26:52.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/"
-    >Chapter2 拉伸和压缩</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
-  <time datetime="2023-07-30T01:11:55.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/"
-    >Chapter1 绪论</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2023-07-30T01:02:05.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"
-    >从零搭建自己的博客教程</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/" class="archive-article-date">
-  <time datetime="2023-07-30T00:42:21.000Z" itemprop="datePublished">07/30</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/"
-    >Chapter1 流体及其物理性质</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
   </div>
-  
-  
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            02 远程仓库
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">计算方法考点</div>
+      </a>
+    
+  </nav>
 
   
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -430,6 +400,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
