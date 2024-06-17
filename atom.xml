@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-02T15:09:53.761Z</updated>
+  <updated>2024-06-17T03:21:10.744Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1.1 信号的分类</title>
+    <link href="http://example.com/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/"/>
+    <id>http://example.com/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/</id>
+    <published>2024-06-17T03:17:59.000Z</published>
+    <updated>2024-06-17T03:21:10.744Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;信号分类&quot;&gt;&lt;a href=&quot;#信号分类&quot; class=&quot;headerlink&quot; title=&quot;信号分类&quot;&gt;&lt;/a&gt;信号分类&lt;/h1&gt;&lt;h2 id=&quot;确定信号&quot;&gt;&lt;a href=&quot;#确定信号&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="测试技术" scheme="http://example.com/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="学习" scheme="http://example.com/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="测试" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="信号" scheme="http://example.com/tags/%E4%BF%A1%E5%8F%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>01 层次分析法</title>
