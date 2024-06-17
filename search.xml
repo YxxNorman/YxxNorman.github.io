@@ -1156,12 +1156,169 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 </ul>
 ]]></content>
       <categories>
-        <category>测试技术</category>
         <category>学习</category>
+        <category>测试技术</category>
       </categories>
       <tags>
         <tag>测试</tag>
         <tag>信号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.2 傅里叶展开</title>
+    <url>/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/</url>
+    <content><![CDATA[<h1 id="傅里叶展开"><a href="#傅里叶展开" class="headerlink" title="傅里叶展开"></a>傅里叶展开</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于周期信号，包括谐波信号和一般周期信号，需满足<strong>狄里赫利条件</strong>。</p>
+<h2 id="三角函数展开"><a href="#三角函数展开" class="headerlink" title="三角函数展开"></a>三角函数展开</h2><p>对于一般周期信号，可以展开为</p>
+<script type="math/tex; mode=display">
+x(t) = a_{0} + \sum_{n=1}^{\infty}(a_{n}\cos n\omega_{0}t + b_{n}\sin n\omega_{0}t)</script><script type="math/tex; mode=display">
+\begin{matrix}
+a_{0}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)dt\\
+a_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\cos}n\omega_{0}tdt \\ 
+b_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\sin}n\omega_{0}tdt \\ 
+\end{matrix}</script><p>$\omega_{0}$称为基频，$\omega_{0}=\frac{2\pi}{T_{0}}$；$n\omega_{0}$称为n次谐频。<br>画频谱图前，需要将谐波信号成分均转化为正弦成分。</p>
+<script type="math/tex; mode=display">
+x(t) = A_{0} + \sum_{n=1}^{\infty}A_{n}{\sin}(n\omega_{0}t + \varphi_{n})</script><script type="math/tex; mode=display">
+\begin{matrix}
+A_{0}=a_{0} \\ 
+A_{n}=\sqrt{a_{n}^{2} + b_{n}^{2}} \\ 
+\varphi_{n}=\arctan \frac{a_{n}}{b_{n}}
+\end{matrix}</script><h2 id="复指数展开"><a href="#复指数展开" class="headerlink" title="复指数展开"></a>复指数展开</h2><script type="math/tex; mode=display">
+x(t) = \sum_{n=-\infty}^{\infty}C_{n}e^{jn\omega_{0}t}\quad (n=0,\pm1,\pm2,\cdots)</script><script type="math/tex; mode=display">
+C_{n}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)e^{-jn\omega_{0}t}dt</script><script type="math/tex; mode=display">
+\begin{matrix}
+C_{n}=ReC_{n} + jImC_{n} = |C_{n}|e^{j\varphi_{n}}\\
+|C_{n}| = \sqrt{(ReC_{n})^{2} + (ImC_{n})^{2}}\\
+\varphi_{n} = \arctan \frac{ImC_{n}}{ReC_{n}}
+\end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求周期方波$x(t)$的频谱</p>
+<script type="math/tex; mode=display">
+x(t) = \left\{\begin{matrix}A\qquad(0\le t\le \frac{T_{0}}{2})\\ -A \qquad (-\frac{T_{0}}{2}\le t\le 0)\end{matrix}\right.</script><h3 id="应用三角函数展开"><a href="#应用三角函数展开" class="headerlink" title="应用三角函数展开"></a>应用三角函数展开</h3><script type="math/tex; mode=display">
+\left\{\begin{array}{l}a_{0} = \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Adt + \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{0}-Adt=0 \\  a_{n}=\frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\cos n\omega_{0}tdt = 0 \\ b_{n} = \frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\sin n\omega_{0}tdt = \frac{4A}{n\omega_{0}T_{0}}[1 - \cos (n\omega_{0}T_{0}/2)]=\left\{\begin{matrix}\frac{4A}{n\pi} \quad n=1,3,5,\dots\\ 0\quad n=2,4,6,\dots\end{matrix}\right.\end{array}\right.</script><script type="math/tex; mode=display">
+\therefore x(t) = \frac{4A}{\pi}\left(\sin\omega_{0}t + \frac{1}{3}\sin3\omega_{0}t + \frac{1}{5}\sin5\omega_{0}t + \cdots\right)</script><h2 id="应用复指数展开"><a href="#应用复指数展开" class="headerlink" title="应用复指数展开"></a>应用复指数展开</h2><script type="math/tex; mode=display">
+\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-jn\omega_{0}t}dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Ae^{-jn\omega_{0}t}dt + \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{0}-Ae^{-jn\omega_{0}t}dt \\= \frac{A}{2jn\pi}\left(2 - e^{jn\pi} - e^{-jn\pi}\right)=\left\{\begin{matrix}-j\frac{2A}{\pi n}\quad (n=\pm1,\pm3,\pm5,\cdots)\\ 0\quad(n=0,\pm2,\pm4,\pm6,\cdots)\end{matrix}\right.\end{array}</script><script type="math/tex; mode=display">
+\therefore x(t) = -j\frac{2A}{\pi}\sum_{n=-\infty}^{\infty}\frac{1}{n}e^{jn\omega_{0}t}(n=\pm1,\pm3,\pm5,\cdots)</script><script type="math/tex; mode=display">
+|C_{n}|=\left\{\begin{matrix}\frac{2A}{n\pi}\quad (n=\pm1,\pm3,\pm5,\cdots) \\ 0\quad (n=0,\pm2,\pm=4\pm6,\cdots)\end{matrix}\right.</script><script type="math/tex; mode=display">
+\varphi_{n}= \arctan\frac{\frac{2A}{n\pi}}{0} = \left\{\begin{matrix}\frac{\pi}{2} \quad(n<0)\\ -\frac{\pi}{2}\quad(n>0)\end{matrix}\right.</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>运用复指数展开求$x(t) = |\cos(\omega t)|$的频谱</p>
+</blockquote>
+<p>周期：$T_{0} = \frac{\pi}{\omega}$，频率：$f_{0} = \frac{\omega}{\pi}$</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-j2\pi nf_{0}t}dt = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}\frac{1}{2}\left[e^{-j\pi  f_{0}t} + e^{j\pi f_{0}t}\right]e^{-j2\pi nf_{0}t}dt  \\ =\frac{\pi}{2\omega}\int_{-\frac{\pi}{2\omega}}^{\frac{\pi}{2\omega}}e^{-j\pi(2n+1)f_{0}t} + e^{-j\pi(2n - 1)f_{0}t}dt = \end{array}\right.</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+        <tag>傅里叶变换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.4 典型信号</title>
+    <url>/2024/06/17/1-4-%E5%85%B8%E5%9E%8B%E4%BF%A1%E5%8F%B7/</url>
+    <content><![CDATA[<h1 id="典型信号"><a href="#典型信号" class="headerlink" title="典型信号"></a>典型信号</h1><h2 id="单位脉冲函数"><a href="#单位脉冲函数" class="headerlink" title="单位脉冲函数"></a>单位脉冲函数</h2><p>$\delta$函数：</p>
+<script type="math/tex; mode=display">
+\delta(t) = \lim_{\varepsilon \to 0}(t) = \left\{\begin{matrix}\infty\quad(t=0)\\0\quad(t\ne 0)\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+\begin{matrix}
+\Delta(f) = 1 \\ 
+\delta(t) = \int_{-\infty}^{\infty}e^{j2\pi ft}df
+\end{matrix}</script><script type="math/tex; mode=display">
+\begin{matrix}
+\delta(t\pm t_{0}) \Leftrightarrow e^{\pm 2\pi ft_{0}}\\
+\Delta(f\pm f_{0})\Leftrightarrow e^{\mp 2\pi f_{0}t}
+\end{matrix}</script><h2 id="矩形窗函数"><a href="#矩形窗函数" class="headerlink" title="矩形窗函数"></a>矩形窗函数</h2><script type="math/tex; mode=display">
+w_{R}(t) = 
+\left\{\begin{matrix}
+1\quad (|t|\le \frac{T}{2}) \\ 
+0\quad (|t|>\frac{T}{2})
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+W_{R} = T\frac{\sin(\pi fT)}{\pi fT} = T\text{sinc}(\pi fT)</script><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h3 id="双边指数函数"><a href="#双边指数函数" class="headerlink" title="双边指数函数"></a>双边指数函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+-e^{at}\quad (a>0,t < 0) \\ 
+e^{-at}\quad (a>0,t\ge 0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j4\pi f}{a^{2} + (2\pi f)^{2}}</script><h3 id="单边指数函数"><a href="#单边指数函数" class="headerlink" title="单边指数函数"></a>单边指数函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+0\qquad\qquad (t< 0) \\ 
+e^{-at}\quad (t\ge 0,a>0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{a-j2\pi f}{a^{2} + (2\pi f)^{2}}</script><h2 id="符号函数和单位阶跃函数"><a href="#符号函数和单位阶跃函数" class="headerlink" title="符号函数和单位阶跃函数"></a>符号函数和单位阶跃函数</h2><h3 id="符号函数"><a href="#符号函数" class="headerlink" title="符号函数"></a>符号函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+-1=\lim_{a\to 0}(-e^{at})\quad (a>0,t<0) \\ 
+1=\lim_{a\to 0}(e^{-at})\quad (a>0,t\ge0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j}{\pi f}</script><h3 id="单位阶跃函数"><a href="#单位阶跃函数" class="headerlink" title="单位阶跃函数"></a>单位阶跃函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+0\qquad\qquad (t<0) \\ 
+1=\lim_{a\to 0}(e^{-at})\quad (a>0,t\ge0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j}{2\pi f}</script><h2 id="正、余弦函数"><a href="#正、余弦函数" class="headerlink" title="正、余弦函数"></a>正、余弦函数</h2><h3 id="余弦函数"><a href="#余弦函数" class="headerlink" title="余弦函数"></a>余弦函数</h3><script type="math/tex; mode=display">
+x(t) = {\cos}2\pi f_{0}t = \frac{1}{2}(e^{-j2\pi f_{0}t} + e^{j2\pi f_{0}t})</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{1}{2}[\delta(f + f_{0}) + \delta(f - f_{0})]</script><h3 id="正弦函数"><a href="#正弦函数" class="headerlink" title="正弦函数"></a>正弦函数</h3><script type="math/tex; mode=display">
+x(t) = {\sin}2\pi f_{0}t = \frac{j}{2}(e^{-2\pi f_{0}t} - e^{2\pi f_{0}t})</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{j}{2}[\delta(f+f_{0}) - \delta(f-f_{0})]</script><h2 id="采样函数"><a href="#采样函数" class="headerlink" title="采样函数"></a>采样函数</h2><script type="math/tex; mode=display">
+g(t)=\sum_{n=-\infty}^{\infty}\delta(t - nT_{s}) = \frac{1}{T_{s}}\sum_{n=-\infty}^{\infty}e^{j2\pi nf_{s}t}</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+G(f) = \frac{1}{T_{s}}\sum_{n=-\infty}^{\infty}\delta(f-nf_{s})</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+        <tag>傅里叶变换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.3 傅里叶变换</title>
+    <url>/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[<h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于非周期信号，需满足<strong>狄里赫利条件</strong>，并且<strong>绝对可积</strong>。</p>
+<h2 id="变换公式"><a href="#变换公式" class="headerlink" title="变换公式"></a>变换公式</h2><script type="math/tex; mode=display">
+X(f) = \int_{-\infty}^{\infty}x(t)e^{-j2\pi ft}dt</script><script type="math/tex; mode=display">
+x(t) = \int_{-\infty}^{\infty}X(f)e^{j2\pi ft}df</script><h2 id="变换性质"><a href="#变换性质" class="headerlink" title="变换性质"></a>变换性质</h2><ul>
+<li>奇偶虚实性</li>
+<li>线性叠加性</li>
+<li>对称性</li>
+<li>尺度改变性</li>
+<li><strong>时移性</strong></li>
+<li><strong>频移性</strong></li>
+<li><strong>微分性质</strong></li>
+<li><strong>积分性质</strong></li>
+<li><strong>卷积特性</strong></li>
+</ul>
+<h3 id="时移性"><a href="#时移性" class="headerlink" title="时移性"></a>时移性</h3><script type="math/tex; mode=display">
+x(t\pm t_{0})\leftrightarrow X(f)e^{\pm j2\pi f_{0}t}</script><h3 id="频移性"><a href="#频移性" class="headerlink" title="频移性"></a>频移性</h3><script type="math/tex; mode=display">
+x(t)e^{\mp j2\pi f_{0}t} \leftrightarrow X(f\pm f_{0})</script><h3 id="微分性质"><a href="#微分性质" class="headerlink" title="微分性质"></a>微分性质</h3><script type="math/tex; mode=display">
+\frac{d^{n}x(t)}{dt^{n}} \leftrightarrow (j2\pi f)^{n}X(f)</script><h3 id="积分性质"><a href="#积分性质" class="headerlink" title="积分性质"></a>积分性质</h3><script type="math/tex; mode=display">
+\int_{-\infty}^{t}x(t)dt \leftrightarrow \frac{1}{j2\pi f}X(f)</script><h3 id="卷积特性"><a href="#卷积特性" class="headerlink" title="卷积特性"></a>卷积特性</h3><script type="math/tex; mode=display">
+\begin{matrix} x_{1}(t)x_{2}(t)\leftrightarrow X_{1}(f)*X_2(f)  \\ x_{1}(t)*x_{2}(t)\leftrightarrow X_{1}(f)X_2(f) \end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求三角窗函数的傅里叶变换：</p>
+<script type="math/tex; mode=display">
+x(t)=\left\{ \begin{matrix} 1 + \frac{2}{T_{0}}t,\quad -\frac{T_{0}}{2}\le t <0 \\ 1 - \frac{2}{T_{0}}t,\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix} \right.</script><script type="math/tex; mode=display">
+\frac{dx(t)}{dt} = \left\{\begin{matrix}\frac{2}{T_{0}},\quad -\frac{T_{0}}{2}\le t < 0 \\ -\frac{2}{T_{0}},\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix}\right.</script><script type="math/tex; mode=display">
+\frac{d^{2}x(t)}{dt^{2}} = \frac{2}{T_{0}}\delta\left(t + \frac{T_{0}}{2}\right) + \frac{2}{T_{0}}\delta\left(t - \frac{T_{0}}{2}\right) - \frac{4}{T_{0}}\delta (t)</script><script type="math/tex; mode=display">
+F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{T_{0}}\left[e^{j\pi fT_{0}} + e^{-j\pi fT_{0}} - 2\right] = -\frac{8}{T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script><script type="math/tex; mode=display">
+X(f) = \frac{1}{(j2\pi f)^{2}}F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{\pi^{2}f^{2}T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right) = \frac{T_{0}}{2} \frac{\sin^{2}\left(\frac{\pi fT_{0}}{2}\right)}{\left(\frac{\pi fT_{0}}{2}\right)^{2}}= \frac{T_{0}}{2}\text{sinc}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+        <tag>傅里叶变换</tag>
       </tags>
   </entry>
 </search>

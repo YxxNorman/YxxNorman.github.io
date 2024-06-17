@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Chapter2 拉伸和压缩 |  Norman&#39;s Blog</title>
+      <title>1.3 傅里叶变换 |  Norman&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -61,7 +61,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Chapter2-拉伸和压缩"
+  id="post-1-3-傅里叶变换"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -72,7 +72,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Chapter2 拉伸和压缩
+  1.3 傅里叶变换
 </h1>
  
 
@@ -80,11 +80,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/" class="article-date">
-  <time datetime="2023-07-30T03:26:52.000Z" itemprop="datePublished">2023-07-30</time>
+      <a href="/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" class="article-date">
+  <time datetime="2024-06-17T03:37:25.000Z" itemprop="datePublished">2024-06-17</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
   </div>
   
 <div class="word_count">
@@ -92,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">380</span>
+            <span class="post-count">236</span>
         </span>
     </span>
 
@@ -116,18 +116,32 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Chapter2-拉伸和压缩"><a href="#Chapter2-拉伸和压缩" class="headerlink" title="Chapter2 拉伸和压缩"></a>Chapter2 拉伸和压缩</h1><h2 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h2><p>杆件上外力合力的<strong>作用线与轴线重合</strong>，杆件变形是沿轴线方向的伸长或缩短</p>
-<h2 id="2-2-轴向拉伸或压缩横截面上的内力与应力"><a href="#2-2-轴向拉伸或压缩横截面上的内力与应力" class="headerlink" title="2.2 轴向拉伸或压缩横截面上的内力与应力"></a>2.2 轴向拉伸或压缩横截面上的内力与应力</h2><p>因为外力F的作用线与杆件轴线重合，内力的合力$F_{N}$的作用线也必然与杆件的轴线重合，所以$F_{N}$称为<strong>轴力</strong></p>
-<p>拉伸为正，压缩为负</p>
-<p>轴力图一般用来描述轴力沿轴线变化的情况</p>
-<img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E8%BD%B4%E5%8A%9B%E5%9B%BE.png" class="">
-<p><strong>拉伸或压缩的平面假设</strong>：变形前原为平面的横截面，变形后仍保持为平面且仍垂直于轴线</p>
-<p><strong>圣维南原理</strong>：如用与外力系静力等效的合力来代替原力系，则除在原力系作用区域内有明显差别外，在离外力作用区域略远处（例如距离约等于横截面尺寸处），上述代替的影响就非常微小，可以不计</p>
-<img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E5%9C%A3%E7%BB%B4%E5%8D%97%E5%8E%9F%E7%90%86.png" class="">
-<p>由平面假设可推出，<strong>均匀分布：正应力在轴向拉伸直杆横截面上均匀分布</strong>，前提条件是杆件上外力合力的作用线与轴线重合</p>
-<script type="math/tex; mode=display">\sigma = \frac{F_{N}}{A}</script><p>当轴力和横截面面积都沿x轴变化时，</p>
-<script type="math/tex; mode=display">\sigma(x) = \frac{F_{N}(x)}{A(x)}</script><h2 id="2-3-直杆轴向拉伸或压缩斜截面上的应力"><a href="#2-3-直杆轴向拉伸或压缩斜截面上的应力" class="headerlink" title="2.3 直杆轴向拉伸或压缩斜截面上的应力"></a>2.3 直杆轴向拉伸或压缩斜截面上的应力</h2><img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E8%BD%B4%E5%8A%9B.png" class="">
-<script type="math/tex; mode=display">\begin{matrix}p_{\alpha} = \sigma \cos\alpha  \\ \sigma_{\alpha} = p_{\alpha}\cos\alpha = \sigma \cos^{2}\alpha  \\ \tau_{\alpha} = p_{\alpha}\sin\alpha = \frac{\sigma}{2}\sin2\alpha \end{matrix}</script> 
+  <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于非周期信号，需满足<strong>狄里赫利条件</strong>，并且<strong>绝对可积</strong>。</p>
+<h2 id="变换公式"><a href="#变换公式" class="headerlink" title="变换公式"></a>变换公式</h2><script type="math/tex; mode=display">
+X(f) = \int_{-\infty}^{\infty}x(t)e^{-j2\pi ft}dt</script><script type="math/tex; mode=display">
+x(t) = \int_{-\infty}^{\infty}X(f)e^{j2\pi ft}df</script><h2 id="变换性质"><a href="#变换性质" class="headerlink" title="变换性质"></a>变换性质</h2><ul>
+<li>奇偶虚实性</li>
+<li>线性叠加性</li>
+<li>对称性</li>
+<li>尺度改变性</li>
+<li><strong>时移性</strong></li>
+<li><strong>频移性</strong></li>
+<li><strong>微分性质</strong></li>
+<li><strong>积分性质</strong></li>
+<li><strong>卷积特性</strong></li>
+</ul>
+<h3 id="时移性"><a href="#时移性" class="headerlink" title="时移性"></a>时移性</h3><script type="math/tex; mode=display">
+x(t\pm t_{0})\leftrightarrow X(f)e^{\pm j2\pi f_{0}t}</script><h3 id="频移性"><a href="#频移性" class="headerlink" title="频移性"></a>频移性</h3><script type="math/tex; mode=display">
+x(t)e^{\mp j2\pi f_{0}t} \leftrightarrow X(f\pm f_{0})</script><h3 id="微分性质"><a href="#微分性质" class="headerlink" title="微分性质"></a>微分性质</h3><script type="math/tex; mode=display">
+\frac{d^{n}x(t)}{dt^{n}} \leftrightarrow (j2\pi f)^{n}X(f)</script><h3 id="积分性质"><a href="#积分性质" class="headerlink" title="积分性质"></a>积分性质</h3><script type="math/tex; mode=display">
+\int_{-\infty}^{t}x(t)dt \leftrightarrow \frac{1}{j2\pi f}X(f)</script><h3 id="卷积特性"><a href="#卷积特性" class="headerlink" title="卷积特性"></a>卷积特性</h3><script type="math/tex; mode=display">
+\begin{matrix} x_{1}(t)x_{2}(t)\leftrightarrow X_{1}(f)*X_2(f)  \\ x_{1}(t)*x_{2}(t)\leftrightarrow X_{1}(f)X_2(f) \end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求三角窗函数的傅里叶变换：</p>
+<script type="math/tex; mode=display">
+x(t)=\left\{ \begin{matrix} 1 + \frac{2}{T_{0}}t,\quad -\frac{T_{0}}{2}\le t <0 \\ 1 - \frac{2}{T_{0}}t,\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix} \right.</script><script type="math/tex; mode=display">
+\frac{dx(t)}{dt} = \left\{\begin{matrix}\frac{2}{T_{0}},\quad -\frac{T_{0}}{2}\le t < 0 \\ -\frac{2}{T_{0}},\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix}\right.</script><script type="math/tex; mode=display">
+\frac{d^{2}x(t)}{dt^{2}} = \frac{2}{T_{0}}\delta\left(t + \frac{T_{0}}{2}\right) + \frac{2}{T_{0}}\delta\left(t - \frac{T_{0}}{2}\right) - \frac{4}{T_{0}}\delta (t)</script><script type="math/tex; mode=display">
+F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{T_{0}}\left[e^{j\pi fT_{0}} + e^{-j\pi fT_{0}} - 2\right] = -\frac{8}{T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script><script type="math/tex; mode=display">
+X(f) = \frac{1}{(j2\pi f)^{2}}F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{\pi^{2}f^{2}T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right) = \frac{T_{0}}{2} \frac{\sin^{2}\left(\frac{\pi fT_{0}}{2}\right)}{\left(\frac{\pi fT_{0}}{2}\right)^{2}}= \frac{T_{0}}{2}\text{sinc}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script> 
       <!-- reward -->
       
     </div>
@@ -191,12 +205,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag">力学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/" rel="tag">材料力学</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
 
     </footer>
   </div>
@@ -204,19 +218,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/07/30/Chapter8-Diodes/" class="article-nav-link">
+      <a href="/2024/06/17/1-4-%E5%85%B8%E5%9E%8B%E4%BF%A1%E5%8F%B7/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Chapter8 Diodes
+            1.4 典型信号
           
         </div>
       </a>
     
     
-      <a href="/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/" class="article-nav-link">
+      <a href="/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Chapter1 绪论</div>
+        <div class="article-nav-title">1.2 傅里叶展开</div>
       </a>
     
   </nav>

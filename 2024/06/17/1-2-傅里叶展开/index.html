@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>测试技术 |  Norman&#39;s Blog</title>
+      <title>1.2 傅里叶展开 |  Norman&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -60,74 +60,205 @@
       
     <main class="content on">
       <section class="outer">
-  
-  <ul class="ads">
+  <article
+  id="post-1-2-傅里叶展开"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="" alt="">
-            </a>
-        </li>
-    
-</ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">测试技术</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/" class="archive-article-date">
-  <time datetime="2024-06-17T03:17:59.000Z" itemprop="datePublished">06/17</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/"
-    >1.1 信号的分类</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  1.2 傅里叶展开
+</h1>
  
 
+      
     </header>
-    
-      
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/" class="article-date">
+  <time datetime="2024-06-17T03:26:06.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a> / <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/%E5%AD%A6%E4%B9%A0/">学习</a>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
   </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">815</span>
+        </span>
+    </span>
 
-    
-    
-  </div>
-</article>
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">4 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="傅里叶展开"><a href="#傅里叶展开" class="headerlink" title="傅里叶展开"></a>傅里叶展开</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于周期信号，包括谐波信号和一般周期信号，需满足<strong>狄里赫利条件</strong>。</p>
+<h2 id="三角函数展开"><a href="#三角函数展开" class="headerlink" title="三角函数展开"></a>三角函数展开</h2><p>对于一般周期信号，可以展开为</p>
+<script type="math/tex; mode=display">
+x(t) = a_{0} + \sum_{n=1}^{\infty}(a_{n}\cos n\omega_{0}t + b_{n}\sin n\omega_{0}t)</script><script type="math/tex; mode=display">
+\begin{matrix}
+a_{0}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)dt\\
+a_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\cos}n\omega_{0}tdt \\ 
+b_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\sin}n\omega_{0}tdt \\ 
+\end{matrix}</script><p>$\omega_{0}$称为基频，$\omega_{0}=\frac{2\pi}{T_{0}}$；$n\omega_{0}$称为n次谐频。<br>画频谱图前，需要将谐波信号成分均转化为正弦成分。</p>
+<script type="math/tex; mode=display">
+x(t) = A_{0} + \sum_{n=1}^{\infty}A_{n}{\sin}(n\omega_{0}t + \varphi_{n})</script><script type="math/tex; mode=display">
+\begin{matrix}
+A_{0}=a_{0} \\ 
+A_{n}=\sqrt{a_{n}^{2} + b_{n}^{2}} \\ 
+\varphi_{n}=\arctan \frac{a_{n}}{b_{n}}
+\end{matrix}</script><h2 id="复指数展开"><a href="#复指数展开" class="headerlink" title="复指数展开"></a>复指数展开</h2><script type="math/tex; mode=display">
+x(t) = \sum_{n=-\infty}^{\infty}C_{n}e^{jn\omega_{0}t}\quad (n=0,\pm1,\pm2,\cdots)</script><script type="math/tex; mode=display">
+C_{n}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)e^{-jn\omega_{0}t}dt</script><script type="math/tex; mode=display">
+\begin{matrix}
+C_{n}=ReC_{n} + jImC_{n} = |C_{n}|e^{j\varphi_{n}}\\
+|C_{n}| = \sqrt{(ReC_{n})^{2} + (ImC_{n})^{2}}\\
+\varphi_{n} = \arctan \frac{ImC_{n}}{ReC_{n}}
+\end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求周期方波$x(t)$的频谱</p>
+<script type="math/tex; mode=display">
+x(t) = \left\{\begin{matrix}A\qquad(0\le t\le \frac{T_{0}}{2})\\ -A \qquad (-\frac{T_{0}}{2}\le t\le 0)\end{matrix}\right.</script><h3 id="应用三角函数展开"><a href="#应用三角函数展开" class="headerlink" title="应用三角函数展开"></a>应用三角函数展开</h3><script type="math/tex; mode=display">
+\left\{\begin{array}{l}a_{0} = \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Adt + \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{0}-Adt=0 \\  a_{n}=\frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\cos n\omega_{0}tdt = 0 \\ b_{n} = \frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\sin n\omega_{0}tdt = \frac{4A}{n\omega_{0}T_{0}}[1 - \cos (n\omega_{0}T_{0}/2)]=\left\{\begin{matrix}\frac{4A}{n\pi} \quad n=1,3,5,\dots\\ 0\quad n=2,4,6,\dots\end{matrix}\right.\end{array}\right.</script><script type="math/tex; mode=display">
+\therefore x(t) = \frac{4A}{\pi}\left(\sin\omega_{0}t + \frac{1}{3}\sin3\omega_{0}t + \frac{1}{5}\sin5\omega_{0}t + \cdots\right)</script><h2 id="应用复指数展开"><a href="#应用复指数展开" class="headerlink" title="应用复指数展开"></a>应用复指数展开</h2><script type="math/tex; mode=display">
+\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-jn\omega_{0}t}dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Ae^{-jn\omega_{0}t}dt + \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{0}-Ae^{-jn\omega_{0}t}dt \\= \frac{A}{2jn\pi}\left(2 - e^{jn\pi} - e^{-jn\pi}\right)=\left\{\begin{matrix}-j\frac{2A}{\pi n}\quad (n=\pm1,\pm3,\pm5,\cdots)\\ 0\quad(n=0,\pm2,\pm4,\pm6,\cdots)\end{matrix}\right.\end{array}</script><script type="math/tex; mode=display">
+\therefore x(t) = -j\frac{2A}{\pi}\sum_{n=-\infty}^{\infty}\frac{1}{n}e^{jn\omega_{0}t}(n=\pm1,\pm3,\pm5,\cdots)</script><script type="math/tex; mode=display">
+|C_{n}|=\left\{\begin{matrix}\frac{2A}{n\pi}\quad (n=\pm1,\pm3,\pm5,\cdots) \\ 0\quad (n=0,\pm2,\pm=4\pm6,\cdots)\end{matrix}\right.</script><script type="math/tex; mode=display">
+\varphi_{n}= \arctan\frac{\frac{2A}{n\pi}}{0} = \left\{\begin{matrix}\frac{\pi}{2} \quad(n<0)\\ -\frac{\pi}{2}\quad(n>0)\end{matrix}\right.</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>运用复指数展开求$x(t) = |\cos(\omega t)|$的频谱</p>
+</blockquote>
+<p>周期：$T_{0} = \frac{\pi}{\omega}$，频率：$f_{0} = \frac{\omega}{\pi}$</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-j2\pi nf_{0}t}dt = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}\frac{1}{2}\left[e^{-j\pi  f_{0}t} + e^{j\pi f_{0}t}\right]e^{-j2\pi nf_{0}t}dt  \\ =\frac{\pi}{2\omega}\int_{-\frac{\pi}{2\omega}}^{\frac{\pi}{2\omega}}e^{-j\pi(2n+1)f_{0}t} + e^{-j\pi(2n - 1)f_{0}t}dt = \end{array}\right.</script> 
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
   </div>
-  
-  
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            1.3 傅里叶变换
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">1.1 信号的分类</div>
+      </a>
+    
+  </nav>
 
   
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -268,6 +399,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
@@ -498,21 +645,6 @@
     
 
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>
