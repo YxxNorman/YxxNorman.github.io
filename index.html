@@ -173,6 +173,232 @@
     
     
     <article
+  id="post-2-3-频域分析"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/2-3-%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90/"
+    >2.3 频域分析</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/2-3-%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90/" class="article-date">
+  <time datetime="2024-06-17T05:19:50.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1><h2 id="帕斯瓦尔定理"><a href="#帕斯瓦尔定理" class="headerlink" title="帕斯瓦尔定理"></a>帕斯瓦尔定理</h2><script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}x^{2}(t)dt = \int_{-\infty}^{\infty}|X(f)|^{2}df</script><h2 id="功率谱"><a href="#功率谱" class="headerlink" title="功率谱"></a>功率谱</h2><h3 id="自功率谱密度函数"><a href="#自功率谱密度函数" class="headerlink" title="自功率谱密度函数"></a>自功率谱密度函数</h3><script type="math/tex; mode=display">
+S_{x}(f) = \int_{-\infty}^{\infty}R_{x}(\tau)e^{-j2\pi f\tau}d\tau</script><h3 id="互功率谱密度函数"><a href="#互功率谱密度函数" class="headerlink" title="互功率谱密度函数"></a>互功率谱密度函数</h3><script type="math/tex; mode=display">
+S_{xy}(f) = \int_{-\infty}^{\infty}R_{xy}(\tau)e^{-j2\pi f\tau}d\tau</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><script type="math/tex; mode=display">
+R_{x}(\tau) = \int_{-\infty}^{\infty}S_{x}(f)e^{j2\pi f\tau}df</script><script type="math/tex; mode=display">
+R_{xy} = \int_{-\infty}^{\infty}S_{xy}(f)e^{j2\pi f\tau}df</script></li>
+<li><script type="math/tex; mode=display">
+R_{x}(0) = \int_{-\infty}^{\infty}S_{x}(f)df = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x^{2}(t)dt</script></li>
+<li><script type="math/tex; mode=display">
+S_{x} = \lim_{T\to \infty}\frac{1}{T}|X(f)|^{2}</script></li>
+<li><script type="math/tex; mode=display">
+H(f) = \frac{Y(f)}{X(f)}</script><script type="math/tex; mode=display">
+S_{y} = |H(f)|^{2}S_{x}(f)</script>对于线性系统：<script type="math/tex; mode=display">
+S_{xy} = H(f)S_{x}(f)</script></li>
+</ol>
+<h3 id="相干函数"><a href="#相干函数" class="headerlink" title="相干函数"></a>相干函数</h3><script type="math/tex; mode=display">
+\gamma_{xy}^{2}(f) = \frac{|S_{xy}(f)|^{2}}{S_{x}(f)S_{y}(f)}</script><p>对于线性系统：</p>
+<script type="math/tex; mode=display">
+\gamma_{xy}^{2}(f) = 1</script><h2 id="倒谱分析"><a href="#倒谱分析" class="headerlink" title="倒谱分析"></a>倒谱分析</h2><p>功率倒频谱：</p>
+<script type="math/tex; mode=display">
+C_{p}(q) = |\mathscr{F}\{\lg S_{x}(f)\}|^{2}</script><p>幅值倒频谱：</p>
+<script type="math/tex; mode=display">
+C_{0}(q) = |\mathscr{F}\{\lg S_{x}(f)\}|</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9F%E7%8E%87%E8%B0%B1/" rel="tag">功率谱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B8%95%E6%96%AF%E7%93%A6%E5%B0%94%E5%AE%9A%E7%90%86/" rel="tag">帕斯瓦尔定理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-2-2-相关性分析"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/"
+    >2.2 相关性分析</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/" class="article-date">
+  <time datetime="2024-06-17T05:08:44.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="信号的相关分析"><a href="#信号的相关分析" class="headerlink" title="信号的相关分析"></a>信号的相关分析</h1><h2 id="自相关分析"><a href="#自相关分析" class="headerlink" title="自相关分析"></a>自相关分析</h2><h3 id="自相关函数"><a href="#自相关函数" class="headerlink" title="自相关函数"></a>自相关函数</h3><p>==周期信号==的自相关函数：</p>
+<script type="math/tex; mode=display">
+R_{x}(\tau) = \frac{1}{T}\int_{0}^{T}x(t)x(t + \tau)dt</script><p>==非周期信号==的自相关函数：</p>
+<script type="math/tex; mode=display">
+R_{x}(t) = \int_{-\infty}^{\infty}x(t)x(t + \tau)dt</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>对称性<script type="math/tex; mode=display">
+R_{x}(\tau) = R_{x}(-\tau)</script></li>
+<li>最大值<script type="math/tex; mode=display">
+R_{x}(0) = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x^{2}(t)dt = \psi^{2}(x) = \sigma_{x}^{2} + \mu_{x}^{2}</script></li>
+<li>相关系数与自相关函数关系<script type="math/tex; mode=display">
+\rho_{x}(\tau) = \frac{R_{x}(\tau) - \mu_{x}^{2}}{\sigma_{x}^{2}}</script></li>
+<li>限制范围<script type="math/tex; mode=display">
+\mu_{x}^{2} - \sigma_{x}^{2} \le R_{x}(\tau) \le \mu_{x}^{2} + \sigma_{x}^{2}</script></li>
+<li>极限值<script type="math/tex; mode=display">
+R_{x}(\tau \to \infty) \to \mu_{x}^{2}</script></li>
+<li>周期函数同频率<script type="math/tex; mode=display">
+R_{x}(\tau + nT) = R_{x}(\tau)</script><img src="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/AutocorrelationFunction.png" class="">
+</li>
+</ol>
+<h3 id="谐波函数的自相关函数"><a href="#谐波函数的自相关函数" class="headerlink" title="谐波函数的自相关函数"></a>谐波函数的自相关函数</h3><script type="math/tex; mode=display">
+\left.\begin{matrix}x(t)=x_{0}\sin(\omega t + \varphi)\\x(t)=x_{0}\cos(\omega t + \varphi)\end{matrix}\right\}\Rightarrow R_{x}(\tau) = \frac{x_{0}^{2}}{2}\cos\omega \tau</script><h2 id="互相关分析"><a href="#互相关分析" class="headerlink" title="互相关分析"></a>互相关分析</h2><h3 id="互相关函数"><a href="#互相关函数" class="headerlink" title="互相关函数"></a>互相关函数</h3><script type="math/tex; mode=display">
+R_{xy}(\tau) = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x(t)y(t + \tau)dt</script><h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><script type="math/tex; mode=display">
+R_{xy}(\tau) = R_{yx}(-\tau)</script></li>
+<li>最大值<script type="math/tex; mode=display">
+R_{xy}(\tau_{0})= \mu_{x}\mu_{y}+\sigma_{x}\sigma_{y}</script></li>
+<li>限制范围<script type="math/tex; mode=display">
+\mu_{x}\mu_{y} - \sigma_{x}\sigma_{y} \le R_{xy}(\tau) \le \mu_{x}\mu_{y} + \sigma_{x}\sigma_{y}</script></li>
+<li>两个不同频率的周期信号，互相关函数为0</li>
+<li>两个统计独立的随机信号，当均值为0时，互相关函数为0</li>
+<li>两个同频率的正余弦函数相关</li>
+<li>周期信号与随机信号的互相关函数为0<img src="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/CrosscorrelationFunction.png" class="">
+</li>
+</ol>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/" rel="tag">相关性分析</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-2-1-特征值"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/2-1-%E7%89%B9%E5%BE%81%E5%80%BC/"
+    >2.1 特征值</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/2-1-%E7%89%B9%E5%BE%81%E5%80%BC/" class="article-date">
+  <time datetime="2024-06-17T05:05:57.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h1><h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><script type="math/tex; mode=display">
+\mu_{x}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}x_{n}</script><h2 id="均方值"><a href="#均方值" class="headerlink" title="均方值"></a>均方值</h2><script type="math/tex; mode=display">
+\psi_{x}^{2} =\lim_{N\to \infty}\frac{1}{N}\sum\limits _{n=1}^{N}x_{n}^{2} = R_{x}(0) = \sigma_{x}^{2} + \mu_{x}^{2}</script><h2 id="均方根值"><a href="#均方根值" class="headerlink" title="均方根值"></a>均方根值</h2><script type="math/tex; mode=display">
+x_{rms}=\sqrt{\psi_{x}^{2}}</script><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><script type="math/tex; mode=display">
+\sigma_{x}^{2}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}(x_{n} - \mu_{x})^{2}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>求$x(t) = 3\sin(5t) - 5\cos(10t)$的均方根$x_{rms} = \sqrt{\psi_{x}^{2}}$</p>
+</blockquote>
+<script type="math/tex; mode=display">
+R_{x}(\tau) = \frac{3^{2}}{2}\cos(5\tau) + \frac{5^{2}}{2}\cos(10\tau) = 4.5\cos(5\tau) + 12.5\cos(10\tau)</script><script type="math/tex; mode=display">
+\psi_{x}^{2} = R_{x}(0) = 17</script><script type="math/tex; mode=display">
+x_{rms} = \sqrt{\psi_{x}^{2}} = \sqrt{17}</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-1-4-典型信号"
   class="article article-type-post"
   itemscope
@@ -1379,355 +1605,6 @@ x(t) = \left\{\begin{matrix}A\qquad(0\le t\le \frac{T_{0}}{2})\\ -A \qquad (-\fr
 </article>
 
     
-    <article
-  id="post-01-Git入门教程"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/"
-    >01 Git入门教程</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/31/01-Git%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2023-07-31T09:23:23.000Z" itemprop="datePublished">2023-07-31</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Git入门教程"><a href="#Git入门教程" class="headerlink" title="Git入门教程"></a>Git入门教程</h1><h2 id="初始化设置"><a href="#初始化设置" class="headerlink" title="初始化设置"></a>初始化设置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your name&quot;    # 配置用户名</span><br><span class="line">$ git config --global user.email &quot;norman@qq.com&quot;    # 配置邮箱</span><br></pre></td></tr></table></figure>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建仓库有两种方法，一种方法是在本地直接创建仓库，另一种方法是克隆远程仓库。</p>
-<ul>
-<li>本地创建仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init &lt;project-name&gt;    # &lt;project-name&gt;为空则在当前文件夹创建</span><br></pre></td></tr></table></figure></li>
-<li>克隆远程仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="工作区域"><a href="#工作区域" class="headerlink" title="工作区域"></a>工作区域</h2>Git 分为四个区域：</li>
-<li>工作区（Working Directory）：就是在电脑⾥能实际看到的⽬录。</li>
-<li>暂存区（Stage/Index）：暂存区也叫索引，⽤来临时存放未提交的内容，⼀般在.git⽬录下的index中。</li>
-<li>本地仓库（Repository）：Git在本地的版本库，仓库信息存储在.git这个隐藏⽬录中。</li>
-<li>远程仓库（Remote Repository）：托管在远程服务器上的仓库。常⽤的有GitHub、GitLab、Gitee。<br>文件状态：</li>
-<li>main/master : 默认主分支</li>
-<li>Origin : 默认远程仓库</li>
-<li>HEAD : 当前版本指针</li>
-<li>HEAD^ : 上一个版本</li>
-<li>HEAD~ : 上四个版本<h2 id="添加与提交文件"><a href="#添加与提交文件" class="headerlink" title="添加与提交文件"></a>添加与提交文件</h2>在工作区新建的文件需要先添加至暂存区，再进行提交至本地仓库。<br>添加至暂存区：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;filename&gt;</span><br><span class="line">$ git add .    # 添加所有文件</span><br></pre></td></tr></table></figure>
-提交至本地仓库：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;message&quot;    # message是填写每次提交的信息</span><br></pre></td></tr></table></figure>
-因此，文件有三种不同状态：</li>
-<li>未跟踪（Untrack）：新建文件的状态</li>
-<li>未修改（Unmodified）：被Git管理起来，但是未被修改的文件</li>
-<li>已修改（Modified）：已经修改过的文件，还未暂存</li>
-<li>已暂存（Staged）：修改后已保存到暂存区的文件</li>
-<li>已提交（Committed）：已经提交到本地仓库的文件<br>查看仓库的状态：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
-查看仓库的提交记录：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br><span class="line">$ git log --oneline    # 显示简洁模式</span><br></pre></td></tr></table></figure>
-<h2 id="撤销和恢复文件"><a href="#撤销和恢复文件" class="headerlink" title="撤销和恢复文件"></a>撤销和恢复文件</h2>移动文件位置：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mv &lt;file&gt; &lt;new-file&gt;</span><br></pre></td></tr></table></figure>
-删除文件：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;file&gt;    # 删除工作区和暂存区的文件</span><br><span class="line">$ git rm -f &lt;file&gt;    # 强制删除工作区和暂存区已修改过的文件</span><br><span class="line">$ git rm --cached &lt;file&gt;    # 删除暂存区的文件，但保留工作区</span><br></pre></td></tr></table></figure>
-重置当前HEAD分支到某一提交版本，并且删除之后的所有提交：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --soft &lt;commit-id&gt;    # 保留工作区和暂存区文件</span><br><span class="line">$ git reset --hard &lt;commit-id&gt;    # 重置工作区和暂存区文件</span><br><span class="line">$ git reset --mixed &lt;commit-id&gt;   # 重置暂存区文件，保留工作区</span><br></pre></td></tr></table></figure>
-<h2 id="比较差异"><a href="#比较差异" class="headerlink" title="比较差异"></a>比较差异</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git diff    # 比较工作区与暂存区的差异</span><br><span class="line">$ git diff HEAD    # 比较工作区+暂存区与本地仓库的差异</span><br><span class="line">$ git diff HEAD --cached/--staged    # 比较暂存区与本地仓库的差异</span><br><span class="line">$ git diff &lt;commit-id&gt; &lt;commit-id&gt;   # 比较提交版本之间的差异</span><br><span class="line">$ git diff HEAD~ HEAD    # 比较上一个提交版本与当前版本之间的差异</span><br><span class="line">$ git diff &lt;branch_name&gt; &lt;branch_name&gt;  # 比较分支之间的差异</span><br></pre></td></tr></table></figure>
-<h2 id="gitignore忽略文件"><a href="#gitignore忽略文件" class="headerlink" title=".gitignore忽略文件"></a>.gitignore忽略文件</h2>.gitignore文件的匹配规则：</li>
-<li>空行或者以<code>#</code>开头的行会被Git忽略。一般空行用于可读性的分隔，<code>#</code>一般用作注释</li>
-<li>星号<code>*</code>通配任意个字符</li>
-<li>问号<code>?</code>匹配单个字符</li>
-<li>中括号<code>[]</code>表示匹配列表中的单个字符，比如：<code>[abc]</code>表示a/b/c</li>
-<li>两个星号<code>**</code>表示匹配任意的中间目录</li>
-<li>中括号可以使用短中线连接，比如：<code>[0-9]</code>表示任意一位数字，<code>[a-z]</code>表示任意一位小写字母感叹号</li>
-<li><code>!</code>表示取反</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-计算方法考点"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/"
-    >计算方法考点</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E8%80%83%E7%82%B9/" class="article-date">
-  <time datetime="2023-07-30T07:32:51.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">计算方法</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h1><h2 id="1-有效数字"><a href="#1-有效数字" class="headerlink" title="1. 有效数字"></a>1. 有效数字</h2><p>由变量的有效数字求出函数的有效数字</p>
-<h3 id="对于一元函数"><a href="#对于一元函数" class="headerlink" title="对于一元函数"></a>对于一元函数</h3><script type="math/tex; mode=display">e(y) = f'(x)(x^* - x) = f'(x)e(x)</script><h3 id="对于二元函数"><a href="#对于二元函数" class="headerlink" title="对于二元函数"></a>对于二元函数</h3><script type="math/tex; mode=display">e(y) = \frac{\partial f(x_1, x_2)}{\partial x_1}e(x_1) + \frac{\partial f(x_1, x_2)}{\partial x_2}e(x_2)</script><h2 id="2-方程求根"><a href="#2-方程求根" class="headerlink" title="2. 方程求根"></a>2. 方程求根</h2><h3 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h3><script type="math/tex; mode=display">x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}</script><h3 id="牛顿迭代大范围收敛"><a href="#牛顿迭代大范围收敛" class="headerlink" title="牛顿迭代大范围收敛"></a>牛顿迭代大范围收敛</h3><ol>
-<li><script type="math/tex; mode=display">f(a)f(b)<0</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b],f'(x) \ne 0</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b],f''(x)\text{保号}</script></li>
-<li><script type="math/tex; mode=display">a - \frac{f(a)}{f'(a)} \le b, b - \frac{f(b)}{f'(b)} \ge a</script></li>
-</ol>
-<p>满足以上条件牛顿迭代格式在$[a, b]$收敛</p>
-<h3 id="不动点迭代法"><a href="#不动点迭代法" class="headerlink" title="不动点迭代法"></a>不动点迭代法</h3><script type="math/tex; mode=display">x_{k+1} = \varphi(x_k)</script><p>收敛条件：</p>
-<ol>
-<li><script type="math/tex; mode=display">x \in [a, b], \varphi(x) \in [a, b]</script></li>
-<li><script type="math/tex; mode=display">x \in [a, b], |\varphi'(x)| \le L < 1</script></li>
-</ol>
-<h2 id="3-线性方程组解法"><a href="#3-线性方程组解法" class="headerlink" title="3. 线性方程组解法"></a>3. 线性方程组解法</h2><h3 id="列主元高斯消去法"><a href="#列主元高斯消去法" class="headerlink" title="列主元高斯消去法"></a>列主元高斯消去法</h3><h3 id="雅可比迭代法-amp-高斯赛德尔迭代法"><a href="#雅可比迭代法-amp-高斯赛德尔迭代法" class="headerlink" title="雅可比迭代法&amp;高斯赛德尔迭代法"></a>雅可比迭代法&amp;高斯赛德尔迭代法</h3><ol>
-<li><p>雅可比迭代格式</p>
-<script type="math/tex; mode=display">
-\left \{\begin{matrix}
-x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
-x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
-\vdots \\
-x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k)} - a_{n2}x_2^{(k)} - \cdots - a_{n,n-1}x_{n-1}^{(k)} + b_n)
-\end{matrix}\right.</script><p>特征方程：</p>
-<script type="math/tex; mode=display">
-\begin{vmatrix}
-\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
-a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
-\vdots &\vdots &\ddots &\vdots\\
-a_{n1} &a_{n2} &\cdots &\lambda a_{nn}
-\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
-</li>
-<li><p>高斯赛德尔迭代法</p>
-<script type="math/tex; mode=display">
-\left \{\begin{matrix}
-x_1^{(k+1)} = \frac{1}{a_{11}}(-a_{12}x_2^{(k)} - a_{13}x_3^{(k)} - \cdots - a_{1n}x_n^{(k)} + b_1)\\
-x_2^{(k+1)} = \frac{1}{a_{22}}(-a_{21}x_1^{(k+1)} - a_{23}x_3^{(k)} - \cdots - a_{2n}x_n^{(k)} + b_2)\\
-\vdots \\
-x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots - a_{n,n-1}x_{n-1}^{(k+1)} + b_n)
-\end{matrix}\right.</script><p>特征方程：</p>
-<script type="math/tex; mode=display">
-\begin{vmatrix}
-\lambda a_{11} &a_{12} &\cdots &a_{1n}\\
-\lambda a_{21} &\lambda a_{22} &\cdots &a_{2n}\\
-\vdots &\vdots &\ddots &\vdots\\
-\lambda a_{n1} &\lambda a_{n2} &\cdots &\lambda a_{nn}
-\end{vmatrix}=0</script><p>$\lambda &lt; 1$该迭代格式收敛</p>
-</li>
-</ol>
-<blockquote>
-<p>对于严格对角占优矩阵，雅可比迭代法、高斯赛德尔迭代法均收敛<br>对于对称正定矩阵，高斯赛德尔迭代法收敛</p>
-</blockquote>
-<h2 id="4-插值"><a href="#4-插值" class="headerlink" title="4. 插值"></a>4. 插值</h2><h3 id="拉格朗日插值"><a href="#拉格朗日插值" class="headerlink" title="拉格朗日插值"></a>拉格朗日插值</h3><h4 id="误差"><a href="#误差" class="headerlink" title="误差"></a>误差</h4><script type="math/tex; mode=display">R_{n}(x) = \frac{f^{n+1}(\xi)}{(n+1)!}W_{n+1}(x)</script><h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><script type="math/tex; mode=display">f(x) = f(x_{0}) + f[x_{0}, x_{1}](x-x_{0}) + \cdots + f[x_{0}, \cdots, x_{n}](x-x_{0})(x-x_{1})\cdots(x-x_{n-1})</script><h4 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>k</th>
-<th>$x_{k}$</th>
-<th>$f(x_{k})$</th>
-<th>$f[x_{k}, x_{k+1}]$</th>
-<th>$f[x_{k}, x_{k+1}, x_{k+2}]$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>$x_{0}$</td>
-<td>$f(x_0)$</td>
-<td>$\frac{f(x_{1}) - f(x_{0})}{1-0}$</td>
-<td>$\frac{f[x_{1}, x_{2}] - f[x_{0}, x_{1}]}{2-0}$</td>
-</tr>
-<tr>
-<td>1</td>
-<td>$x_{1}$</td>
-<td>$f(x_1)$</td>
-<td>$\frac{f(x_{2}) - f(x_{1})}{2-1}$</td>
-<td>$\frac{f[x_{2}, x_{3}] - f[x_{1}, x_{2}]}{3-1}$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<script type="math/tex; mode=display">f[x_{0}, \cdots, x_{k}] = \frac{f^{(k)}(\eta)}{k!}</script><h3 id="三次样条插值"><a href="#三次样条插值" class="headerlink" title="三次样条插值"></a>三次样条插值</h3><h4 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h4><ol>
-<li><script type="math/tex; mode=display">\left \{\begin{matrix} S(x_{j} - 0) = S(x_{j} + 0)\\ S'(x_{j} - 0) = S'(x_{j} + 0) &j = 1, 2, \cdots, n-1\\ S''(x_{j} - 0) = S''(x_{j} + 0)\end{matrix}\right.</script></li>
-<li><script type="math/tex; mode=display">S(x_{j}) = f(x_{j})\quad j = 0, 1, \cdots, n</script></li>
-<li>(1) <script type="math/tex">S'(x_{0}) = f'(x_{0}), \quad S'(x_{n}) = f'(x_{n})</script><br>(2)<script type="math/tex">S''(x_{0}) = f''(x_{0}), \quad S''(x_{n}) = f''(x_{n})</script></li>
-</ol>
-<h2 id="5-曲线拟合"><a href="#5-曲线拟合" class="headerlink" title="5. 曲线拟合"></a>5. 曲线拟合</h2><h3 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h3><script type="math/tex; mode=display">\begin{bmatrix}(\varphi_{0},\varphi_{0}) &(\varphi_{1},\varphi_{0}) &\cdots &(\varphi_{m},\varphi_{0}) \\ (\varphi_{0},\varphi_{1}) &(\varphi_{1},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{1}) \\ \vdots &\vdots &\ddots &\vdots \\ (\varphi_{m},\varphi_{1}) &(\varphi_{m},\varphi_{1}) &\cdots &(\varphi_{m},\varphi_{m})\end{bmatrix} \begin{bmatrix}a_{0} \\ a_{1} \\ \vdots \\ a_{m} \end{bmatrix} = \begin{bmatrix}(y, \varphi_{0}) \\ (y, \varphi_{1}) \\ \vdots \\ (y, \varphi_{m}) \end{bmatrix}</script><h3 id="超定方程组的最小二乘解"><a href="#超定方程组的最小二乘解" class="headerlink" title="超定方程组的最小二乘解"></a>超定方程组的最小二乘解</h3><script type="math/tex; mode=display">Ax = b \Longrightarrow A^{T}Ax = A^{T}b</script><h2 id="6-数值积分"><a href="#6-数值积分" class="headerlink" title="6. 数值积分"></a>6. 数值积分</h2><h3 id="插值型求积公式"><a href="#插值型求积公式" class="headerlink" title="插值型求积公式"></a>插值型求积公式</h3><ol>
-<li><p>梯形求积公式</p>
-<script type="math/tex; mode=display">T(f) = \int _{a}^{b}f(x)dx = \frac{b-a}{2}(f(a)+f(b))</script></li>
-<li><p>辛普森求积公式</p>
-<script type="math/tex; mode=display">S(f) = \int_{a}^{b}f(x)dx = \frac{b-a}{6}(f(a)+4f(\frac{a+b}{2})+f(b))</script></li>
-<li><p>科斯特公式</p>
-</li>
-</ol>
-<h3 id="复化求积公式"><a href="#复化求积公式" class="headerlink" title="复化求积公式"></a>复化求积公式</h3><ol>
-<li><p>复化梯形公式</p>
-<script type="math/tex; mode=display">T_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits _{i=0}^{n-1} \frac{h}{2}[f(x_{i})+f(x_{i+1})]</script></li>
-<li><p>复化辛普森公式</p>
-<script type="math/tex; mode=display">S_{n}(f) = \int_{a}^{b}f(x)dx = \sum\limits_{i=0}^{n-1} \frac{h}{6}[f(x_{i})+4f(x_{i+ \frac{1}{2}})+f(x_{i+1})]</script></li>
-<li><p>复化科斯特公式</p>
-</li>
-<li><p>联系</p>
-</li>
-</ol>
-<script type="math/tex; mode=display">T_{2n}(f) = \frac{1}{2}T_{n}(f) + \frac{h}{2}\sum\limits_{i=0}^{n-1}f(x_{i+ \frac{1}{2}})</script><script type="math/tex; mode=display">S_{2n}(f) = \frac{4}{3}T_{2n}(f) - \frac{1}{3}T_{n}(f)</script><script type="math/tex; mode=display">C_{2n}(f) = \frac{16}{15}S_{2n}(f) - \frac{1}{15}S_{n}(f)</script><script type="math/tex; mode=display">R_{2n}(f) = \frac{64}{63}C_{2n}(f) - \frac{1}{63}C_{n}(f)</script><h2 id="7-数值微分"><a href="#7-数值微分" class="headerlink" title="7. 数值微分"></a>7. 数值微分</h2><h3 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h3><ol>
-<li><p>前进欧拉公式</p>
-<script type="math/tex; mode=display">\begin{matrix} y_{i+1} = y_{i} + hf(x_{i}, y_{i}) \\ R_{i+1} = y(x_{i+1}) - y(x_{i}) - hf(x_{i}, y(x_{i})) = \frac{1}{2}h^{2}y''(\xi_{i}) \end{matrix}</script></li>
-<li><p>后退欧拉公式</p>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + hf(x_{i+1}, y_{i+1})</script></li>
-<li><p>梯形公式</p>
-<script type="math/tex; mode=display">y_{i+1} = y_{i} + \frac{h}{2}\left[f(x_{i}, y_{i})+f(x_{i+1}, y_{i+1})\right]</script></li>
-<li><p>改进欧拉公式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix}y_{i+1}^{*} = y_{i} + hf(x_{i}, y_{i}) \\ y_{i+1} = y_{i} + \frac{h}{2} \left[f(x_{i}, y_{i}) + f(x_{i+1}, y_{i+1}^{*})\right] \end{matrix}\right.</script></li>
-<li><p>误差</p>
-<script type="math/tex; mode=display">R_{i+1} = \left[\frac{-1}{12}y'''(\xi_{i}) + \frac{1}{4}\frac{\partial f(x_{i+1}, \eta_{i})}{\partial y}y''(\xi_{i})\right]h^{3}</script></li>
-</ol>
-<h3 id="阿当姆斯公式"><a href="#阿当姆斯公式" class="headerlink" title="阿当姆斯公式"></a>阿当姆斯公式</h3><ol>
-<li><p>内插公式</p>
-</li>
-<li><p>外推公式</p>
-</li>
-<li><p>预测校正阿当姆斯公式</p>
-</li>
-<li><p><strong>误差</strong></p>
-</li>
-</ol>
-<h2 id="8-偏微分"><a href="#8-偏微分" class="headerlink" title="8. 偏微分"></a>8. 偏微分</h2><h3 id="椭圆方程"><a href="#椭圆方程" class="headerlink" title="椭圆方程"></a>椭圆方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}-\left(\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}\right)= f(x, y) \\ u = \varphi(x, y)\end{matrix}\right.</script><p>五点差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix}-\left[\frac{1}{h_{1}^{2}}\left(u_{i+1,j} - 2u_{i,j} + u_{i-1,j}\right) + \frac{1}{h_{2}^{2}}(u_{i,j+1} -2u_{i,j} +u_{i,j-1})\right] = f(x_{i}, y_{j}) \\ u_{i,j} = \varphi(x_{i}, y_{j})\end{matrix}\right.</script><h3 id="抛物方程"><a href="#抛物方程" class="headerlink" title="抛物方程"></a>抛物方程</h3><script type="math/tex; mode=display">\left \{\begin{matrix}\frac{\partial u}{\partial t} - a\frac{\partial^{2}u}{\partial x^{2}} = f(x, t) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向前欧拉格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>向后欧拉格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k} - u_{i}^{k-1}) - \frac{a}{h^{2}}(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k}) = f(x_{i}, t_{k}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><p>中心差商格式</p>
-<script type="math/tex; mode=display">\left \{\begin{matrix} \frac{1}{\tau}(u_{i}^{k+1} - u_{i}^{k}) - \frac{2a}{h^{2}}\left[(u_{i+1}^{k+1}-2u_{i}^{k+1}+ u_{i-1}^{k+1})+(u_{i+1}^{k}-2u_{i}^{k}+ u_{i-1}^{k})\right] = f(x_{i}, t_{k+ \frac{1}{2}}) \\ u_{i}^{0} = \varphi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k})\end{matrix}\right.</script><h3 id="双曲方程"><a href="#双曲方程" class="headerlink" title="双曲方程"></a>双曲方程</h3><script type="math/tex; mode=display">\left \{ \begin{matrix}\frac{\partial^{2}u}{\partial t^{2}} - c^{2}\frac{\partial^{2}u}{\partial x^{2}} =f(x,t) \\ u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>显示差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{0} - 2u_{i}^{0} + u_{i-1}^{0}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left(u_{i+1}^{k} -2u_{i}^{k} +u_{i-1}^{k}\right) = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script><p>隐式差分格式</p>
-<script type="math/tex; mode=display">\left \{ \begin{matrix} \frac{2}{\tau} \left[\frac{u_{i}^{1} - u_{i}^{0}}{\tau} - \psi(x_{i})\right] - \frac{c^{2}}{h^{2}}(u_{i+1}^{1} - 2u_{i}^{1} + u_{i-1}^{1}) = f(x_{i}, t_{0})  \\ \frac{1}{\tau^{2}}\left(u_{i}^{k+1} - 2u_{i}^{k} + u_{i}^{k-1}\right) - \frac{c^{2}}{h^{2}}\left[(u_{i+1}^{k+1} -2u_{i}^{k+1} +u_{i-1}^{k+1})+(u_{i+1}^{k-1} -2u_{i}^{k-1} +u_{i-1}^{k-1})\right] = f(x_{i}, t_{k}) \\u_{i}^{0} = \varphi(x_{i}), \quad \frac{\partial u}{\partial t}(x_{i}, 0) = \psi(x_{i}) \\ u_{0}^{k} = \alpha(t_{k}), \quad u_{m}^{k} = \beta(t_{k}) \end{matrix}\right.</script> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" rel="tag">数值分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-Chapter8-Diodes"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/Chapter8-Diodes/"
-    >Chapter8 Diodes</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/Chapter8-Diodes/" class="article-date">
-  <time datetime="2023-07-30T03:50:09.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E7%94%B5/">模电</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Chapter8-Diodes"><a href="#Chapter8-Diodes" class="headerlink" title="Chapter8 Diodes"></a>Chapter8 Diodes</h1><h2 id="8-1-二极管导电原理"><a href="#8-1-二极管导电原理" class="headerlink" title="8.1 二极管导电原理"></a>8.1 二极管导电原理</h2><h3 id="8-1-1-PN结（PN-junction）"><a href="#8-1-1-PN结（PN-junction）" class="headerlink" title="8.1.1 PN结（PN junction）"></a>8.1.1 PN结（PN junction）</h3><p>P型半导体（positive）：掺杂了一些硼（B）元素，使半导体存在许多空穴，呈正电性</p>
-<p>N型半导体（negative）：掺杂了一些磷（P）元素，使半导体存在许多自由电子，呈负电性</p>
-<p>PN结拼接在一起，自由电子和空穴就会自发的进行<strong>扩散运动</strong>，从而由于电子的移动，会在PN结内部产生内电场，阻碍自由电子和空穴的扩散运动。</p>
-<p>而P型半导体中存在的极少量自由电子，N型半导体中存在的极少量空穴能够在内电场的作用下发生<strong>漂移运动</strong>，电子向N型半导体移动，空穴向N型半导体移动。</p>
-<h3 id="8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）"><a href="#8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）" class="headerlink" title="8.1.2 二极管的伏安特性（Volt-Ampere characteristic）"></a>8.1.2 二极管的伏安特性（Volt-Ampere characteristic）</h3><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png" class="" title="二极管曲线">
-<h3 id="8-1-3-二极管的三种模型"><a href="#8-1-3-二极管的三种模型" class="headerlink" title="8.1.3 二极管的三种模型"></a>8.1.3 二极管的三种模型</h3><ol>
-<li><p>实际模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E5%AE%9E%E9%99%85%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-<li><p>理想模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E7%90%86%E6%83%B3%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-<li><p>恒压降低模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E6%81%92%E5%8E%8B%E9%99%8D%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-</ol>
-<h2 id="8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）"><a href="#8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）" class="headerlink" title="8.2 二极管的图解法——负载线分析法（Load-line analysis method）"></a>8.2 二极管的图解法——负载线分析法（Load-line analysis method）</h2><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%94%B5%E8%B7%AF%E5%9B%BE.png" class="">
-<script type="math/tex; mode=display">V_{SS} = Ri_{D} + v_{D}</script><img src="/2023/07/30/Chapter8-Diodes/%E8%B4%9F%E8%BD%BD%E7%BA%BF%E5%88%86%E6%9E%90%E6%B3%95.png" class="">
-<h2 id="8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）"><a href="#8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）" class="headerlink" title="8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）"></a>8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）</h2><ol>
-<li>假设每个二极管的状态为开路或短路（on&amp;off）,即 n 个二极管开路有 $2^{n}$ 种可能的二极管状态组合</li>
-<li>分析电路以确定流过假设导通（on）的二极管的电流和假设关闭（off）的二极管两端的电压</li>
-<li>检查结果是否与每个二极管的假定状态一致。对于假定为<mark>导通</mark>的二极管，<mark>电流</mark>必须沿<mark>正向</mark>流动；假定为<mark>断开</mark>的二极管两端的<mark>电压</mark>在<mark>阴极处必须为正</mark>，即反向偏置</li>
-<li>如果结果与假定状态一致，则分析完成；否则返回步骤1并选择不同的二极管状态组合</li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A8%A1%E7%94%B5/" rel="tag">模电</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
   </article>
   
 
@@ -2109,6 +1986,21 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
     
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 
 </html>

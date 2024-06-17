@@ -1321,4 +1321,113 @@ X(f) = \frac{1}{(j2\pi f)^{2}}F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{
         <tag>傅里叶变换</tag>
       </tags>
   </entry>
+  <entry>
+    <title>2.1 特征值</title>
+    <url>/2024/06/17/2-1-%E7%89%B9%E5%BE%81%E5%80%BC/</url>
+    <content><![CDATA[<h1 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h1><h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><script type="math/tex; mode=display">
+\mu_{x}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}x_{n}</script><h2 id="均方值"><a href="#均方值" class="headerlink" title="均方值"></a>均方值</h2><script type="math/tex; mode=display">
+\psi_{x}^{2} =\lim_{N\to \infty}\frac{1}{N}\sum\limits _{n=1}^{N}x_{n}^{2} = R_{x}(0) = \sigma_{x}^{2} + \mu_{x}^{2}</script><h2 id="均方根值"><a href="#均方根值" class="headerlink" title="均方根值"></a>均方根值</h2><script type="math/tex; mode=display">
+x_{rms}=\sqrt{\psi_{x}^{2}}</script><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><script type="math/tex; mode=display">
+\sigma_{x}^{2}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}(x_{n} - \mu_{x})^{2}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>求$x(t) = 3\sin(5t) - 5\cos(10t)$的均方根$x_{rms} = \sqrt{\psi_{x}^{2}}$</p>
+</blockquote>
+<script type="math/tex; mode=display">
+R_{x}(\tau) = \frac{3^{2}}{2}\cos(5\tau) + \frac{5^{2}}{2}\cos(10\tau) = 4.5\cos(5\tau) + 12.5\cos(10\tau)</script><script type="math/tex; mode=display">
+\psi_{x}^{2} = R_{x}(0) = 17</script><script type="math/tex; mode=display">
+x_{rms} = \sqrt{\psi_{x}^{2}} = \sqrt{17}</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.2 相关性分析</title>
+    <url>/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="信号的相关分析"><a href="#信号的相关分析" class="headerlink" title="信号的相关分析"></a>信号的相关分析</h1><h2 id="自相关分析"><a href="#自相关分析" class="headerlink" title="自相关分析"></a>自相关分析</h2><h3 id="自相关函数"><a href="#自相关函数" class="headerlink" title="自相关函数"></a>自相关函数</h3><p>==周期信号==的自相关函数：</p>
+<script type="math/tex; mode=display">
+R_{x}(\tau) = \frac{1}{T}\int_{0}^{T}x(t)x(t + \tau)dt</script><p>==非周期信号==的自相关函数：</p>
+<script type="math/tex; mode=display">
+R_{x}(t) = \int_{-\infty}^{\infty}x(t)x(t + \tau)dt</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li>对称性<script type="math/tex; mode=display">
+R_{x}(\tau) = R_{x}(-\tau)</script></li>
+<li>最大值<script type="math/tex; mode=display">
+R_{x}(0) = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x^{2}(t)dt = \psi^{2}(x) = \sigma_{x}^{2} + \mu_{x}^{2}</script></li>
+<li>相关系数与自相关函数关系<script type="math/tex; mode=display">
+\rho_{x}(\tau) = \frac{R_{x}(\tau) - \mu_{x}^{2}}{\sigma_{x}^{2}}</script></li>
+<li>限制范围<script type="math/tex; mode=display">
+\mu_{x}^{2} - \sigma_{x}^{2} \le R_{x}(\tau) \le \mu_{x}^{2} + \sigma_{x}^{2}</script></li>
+<li>极限值<script type="math/tex; mode=display">
+R_{x}(\tau \to \infty) \to \mu_{x}^{2}</script></li>
+<li>周期函数同频率<script type="math/tex; mode=display">
+R_{x}(\tau + nT) = R_{x}(\tau)</script><img src="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/AutocorrelationFunction.png" class="">
+</li>
+</ol>
+<h3 id="谐波函数的自相关函数"><a href="#谐波函数的自相关函数" class="headerlink" title="谐波函数的自相关函数"></a>谐波函数的自相关函数</h3><script type="math/tex; mode=display">
+\left.\begin{matrix}x(t)=x_{0}\sin(\omega t + \varphi)\\x(t)=x_{0}\cos(\omega t + \varphi)\end{matrix}\right\}\Rightarrow R_{x}(\tau) = \frac{x_{0}^{2}}{2}\cos\omega \tau</script><h2 id="互相关分析"><a href="#互相关分析" class="headerlink" title="互相关分析"></a>互相关分析</h2><h3 id="互相关函数"><a href="#互相关函数" class="headerlink" title="互相关函数"></a>互相关函数</h3><script type="math/tex; mode=display">
+R_{xy}(\tau) = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x(t)y(t + \tau)dt</script><h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><script type="math/tex; mode=display">
+R_{xy}(\tau) = R_{yx}(-\tau)</script></li>
+<li>最大值<script type="math/tex; mode=display">
+R_{xy}(\tau_{0})= \mu_{x}\mu_{y}+\sigma_{x}\sigma_{y}</script></li>
+<li>限制范围<script type="math/tex; mode=display">
+\mu_{x}\mu_{y} - \sigma_{x}\sigma_{y} \le R_{xy}(\tau) \le \mu_{x}\mu_{y} + \sigma_{x}\sigma_{y}</script></li>
+<li>两个不同频率的周期信号，互相关函数为0</li>
+<li>两个统计独立的随机信号，当均值为0时，互相关函数为0</li>
+<li>两个同频率的正余弦函数相关</li>
+<li>周期信号与随机信号的互相关函数为0<img src="/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/CrosscorrelationFunction.png" class="">
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+        <tag>相关性分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.3 频域分析</title>
+    <url>/2024/06/17/2-3-%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1><h2 id="帕斯瓦尔定理"><a href="#帕斯瓦尔定理" class="headerlink" title="帕斯瓦尔定理"></a>帕斯瓦尔定理</h2><script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}x^{2}(t)dt = \int_{-\infty}^{\infty}|X(f)|^{2}df</script><h2 id="功率谱"><a href="#功率谱" class="headerlink" title="功率谱"></a>功率谱</h2><h3 id="自功率谱密度函数"><a href="#自功率谱密度函数" class="headerlink" title="自功率谱密度函数"></a>自功率谱密度函数</h3><script type="math/tex; mode=display">
+S_{x}(f) = \int_{-\infty}^{\infty}R_{x}(\tau)e^{-j2\pi f\tau}d\tau</script><h3 id="互功率谱密度函数"><a href="#互功率谱密度函数" class="headerlink" title="互功率谱密度函数"></a>互功率谱密度函数</h3><script type="math/tex; mode=display">
+S_{xy}(f) = \int_{-\infty}^{\infty}R_{xy}(\tau)e^{-j2\pi f\tau}d\tau</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
+<li><script type="math/tex; mode=display">
+R_{x}(\tau) = \int_{-\infty}^{\infty}S_{x}(f)e^{j2\pi f\tau}df</script><script type="math/tex; mode=display">
+R_{xy} = \int_{-\infty}^{\infty}S_{xy}(f)e^{j2\pi f\tau}df</script></li>
+<li><script type="math/tex; mode=display">
+R_{x}(0) = \int_{-\infty}^{\infty}S_{x}(f)df = \lim_{T\to \infty}\frac{1}{T}\int_{0}^{T}x^{2}(t)dt</script></li>
+<li><script type="math/tex; mode=display">
+S_{x} = \lim_{T\to \infty}\frac{1}{T}|X(f)|^{2}</script></li>
+<li><script type="math/tex; mode=display">
+H(f) = \frac{Y(f)}{X(f)}</script><script type="math/tex; mode=display">
+S_{y} = |H(f)|^{2}S_{x}(f)</script>对于线性系统：<script type="math/tex; mode=display">
+S_{xy} = H(f)S_{x}(f)</script></li>
+</ol>
+<h3 id="相干函数"><a href="#相干函数" class="headerlink" title="相干函数"></a>相干函数</h3><script type="math/tex; mode=display">
+\gamma_{xy}^{2}(f) = \frac{|S_{xy}(f)|^{2}}{S_{x}(f)S_{y}(f)}</script><p>对于线性系统：</p>
+<script type="math/tex; mode=display">
+\gamma_{xy}^{2}(f) = 1</script><h2 id="倒谱分析"><a href="#倒谱分析" class="headerlink" title="倒谱分析"></a>倒谱分析</h2><p>功率倒频谱：</p>
+<script type="math/tex; mode=display">
+C_{p}(q) = |\mathscr{F}\{\lg S_{x}(f)\}|^{2}</script><p>幅值倒频谱：</p>
+<script type="math/tex; mode=display">
+C_{0}(q) = |\mathscr{F}\{\lg S_{x}(f)\}|</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+        <tag>帕斯瓦尔定理</tag>
+        <tag>功率谱</tag>
+      </tags>
+  </entry>
 </search>
