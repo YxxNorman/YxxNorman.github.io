@@ -1347,9 +1347,9 @@ x_{rms} = \sqrt{\psi_{x}^{2}} = \sqrt{17}</script>]]></content>
   <entry>
     <title>2.2 相关性分析</title>
     <url>/2024/06/17/2-2-%E7%9B%B8%E5%85%B3%E6%80%A7%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="信号的相关分析"><a href="#信号的相关分析" class="headerlink" title="信号的相关分析"></a>信号的相关分析</h1><h2 id="自相关分析"><a href="#自相关分析" class="headerlink" title="自相关分析"></a>自相关分析</h2><h3 id="自相关函数"><a href="#自相关函数" class="headerlink" title="自相关函数"></a>自相关函数</h3><p>==周期信号==的自相关函数：</p>
+    <content><![CDATA[<h1 id="信号的相关分析"><a href="#信号的相关分析" class="headerlink" title="信号的相关分析"></a>信号的相关分析</h1><h2 id="自相关分析"><a href="#自相关分析" class="headerlink" title="自相关分析"></a>自相关分析</h2><h3 id="自相关函数"><a href="#自相关函数" class="headerlink" title="自相关函数"></a>自相关函数</h3><p><strong>周期信号</strong>的自相关函数：</p>
 <script type="math/tex; mode=display">
-R_{x}(\tau) = \frac{1}{T}\int_{0}^{T}x(t)x(t + \tau)dt</script><p>==非周期信号==的自相关函数：</p>
+R_{x}(\tau) = \frac{1}{T}\int_{0}^{T}x(t)x(t + \tau)dt</script><p><strong>非周期信号</strong>的自相关函数：</p>
 <script type="math/tex; mode=display">
 R_{x}(t) = \int_{-\infty}^{\infty}x(t)x(t + \tau)dt</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ol>
 <li>对称性<script type="math/tex; mode=display">
@@ -1428,6 +1428,229 @@ C_{0}(q) = |\mathscr{F}\{\lg S_{x}(f)\}|</script>]]></content>
         <tag>信号</tag>
         <tag>帕斯瓦尔定理</tag>
         <tag>功率谱</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.3 不失真条件</title>
+    <url>/2024/06/20/3-3-%E4%B8%8D%E5%A4%B1%E7%9C%9F%E6%9D%A1%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="不失真条件"><a href="#不失真条件" class="headerlink" title="不失真条件"></a>不失真条件</h1><script type="math/tex; mode=display">
+y = A_{0}x(t - t_{0})</script><p>幅值特性：</p>
+<script type="math/tex; mode=display">
+A(\omega) = A_{0} = const</script><p>相位特性：</p>
+<script type="math/tex; mode=display">
+\varphi(\omega) = -t_{0}\omega</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>不失真条件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.1 频率保持性</title>
+    <url>/2024/06/20/3-1-%E9%A2%91%E7%8E%87%E4%BF%9D%E6%8C%81%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="频率保持性"><a href="#频率保持性" class="headerlink" title="频率保持性"></a>频率保持性</h1><p>线性系统的输入为某一频率的简谐信号，则稳态响应必是同一频率的简谐信号</p>
+<script type="math/tex; mode=display">
+x(t)=X_{0}e^{j\omega t}\leftrightarrow y(t) = Y_{0}e^{j(\omega t + \varphi_{0})}</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.4 数字信号处理</title>
+    <url>/2024/06/20/2-4-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h1 id="数字信号处理"><a href="#数字信号处理" class="headerlink" title="数字信号处理"></a>数字信号处理</h1><h2 id="时域采样"><a href="#时域采样" class="headerlink" title="时域采样"></a>时域采样</h2><h3 id="采样函数"><a href="#采样函数" class="headerlink" title="采样函数"></a>采样函数</h3><script type="math/tex; mode=display">
+g(t) = \sum\limits_{n=-\infty}^{\infty}\delta(t - nT_{s}) = \frac{1}{T_{s}}\sum\limits_{n=-\infty}^{\infty}e^{j2\pi nf_{s}t}</script><ul>
+<li>采样结果：$x(t)g(t) = x(nT_{s})$</li>
+<li>采样频率：$f_{s} = \frac{1}{T_{s}}$</li>
+</ul>
+<h3 id="混叠"><a href="#混叠" class="headerlink" title="混叠"></a>混叠</h3><p>采样结果的傅里叶变换：</p>
+<script type="math/tex; mode=display">
+\mathscr{F}[x(t)\cdot g(t)] = X(f)*G(f) = \frac{1}{T_{s}}\sum\limits_{n=-\infty}^{\infty}X(f - nf_{s})</script><img src="/2024/06/20/2-4-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/Aliasing.png" class="">
+<h3 id="采样定理"><a href="#采样定理" class="headerlink" title="采样定理"></a>采样定理</h3><script type="math/tex; mode=display">
+f_{s} > 2f_{m}</script><p>$f_{m}$为$x(t)$的最大频率</p>
+<h2 id="截断"><a href="#截断" class="headerlink" title="截断"></a>截断</h2><p>对信号进行加窗处理：$x(t)w(t)$</p>
+<h3 id="泄漏"><a href="#泄漏" class="headerlink" title="泄漏"></a>泄漏</h3><p>对于带限信号时域进行截断，导致频域上出现附加分量</p>
+<img src="/2024/06/20/2-4-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/Leakage.png" class="">
+<h2 id="频域采样"><a href="#频域采样" class="headerlink" title="频域采样"></a>频域采样</h2><img src="/2024/06/20/2-4-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/FrequencyDomainSampling.png" class="">
+<script type="math/tex; mode=display">
+\tilde{X}(f) = [X(f)*S_{0}(f)*W(f)]S_{1}(f)</script><script type="math/tex; mode=display">
+\tilde{x}(t) = [x(t)s_{0}(t)w(t)]*s_{1}(t)</script><ul>
+<li>$\tilde{x}(t)$为$x(t)$窗内的信号在窗外的<strong>周期延拓</strong></li>
+<li>$\Delta f$为频率采样间隔（频率采样周期），$f_{s} = N\Delta f$，$N$为采样点数</li>
+</ul>
+<h3 id="栅栏效应"><a href="#栅栏效应" class="headerlink" title="栅栏效应"></a>栅栏效应</h3><p>只有落在缝隙前的少数频率能够被观察到，其余频率均被去除</p>
+<h3 id="整周期采样"><a href="#整周期采样" class="headerlink" title="整周期采样"></a>整周期采样</h3><p>对于感兴趣的频率$f_{0}$，可以通过改变频率采样间隔$\Delta f$来实现：</p>
+<script type="math/tex; mode=display">
+f_{0} = n\Delta f \Leftrightarrow T = nT_{0}</script><h3 id="频率分辨力"><a href="#频率分辨力" class="headerlink" title="频率分辨力"></a>频率分辨力</h3><p>减小频率采样间隔$\Delta f$就能增大频率分辨力，从而减小栅栏效应</p>
+<script type="math/tex; mode=display">
+\Delta f = \frac{f_{s}}{N}\quad \Delta f\downarrow N\uparrow</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号处理</tag>
+        <tag>频域采样</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.1 电桥</title>
+    <url>/2024/06/20/5-1-%E7%94%B5%E6%A1%A5/</url>
+    <content><![CDATA[<h1 id="电桥"><a href="#电桥" class="headerlink" title="电桥"></a>电桥</h1><h2 id="直流电桥"><a href="#直流电桥" class="headerlink" title="直流电桥"></a>直流电桥</h2><h3 id="电桥灵敏度"><a href="#电桥灵敏度" class="headerlink" title="电桥灵敏度"></a>电桥灵敏度</h3><script type="math/tex; mode=display">
+S_{B} = \frac{U_{o}}{\Delta R_{0}/R_{0}}</script><h3 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h3><ul>
+<li>半桥单臂：$S_{B} = \frac{U_{o}}{\Delta R_{0}/R_{0}}= \frac{\frac{\Delta R_{0}}{4R_{0}}U_{i}}{\Delta R_{0}/R_{0}}=\frac{1}{4}U_{i}$</li>
+<li>半桥双臂：$S_{B} = \frac{U_{o}}{\Delta R_{0}/R_{0}}= \frac{\frac{\Delta R_{0}}{2R_{0}}U_{i}}{\Delta R_{0}/R_{0}}=\frac{1}{2}U_{i}$</li>
+<li>全桥：$S_{B} = \frac{U_{o}}{\Delta R_{0}/R_{0}}= \frac{\frac{\Delta R_{0}}{R_{0}}U_{i}}{\Delta R_{0}/R_{0}}=U_{i}$</li>
+</ul>
+<h3 id="非线性误差和温度补偿"><a href="#非线性误差和温度补偿" class="headerlink" title="非线性误差和温度补偿"></a>非线性误差和温度补偿</h3><p>半桥双臂和全桥可以减少非线性误差和进行温度补偿</p>
+<h2 id="交流电桥"><a href="#交流电桥" class="headerlink" title="交流电桥"></a>交流电桥</h2>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>电桥</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4 传感器</title>
+    <url>/2024/06/20/4-%E4%BC%A0%E6%84%9F%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h1><h2 id="传感器指标"><a href="#传感器指标" class="headerlink" title="传感器指标"></a>传感器指标</h2><ul>
+<li>灵敏度</li>
+<li>响应特性</li>
+<li>线性范围</li>
+<li>稳定性</li>
+<li>精度</li>
+</ul>
+<h2 id="电阻式传感器"><a href="#电阻式传感器" class="headerlink" title="电阻式传感器"></a>电阻式传感器</h2><h3 id="应变式"><a href="#应变式" class="headerlink" title="应变式"></a>应变式</h3><p>特点：可用于测量压力、力、微位移，频率响应特性较好，但是输出信号微弱。</p>
+<script type="math/tex; mode=display">
+S_{g} = \frac{dR/R}{\varepsilon}= 1+2\mu</script><h3 id="压阻式（半导体电阻）"><a href="#压阻式（半导体电阻）" class="headerlink" title="压阻式（半导体电阻）"></a>压阻式（半导体电阻）</h3><script type="math/tex; mode=display">
+S_{g} = \frac{dR/R}{\varepsilon}=\pi_{L}E</script><h3 id="变阻式"><a href="#变阻式" class="headerlink" title="变阻式"></a>变阻式</h3><p>特点：可以测量线位移和角位移，还有可以转换为位移的其他物理参数，如压力、加速度</p>
+<ul>
+<li>直线位移型：<script type="math/tex; mode=display">
+S_{g}=\frac{dR}{dx}=K_{L}</script></li>
+<li>角位移型：<script type="math/tex; mode=display">
+S_{g} = \frac{dR}{d\alpha}=K_{\alpha}</script></li>
+<li>非线性型</li>
+</ul>
+<h2 id="电感式传感器"><a href="#电感式传感器" class="headerlink" title="电感式传感器"></a>电感式传感器</h2><p>特点：测量位移、压力、振动</p>
+<h3 id="自感式"><a href="#自感式" class="headerlink" title="自感式"></a>自感式</h3><script type="math/tex; mode=display">
+L = \frac{W^{2}\mu_{0}A_{0}}{2\delta}</script><script type="math/tex; mode=display">
+S = \frac{dL}{d\delta} = -\frac{L}{\delta} = -\frac{\frac{W^{2}}{R_{m}}}{\delta} = -\frac{W^{2}\mu_{0}A_{0}}{2\delta^{2}}</script><ul>
+<li>可变磁阻式距离型</li>
+<li>可变磁阻式面积型</li>
+<li>差动型</li>
+<li>单螺管线圈型</li>
+<li><p>双螺管线圈差动型</p>
+<h3 id="互感式"><a href="#互感式" class="headerlink" title="互感式"></a>互感式</h3></li>
+<li><p>差动变压式</p>
+</li>
+<li>涡流传感器</li>
+</ul>
+<h3 id="压磁式"><a href="#压磁式" class="headerlink" title="压磁式"></a>压磁式</h3><h2 id="电容式传感器"><a href="#电容式传感器" class="headerlink" title="电容式传感器"></a>电容式传感器</h2><script type="math/tex; mode=display">
+C=\frac{\varepsilon_{0} \varepsilon A}{\delta}</script><h3 id="极距变化型"><a href="#极距变化型" class="headerlink" title="极距变化型"></a>极距变化型</h3><p>特点：线性差，可以测量微小位移</p>
+<script type="math/tex; mode=display">
+S =  \frac{dC}{d\delta} = -\frac{\varepsilon_{0}\varepsilon A}{\delta^{2}} = -\frac{C}{\delta}</script><h3 id="面积变化型"><a href="#面积变化型" class="headerlink" title="面积变化型"></a>面积变化型</h3><p>特点：线性好，可以测量较大线位移</p>
+<ul>
+<li>角位移型：<script type="math/tex; mode=display">
+S = \frac{dC}{d\alpha } = \frac{\varepsilon_{0}\varepsilon r^{2}}{2\delta} = const</script></li>
+<li>线位移型：<script type="math/tex; mode=display">
+S = \frac{dC}{dx} = \frac{\varepsilon_{0}\varepsilon b}{\delta} = const</script></li>
+<li>圆筒形线位移：<script type="math/tex; mode=display">
+S= \frac{dC}{dx} = \frac{2\pi\varepsilon_{0}\varepsilon }{\ln(r_{2}/r_{1})}</script></li>
+</ul>
+<h3 id="介电常数变化型"><a href="#介电常数变化型" class="headerlink" title="介电常数变化型"></a>介电常数变化型</h3><h2 id="压电式传感器"><a href="#压电式传感器" class="headerlink" title="压电式传感器"></a>压电式传感器</h2><h2 id="磁电传感器"><a href="#磁电传感器" class="headerlink" title="磁电传感器"></a>磁电传感器</h2><h2 id="光电传感器"><a href="#光电传感器" class="headerlink" title="光电传感器"></a>光电传感器</h2><h2 id="光纤传感器"><a href="#光纤传感器" class="headerlink" title="光纤传感器"></a>光纤传感器</h2><h2 id="新型传感器"><a href="#新型传感器" class="headerlink" title="新型传感器"></a>新型传感器</h2>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>传感器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.2 调制与解调</title>
+    <url>/2024/06/20/5-2-%E8%B0%83%E5%88%B6%E4%B8%8E%E8%A7%A3%E8%B0%83/</url>
+    <content><![CDATA[<h1 id="调制与解调"><a href="#调制与解调" class="headerlink" title="调制与解调"></a>调制与解调</h1><ul>
+<li>调制信号$x(t)$</li>
+<li>载波信号$\cos2\pi f_{0}t$</li>
+<li>调幅波</li>
+<li>调频波</li>
+</ul>
+<h2 id="幅值调制"><a href="#幅值调制" class="headerlink" title="幅值调制"></a>幅值调制</h2><script type="math/tex; mode=display">
+x(t)\cos2\pi f_{0}t \Leftrightarrow \frac{1}{2}[X(f + f_{0}) + X(f - f_{0})]</script><img src="/2024/06/20/5-2-%E8%B0%83%E5%88%B6%E4%B8%8E%E8%A7%A3%E8%B0%83/Modulation.png" class="">
+<h2 id="幅值解调"><a href="#幅值解调" class="headerlink" title="幅值解调"></a>幅值解调</h2><script type="math/tex; mode=display">
+x(t)\cos2\pi f_{0}t\cos2\pi f_{0}t = \frac{x(t)}{2} + \frac{1}{2}x(t)\cos4\pi f_{0}t</script><img src="/2024/06/20/5-2-%E8%B0%83%E5%88%B6%E4%B8%8E%E8%A7%A3%E8%B0%83/Demodulation.png" class="">
+<h3 id="整流检波"><a href="#整流检波" class="headerlink" title="整流检波"></a>整流检波</h3><p>给调制信号加一个偏置电压，把调幅波进行半波或者全波整流、滤波，再减去偏置电压即可恢复原调制信号。</p>
+<h3 id="相敏检波"><a href="#相敏检波" class="headerlink" title="相敏检波"></a>相敏检波</h3><p>不需要对调制信号加偏置电压</p>
+<h2 id="频率调制与解调"><a href="#频率调制与解调" class="headerlink" title="频率调制与解调"></a>频率调制与解调</h2>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>信号调制</tag>
+        <tag>信号解调</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3.2 测试系统特性</title>
+    <url>/2024/06/20/3-2-%E6%B5%8B%E8%AF%95%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="测试系统特性"><a href="#测试系统特性" class="headerlink" title="测试系统特性"></a>测试系统特性</h1><h2 id="静态特性"><a href="#静态特性" class="headerlink" title="静态特性"></a>静态特性</h2><h3 id="灵敏度"><a href="#灵敏度" class="headerlink" title="灵敏度"></a>灵敏度</h3><script type="math/tex; mode=display">
+S = \frac{dy}{dx}</script><script type="math/tex; mode=display">
+S_{z} = \prod_{i=1}^{n} S_{i}</script><h3 id="分辨力"><a href="#分辨力" class="headerlink" title="分辨力"></a>分辨力</h3><script type="math/tex; mode=display">
+\Delta x = \frac{1}{S}</script><h3 id="信噪比"><a href="#信噪比" class="headerlink" title="信噪比"></a>信噪比</h3><script type="math/tex; mode=display">
+SNR = 10\lg\frac{P_{s}}{P_{n}} = 20\lg\frac{U_{s}}{U_{n}}</script><h2 id="动态特性"><a href="#动态特性" class="headerlink" title="动态特性"></a>动态特性</h2><h3 id="一阶系统幅值误差"><a href="#一阶系统幅值误差" class="headerlink" title="一阶系统幅值误差"></a>一阶系统幅值误差</h3><script type="math/tex; mode=display">
+e_{A} = 1 - A(\omega) = 1 - \frac{1}{\sqrt{1 + (\omega \tau)^{2}}}</script><h3 id="一阶相位误差"><a href="#一阶相位误差" class="headerlink" title="一阶相位误差"></a>一阶相位误差</h3><script type="math/tex; mode=display">
+e_{\phi} = -\arctan(\omega \tau)</script>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>系统特性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5.3 滤波器</title>
+    <url>/2024/06/20/5-3-%E6%BB%A4%E6%B3%A2%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h1><h2 id="理想滤波器"><a href="#理想滤波器" class="headerlink" title="理想滤波器"></a>理想滤波器</h2><ul>
+<li>截止频率：$f_{c}$</li>
+<li>建立时间：$T_{e} = t_{b} - t_{a} = \frac{0.61}{f_{c}}$，$T_{e} = t_{b}’ - t_{a}’ = \frac{0.45}{f_{c}}$</li>
+<li>带宽$B$：$T_{e}B = const$</li>
+</ul>
+<h2 id="实际滤波器"><a href="#实际滤波器" class="headerlink" title="实际滤波器"></a>实际滤波器</h2><ul>
+<li>截止频率：$f_{c1}, f_{c2}$，对应的幅值为$\frac{A_{0}}{\sqrt{2}}$，衰减-3dB</li>
+<li>中心频率：$f_{0}$<script type="math/tex; mode=display">
+f_{0} = \sqrt{f_{c1}f_{c2}}</script></li>
+<li>带宽$B$：$B = f_{c2} - f_{c1}$，决定频率分辨力，带宽越大，频率分辨力越低</li>
+<li>品质因素$Q$：$Q = \frac{f_{0}}{B}$</li>
+<li>滤波器因素$\lambda$：$\lambda = \frac{B_{-60dB}}{B_{-3dB}}$<h3 id="恒带宽比滤波器"><a href="#恒带宽比滤波器" class="headerlink" title="恒带宽比滤波器"></a>恒带宽比滤波器</h3></li>
+</ul>
+<script type="math/tex; mode=display">
+f_{c2} = 2^{n}f_{c1}</script><script type="math/tex; mode=display">
+\left\{\begin{matrix}f_{c2} = 2^{\frac{n}{2}}f_{0}\\f_{c1} = 2^{-\frac{n}{2}}f_{0}\end{matrix}\right.</script><script type="math/tex; mode=display">
+\frac{1}{Q} = \frac{B}{f_{0}} = 2^{\frac{n}{2}}- 2^{-\frac{n}{2}}</script><h3 id="恒带宽滤波器"><a href="#恒带宽滤波器" class="headerlink" title="恒带宽滤波器"></a>恒带宽滤波器</h3>]]></content>
+      <categories>
+        <category>学习</category>
+        <category>测试技术</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>滤波器</tag>
       </tags>
   </entry>
 </search>

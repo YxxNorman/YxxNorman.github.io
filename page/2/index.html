@@ -173,6 +173,1276 @@
     
     
     <article
+  id="post-2-1-特征值"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/2-1-%E7%89%B9%E5%BE%81%E5%80%BC/"
+    >2.1 特征值</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/2-1-%E7%89%B9%E5%BE%81%E5%80%BC/" class="article-date">
+  <time datetime="2024-06-17T05:05:57.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h1><h2 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h2><script type="math/tex; mode=display">
+\mu_{x}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}x_{n}</script><h2 id="均方值"><a href="#均方值" class="headerlink" title="均方值"></a>均方值</h2><script type="math/tex; mode=display">
+\psi_{x}^{2} =\lim_{N\to \infty}\frac{1}{N}\sum\limits _{n=1}^{N}x_{n}^{2} = R_{x}(0) = \sigma_{x}^{2} + \mu_{x}^{2}</script><h2 id="均方根值"><a href="#均方根值" class="headerlink" title="均方根值"></a>均方根值</h2><script type="math/tex; mode=display">
+x_{rms}=\sqrt{\psi_{x}^{2}}</script><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><script type="math/tex; mode=display">
+\sigma_{x}^{2}=\lim_{N\to \infty}\frac{1}{N}\sum\limits_{n=1}^{N}(x_{n} - \mu_{x})^{2}</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>求$x(t) = 3\sin(5t) - 5\cos(10t)$的均方根$x_{rms} = \sqrt{\psi_{x}^{2}}$</p>
+</blockquote>
+<script type="math/tex; mode=display">
+R_{x}(\tau) = \frac{3^{2}}{2}\cos(5\tau) + \frac{5^{2}}{2}\cos(10\tau) = 4.5\cos(5\tau) + 12.5\cos(10\tau)</script><script type="math/tex; mode=display">
+\psi_{x}^{2} = R_{x}(0) = 17</script><script type="math/tex; mode=display">
+x_{rms} = \sqrt{\psi_{x}^{2}} = \sqrt{17}</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-1-4-典型信号"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/1-4-%E5%85%B8%E5%9E%8B%E4%BF%A1%E5%8F%B7/"
+    >1.4 典型信号</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/1-4-%E5%85%B8%E5%9E%8B%E4%BF%A1%E5%8F%B7/" class="article-date">
+  <time datetime="2024-06-17T03:40:55.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="典型信号"><a href="#典型信号" class="headerlink" title="典型信号"></a>典型信号</h1><h2 id="单位脉冲函数"><a href="#单位脉冲函数" class="headerlink" title="单位脉冲函数"></a>单位脉冲函数</h2><p>$\delta$函数：</p>
+<script type="math/tex; mode=display">
+\delta(t) = \lim_{\varepsilon \to 0}(t) = \left\{\begin{matrix}\infty\quad(t=0)\\0\quad(t\ne 0)\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+\begin{matrix}
+\Delta(f) = 1 \\ 
+\delta(t) = \int_{-\infty}^{\infty}e^{j2\pi ft}df
+\end{matrix}</script><script type="math/tex; mode=display">
+\begin{matrix}
+\delta(t\pm t_{0}) \Leftrightarrow e^{\pm 2\pi ft_{0}}\\
+\Delta(f\pm f_{0})\Leftrightarrow e^{\mp 2\pi f_{0}t}
+\end{matrix}</script><h2 id="矩形窗函数"><a href="#矩形窗函数" class="headerlink" title="矩形窗函数"></a>矩形窗函数</h2><script type="math/tex; mode=display">
+w_{R}(t) = 
+\left\{\begin{matrix}
+1\quad (|t|\le \frac{T}{2}) \\ 
+0\quad (|t|>\frac{T}{2})
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+W_{R} = T\frac{\sin(\pi fT)}{\pi fT} = T\text{sinc}(\pi fT)</script><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><h3 id="双边指数函数"><a href="#双边指数函数" class="headerlink" title="双边指数函数"></a>双边指数函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+-e^{at}\quad (a>0,t < 0) \\ 
+e^{-at}\quad (a>0,t\ge 0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j4\pi f}{a^{2} + (2\pi f)^{2}}</script><h3 id="单边指数函数"><a href="#单边指数函数" class="headerlink" title="单边指数函数"></a>单边指数函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+0\qquad\qquad (t< 0) \\ 
+e^{-at}\quad (t\ge 0,a>0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{a-j2\pi f}{a^{2} + (2\pi f)^{2}}</script><h2 id="符号函数和单位阶跃函数"><a href="#符号函数和单位阶跃函数" class="headerlink" title="符号函数和单位阶跃函数"></a>符号函数和单位阶跃函数</h2><h3 id="符号函数"><a href="#符号函数" class="headerlink" title="符号函数"></a>符号函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+-1=\lim_{a\to 0}(-e^{at})\quad (a>0,t<0) \\ 
+1=\lim_{a\to 0}(e^{-at})\quad (a>0,t\ge0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j}{\pi f}</script><h3 id="单位阶跃函数"><a href="#单位阶跃函数" class="headerlink" title="单位阶跃函数"></a>单位阶跃函数</h3><script type="math/tex; mode=display">
+x(t) = 
+\left\{\begin{matrix}
+0\qquad\qquad (t<0) \\ 
+1=\lim_{a\to 0}(e^{-at})\quad (a>0,t\ge0)
+\end{matrix}\right.</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{-j}{2\pi f}</script><h2 id="正、余弦函数"><a href="#正、余弦函数" class="headerlink" title="正、余弦函数"></a>正、余弦函数</h2><h3 id="余弦函数"><a href="#余弦函数" class="headerlink" title="余弦函数"></a>余弦函数</h3><script type="math/tex; mode=display">
+x(t) = {\cos}2\pi f_{0}t = \frac{1}{2}(e^{-j2\pi f_{0}t} + e^{j2\pi f_{0}t})</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{1}{2}[\delta(f + f_{0}) + \delta(f - f_{0})]</script><h3 id="正弦函数"><a href="#正弦函数" class="headerlink" title="正弦函数"></a>正弦函数</h3><script type="math/tex; mode=display">
+x(t) = {\sin}2\pi f_{0}t = \frac{j}{2}(e^{-2\pi f_{0}t} - e^{2\pi f_{0}t})</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+X(f) = \frac{j}{2}[\delta(f+f_{0}) - \delta(f-f_{0})]</script><h2 id="采样函数"><a href="#采样函数" class="headerlink" title="采样函数"></a>采样函数</h2><script type="math/tex; mode=display">
+g(t)=\sum_{n=-\infty}^{\infty}\delta(t - nT_{s}) = \frac{1}{T_{s}}\sum_{n=-\infty}^{\infty}e^{j2\pi nf_{s}t}</script><p>频谱：</p>
+<script type="math/tex; mode=display">
+G(f) = \frac{1}{T_{s}}\sum_{n=-\infty}^{\infty}\delta(f-nf_{s})</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-1-3-傅里叶变换"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"
+    >1.3 傅里叶变换</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/1-3-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" class="article-date">
+  <time datetime="2024-06-17T03:37:25.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于非周期信号，需满足<strong>狄里赫利条件</strong>，并且<strong>绝对可积</strong>。</p>
+<h2 id="变换公式"><a href="#变换公式" class="headerlink" title="变换公式"></a>变换公式</h2><script type="math/tex; mode=display">
+X(f) = \int_{-\infty}^{\infty}x(t)e^{-j2\pi ft}dt</script><script type="math/tex; mode=display">
+x(t) = \int_{-\infty}^{\infty}X(f)e^{j2\pi ft}df</script><h2 id="变换性质"><a href="#变换性质" class="headerlink" title="变换性质"></a>变换性质</h2><ul>
+<li>奇偶虚实性</li>
+<li>线性叠加性</li>
+<li>对称性</li>
+<li>尺度改变性</li>
+<li><strong>时移性</strong></li>
+<li><strong>频移性</strong></li>
+<li><strong>微分性质</strong></li>
+<li><strong>积分性质</strong></li>
+<li><strong>卷积特性</strong></li>
+</ul>
+<h3 id="时移性"><a href="#时移性" class="headerlink" title="时移性"></a>时移性</h3><script type="math/tex; mode=display">
+x(t\pm t_{0})\leftrightarrow X(f)e^{\pm j2\pi f_{0}t}</script><h3 id="频移性"><a href="#频移性" class="headerlink" title="频移性"></a>频移性</h3><script type="math/tex; mode=display">
+x(t)e^{\mp j2\pi f_{0}t} \leftrightarrow X(f\pm f_{0})</script><h3 id="微分性质"><a href="#微分性质" class="headerlink" title="微分性质"></a>微分性质</h3><script type="math/tex; mode=display">
+\frac{d^{n}x(t)}{dt^{n}} \leftrightarrow (j2\pi f)^{n}X(f)</script><h3 id="积分性质"><a href="#积分性质" class="headerlink" title="积分性质"></a>积分性质</h3><script type="math/tex; mode=display">
+\int_{-\infty}^{t}x(t)dt \leftrightarrow \frac{1}{j2\pi f}X(f)</script><h3 id="卷积特性"><a href="#卷积特性" class="headerlink" title="卷积特性"></a>卷积特性</h3><script type="math/tex; mode=display">
+\begin{matrix} x_{1}(t)x_{2}(t)\leftrightarrow X_{1}(f)*X_2(f)  \\ x_{1}(t)*x_{2}(t)\leftrightarrow X_{1}(f)X_2(f) \end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求三角窗函数的傅里叶变换：</p>
+<script type="math/tex; mode=display">
+x(t)=\left\{ \begin{matrix} 1 + \frac{2}{T_{0}}t,\quad -\frac{T_{0}}{2}\le t <0 \\ 1 - \frac{2}{T_{0}}t,\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix} \right.</script><script type="math/tex; mode=display">
+\frac{dx(t)}{dt} = \left\{\begin{matrix}\frac{2}{T_{0}},\quad -\frac{T_{0}}{2}\le t < 0 \\ -\frac{2}{T_{0}},\quad 0 \le t \le \frac{T_{0}}{2}\end{matrix}\right.</script><script type="math/tex; mode=display">
+\frac{d^{2}x(t)}{dt^{2}} = \frac{2}{T_{0}}\delta\left(t + \frac{T_{0}}{2}\right) + \frac{2}{T_{0}}\delta\left(t - \frac{T_{0}}{2}\right) - \frac{4}{T_{0}}\delta (t)</script><script type="math/tex; mode=display">
+F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{T_{0}}\left[e^{j\pi fT_{0}} + e^{-j\pi fT_{0}} - 2\right] = -\frac{8}{T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script><script type="math/tex; mode=display">
+X(f) = \frac{1}{(j2\pi f)^{2}}F\left[\frac{d^{2}x(t)}{dt^{2}}\right] = \frac{2}{\pi^{2}f^{2}T_{0}}{\sin}^{2}\left(\frac{\pi fT_{0}}{2}\right) = \frac{T_{0}}{2} \frac{\sin^{2}\left(\frac{\pi fT_{0}}{2}\right)}{\left(\frac{\pi fT_{0}}{2}\right)^{2}}= \frac{T_{0}}{2}\text{sinc}^{2}\left(\frac{\pi fT_{0}}{2}\right)</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-1-2-傅里叶展开"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/"
+    >1.2 傅里叶展开</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/1-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%B1%95%E5%BC%80/" class="article-date">
+  <time datetime="2024-06-17T03:26:06.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="傅里叶展开"><a href="#傅里叶展开" class="headerlink" title="傅里叶展开"></a>傅里叶展开</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>适用于周期信号，包括谐波信号和一般周期信号，需满足<strong>狄里赫利条件</strong>。</p>
+<h2 id="三角函数展开"><a href="#三角函数展开" class="headerlink" title="三角函数展开"></a>三角函数展开</h2><p>对于一般周期信号，可以展开为</p>
+<script type="math/tex; mode=display">
+x(t) = a_{0} + \sum_{n=1}^{\infty}(a_{n}\cos n\omega_{0}t + b_{n}\sin n\omega_{0}t)</script><script type="math/tex; mode=display">
+\begin{matrix}
+a_{0}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)dt\\
+a_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\cos}n\omega_{0}tdt \\ 
+b_{n}=\frac{2}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t){\sin}n\omega_{0}tdt \\ 
+\end{matrix}</script><p>$\omega_{0}$称为基频，$\omega_{0}=\frac{2\pi}{T_{0}}$；$n\omega_{0}$称为n次谐频。<br>画频谱图前，需要将谐波信号成分均转化为正弦成分。</p>
+<script type="math/tex; mode=display">
+x(t) = A_{0} + \sum_{n=1}^{\infty}A_{n}{\sin}(n\omega_{0}t + \varphi_{n})</script><script type="math/tex; mode=display">
+\begin{matrix}
+A_{0}=a_{0} \\ 
+A_{n}=\sqrt{a_{n}^{2} + b_{n}^{2}} \\ 
+\varphi_{n}=\arctan \frac{a_{n}}{b_{n}}
+\end{matrix}</script><h2 id="复指数展开"><a href="#复指数展开" class="headerlink" title="复指数展开"></a>复指数展开</h2><script type="math/tex; mode=display">
+x(t) = \sum_{n=-\infty}^{\infty}C_{n}e^{jn\omega_{0}t}\quad (n=0,\pm1,\pm2,\cdots)</script><script type="math/tex; mode=display">
+C_{n}=\frac{1}{T_{0}}\int_{-T_{0}/2}^{T_{0}/2}x(t)e^{-jn\omega_{0}t}dt</script><script type="math/tex; mode=display">
+\begin{matrix}
+C_{n}=ReC_{n} + jImC_{n} = |C_{n}|e^{j\varphi_{n}}\\
+|C_{n}| = \sqrt{(ReC_{n})^{2} + (ImC_{n})^{2}}\\
+\varphi_{n} = \arctan \frac{ImC_{n}}{ReC_{n}}
+\end{matrix}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>求周期方波$x(t)$的频谱</p>
+<script type="math/tex; mode=display">
+x(t) = \left\{\begin{matrix}A\qquad(0\le t\le \frac{T_{0}}{2})\\ -A \qquad (-\frac{T_{0}}{2}\le t\le 0)\end{matrix}\right.</script><h3 id="应用三角函数展开"><a href="#应用三角函数展开" class="headerlink" title="应用三角函数展开"></a>应用三角函数展开</h3><script type="math/tex; mode=display">
+\left\{\begin{array}{l}a_{0} = \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Adt + \frac{1}{T_{0}}\int_{\frac{-T_{0}}{2}}^{0}-Adt=0 \\  a_{n}=\frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\cos n\omega_{0}tdt = 0 \\ b_{n} = \frac{2}{T_{0}}\int_{\frac{-T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)\sin n\omega_{0}tdt = \frac{4A}{n\omega_{0}T_{0}}[1 - \cos (n\omega_{0}T_{0}/2)]=\left\{\begin{matrix}\frac{4A}{n\pi} \quad n=1,3,5,\dots\\ 0\quad n=2,4,6,\dots\end{matrix}\right.\end{array}\right.</script><script type="math/tex; mode=display">
+\therefore x(t) = \frac{4A}{\pi}\left(\sin\omega_{0}t + \frac{1}{3}\sin3\omega_{0}t + \frac{1}{5}\sin5\omega_{0}t + \cdots\right)</script><h2 id="应用复指数展开"><a href="#应用复指数展开" class="headerlink" title="应用复指数展开"></a>应用复指数展开</h2><script type="math/tex; mode=display">
+\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-jn\omega_{0}t}dt = \frac{1}{T_{0}}\int_{0}^{\frac{T_{0}}{2}}Ae^{-jn\omega_{0}t}dt + \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{0}-Ae^{-jn\omega_{0}t}dt \\= \frac{A}{2jn\pi}\left(2 - e^{jn\pi} - e^{-jn\pi}\right)=\left\{\begin{matrix}-j\frac{2A}{\pi n}\quad (n=\pm1,\pm3,\pm5,\cdots)\\ 0\quad(n=0,\pm2,\pm4,\pm6,\cdots)\end{matrix}\right.\end{array}</script><script type="math/tex; mode=display">
+\therefore x(t) = -j\frac{2A}{\pi}\sum_{n=-\infty}^{\infty}\frac{1}{n}e^{jn\omega_{0}t}(n=\pm1,\pm3,\pm5,\cdots)</script><script type="math/tex; mode=display">
+|C_{n}|=\left\{\begin{matrix}\frac{2A}{n\pi}\quad (n=\pm1,\pm3,\pm5,\cdots) \\ 0\quad (n=0,\pm2,\pm=4\pm6,\cdots)\end{matrix}\right.</script><script type="math/tex; mode=display">
+\varphi_{n}= \arctan\frac{\frac{2A}{n\pi}}{0} = \left\{\begin{matrix}\frac{\pi}{2} \quad(n<0)\\ -\frac{\pi}{2}\quad(n>0)\end{matrix}\right.</script><h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><blockquote>
+<p>运用复指数展开求$x(t) = |\cos(\omega t)|$的频谱</p>
+</blockquote>
+<p>周期：$T_{0} = \frac{\pi}{\omega}$，频率：$f_{0} = \frac{\omega}{\pi}$</p>
+<script type="math/tex; mode=display">
+\left\{\begin{array}{l}C_{n} = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}x(t)e^{-j2\pi nf_{0}t}dt = \frac{1}{T_{0}}\int_{-\frac{T_{0}}{2}}^{\frac{T_{0}}{2}}\frac{1}{2}\left[e^{-j\pi  f_{0}t} + e^{j\pi f_{0}t}\right]e^{-j2\pi nf_{0}t}dt  \\ =\frac{\pi}{2\omega}\int_{-\frac{\pi}{2\omega}}^{\frac{\pi}{2\omega}}e^{-j\pi(2n+1)f_{0}t} + e^{-j\pi(2n - 1)f_{0}t}dt = \end{array}\right.</script> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="tag">傅里叶变换</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-1-1-信号的分类"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/"
+    >1.1 信号的分类</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/06/17/1-1-%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E7%B1%BB/" class="article-date">
+  <time datetime="2024-06-17T03:17:59.000Z" itemprop="datePublished">2024-06-17</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF/">测试技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="信号分类"><a href="#信号分类" class="headerlink" title="信号分类"></a>信号分类</h1><h2 id="确定信号"><a href="#确定信号" class="headerlink" title="确定信号"></a>确定信号</h2><h3 id="周期信号"><a href="#周期信号" class="headerlink" title="周期信号"></a>周期信号</h3><ul>
+<li>谐波信号</li>
+<li>一般周期信号：由多个谐波信号叠加而成，这些谐波信号频率存在公共的<strong>基频</strong></li>
+</ul>
+<h3 id="非周期信号"><a href="#非周期信号" class="headerlink" title="非周期信号"></a>非周期信号</h3><ul>
+<li>准周期信号：由多个谐波信号叠加而成，但是这些谐波信号频率比为无理数</li>
+<li>一般非周期信号</li>
+</ul>
+<h2 id="随机信号"><a href="#随机信号" class="headerlink" title="随机信号"></a>随机信号</h2><ul>
+<li>平稳随机信号</li>
+<li>非平稳随机信号</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BF%A1%E5%8F%B7/" rel="tag">信号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-01-层次分析法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/08/02/01-%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/"
+    >01 层次分析法</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/08/02/01-%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/" class="article-date">
+  <time datetime="2023-08-02T07:18:11.000Z" itemprop="datePublished">2023-08-02</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%A8%A1/">数模</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="层次分析法（AHP）"><a href="#层次分析法（AHP）" class="headerlink" title="层次分析法（AHP）"></a>层次分析法（AHP）</h1><h2 id="方法原理"><a href="#方法原理" class="headerlink" title="方法原理"></a>方法原理</h2><h3 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h3><p>日常生活中有很多的决策问题。决策是指在面临多种方案时需要依据一定的标准选择某一种方案。日常生活中有许多决策的问题，比如：</p>
+<ul>
+<li>选择苏杭、北戴河和桂林三地之一作为旅游目标景点。</li>
+<li>买钢笔，一般要依据质量、颜色、实用性、价格、外形等方面的因素选择某一支钢笔。<br>对于这样一类评价类问题，需要通过<strong>确定评价指标</strong>、<strong>形成评价体系</strong>来选择最合适的方案。</li>
+</ul>
+<h3 id="分析思想"><a href="#分析思想" class="headerlink" title="分析思想"></a>分析思想</h3><p>评价类问题我们需要首先弄清楚：<strong>评价目标是什么</strong>、<strong>评价准则是什么</strong>、<strong>供选方案有什么</strong>，然后才可以构建层次分析模型。<br>层次分析法实际上就是“分而治之”的思想：一次性考虑多个指标之间的关系，往往会考虑不周全。所以可以两个两个指标进行比较，最终根据两两比较的结果来推算出各个指标权重，这样便可以构造一个<strong>判断矩阵</strong>。</p>
+<h2 id="方法步骤"><a href="#方法步骤" class="headerlink" title="方法步骤"></a>方法步骤</h2><h3 id="1-建立结构模型"><a href="#1-建立结构模型" class="headerlink" title="1. 建立结构模型"></a>1. 建立结构模型</h3><p>分析系统中各因素之间的关系，建立系统的递阶层次结构。<br>将评价目标、评价准则和供选方案按它们之间的相互关系分成目标层、准则层和方案层，绘制<u>层次结构图</u>。</p>
+<ul>
+<li><p>目标层：评价的目的、要解决的问题；</p>
+</li>
+<li><p>准则层：考虑的因素、评价的准则；</p>
+</li>
+<li><p>方案层：评价时的备选方案；</p>
+</li>
+</ul>
+<p>以“选择苏杭、北戴河和桂林三地之一作为旅游目标景点”为例：</p>
+<pre class="mermaid">graph TB
+
+    J[目标层] --> K[准则层]
+
+    K --> L[方案层]
+
+    A(选择旅游地) --> B(景色)
+
+    A(选择旅游地) --> C(花费)
+
+    A(选择旅游地) --> D(居住)
+
+    A(选择旅游地) --> E(饮食)
+
+    A(选择旅游地) --> F(交通)
+
+    B --> G(苏杭)
+
+    B --> H(北戴河)
+
+    B --> I(桂林)
+
+    C --> G(苏杭)
+
+    C --> H(北戴河)
+
+    C --> I(桂林)
+
+    D --> G(苏杭)
+
+    D --> H(北戴河)
+
+    D --> I(桂林)
+
+    E --> G(苏杭)
+
+    E --> H(北戴河)
+
+    E --> I(桂林)
+
+    F --> G(苏杭)
+
+    F --> H(北戴河)
+
+    F --> I(桂林)</pre>
+
+<p><mark>注意：如果用到了层次分析法，那么这个层次结构图要放在数学建模论文中！</mark></p>
+<h3 id="2-构造判断矩阵"><a href="#2-构造判断矩阵" class="headerlink" title="2. 构造判断矩阵"></a>2. 构造判断矩阵</h3><p>构造的判断矩阵是由两两指标比较得到的相对重要性程度组成的，$a_{ij}$表示与指标𝑗相比，𝑖的重要程度，而这个重要程度的取值是由 Santy 的1-9标度方法给出。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>标度</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>同样重要性</td>
+</tr>
+<tr>
+<td>3</td>
+<td>稍微重要</td>
+</tr>
+<tr>
+<td>5</td>
+<td>明显重要</td>
+</tr>
+<tr>
+<td>7</td>
+<td>强烈重要</td>
+</tr>
+<tr>
+<td>9</td>
+<td>极端重要</td>
+</tr>
+<tr>
+<td>2, 4, 6, 8</td>
+<td>上述两相邻判断的中值</td>
+</tr>
+<tr>
+<td>倒数</td>
+<td>因素i和因素j相比如果标度为$a_{ij}$ .那么因素j和因素i相比就是 $\frac{1}{a_{ji}}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>判断矩阵有如下特点：</p>
+<ul>
+<li>$a_{ij}$表示与指标𝑗相比，𝑖的重要程度</li>
+<li>当𝑖 = 𝑗时，两个指标相同，而同等重要记为1，即主对角线元素全为1</li>
+<li>$a_{ij} &gt; 0$且满足$a_{ij} \times a_{ji} = 1$（满足这一条件的矩阵为正互反矩阵）</li>
+</ul>
+<p>对于n个指标（$n&lt;15$，最好不要大于10），我们需要进行$C_{n}^{2}$次比较，然后构造出$n\times n$的判断矩阵。还是旅游的例子，我们可以构造如下一个$5\times 5$的判断矩阵：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>景色</th>
+<th>花费</th>
+<th>居住</th>
+<th>饮食</th>
+<th>交通</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>景色</td>
+<td>1</td>
+<td>$\frac{1}{2}$</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>花费</td>
+<td>2</td>
+<td>1</td>
+<td>7</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>居住</td>
+<td>$\frac{1}{4}$</td>
+<td>$\frac{1}{7}$</td>
+<td>1</td>
+<td>$\frac{1}{2}$</td>
+<td>$\frac{1}{3}$</td>
+</tr>
+<tr>
+<td>饮食</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{5}$</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>交通</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{5}$</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>同样，我们可以得到：</p>
+<ul>
+<li>在景色方面，苏杭、北戴河、桂林的判断矩阵；</li>
+<li>在花费方面，苏杭、北戴河、桂林的判断矩阵；</li>
+<li>在居住方面，苏杭、北戴河、桂林的判断矩阵；</li>
+<li>在饮食方面，苏杭、北戴河、桂林的判断矩阵；</li>
+<li>在交通方面，苏杭、北戴河、桂林的判断矩阵；</li>
+</ul>
+<h3 id="3-一致性检验"><a href="#3-一致性检验" class="headerlink" title="3. 一致性检验"></a>3. 一致性检验</h3><p>一致矩阵：若正互反矩阵满足$a_{ik} = a_{ij} \times a_{jk}$，则称其为一致矩阵。<br>在算判断矩阵的权重之前，若判断矩阵不为一致矩阵，则必须对其进行一致性检验，我们允许矩阵不一致，但要确定不一致的范围。所谓一致性检验是指确定判断矩阵不一致的允许范围。</p>
+<p>一致性检验步骤：</p>
+<p>（1）计算一致性指标：</p>
+<script type="math/tex; mode=display">CI = \frac{\lambda_{max} - n}{n-1}</script><blockquote>
+<p>$\lambda_{max}$是判断矩阵的最大特征值，如果特征值中有虚数，则比较的是特征值的模长。</p>
+</blockquote>
+<p>（2）查找对应的<strong>平均随机一致性指标RI</strong>：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RI</td>
+<td>0</td>
+<td>0</td>
+<td>0.52</td>
+<td>0.89</td>
+<td>1.12</td>
+<td>1.26</td>
+<td>1.36</td>
+<td>1.41</td>
+<td>1.46</td>
+<td>1.49</td>
+<td>1.52</td>
+<td>1.54</td>
+<td>1.56</td>
+<td>1.58</td>
+<td>1.59</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>在实际运用中，n很少超过10，如果指标的个数大于10，则可考虑建立二级指标体系，或使用我们以后要学习的模糊综合评价模型。</p>
+</blockquote>
+<p>（3）计算一致性比例：</p>
+<script type="math/tex; mode=display">CR = \frac{CI}{CR}</script><p>如果CR &lt; 0.1，则可认为判断矩阵的一致性可以接受；<em>否则需要对判断矩阵进行修正</em>。</p>
+<h3 id="4-计算单层权重（层次单排序）"><a href="#4-计算单层权重（层次单排序）" class="headerlink" title="4. 计算单层权重（层次单排序）"></a>4. 计算单层权重（层次单排序）</h3><p>假设判断矩阵为</p>
+<script type="math/tex; mode=display">A = \begin{bmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn}\end{bmatrix}</script><h4 id="方法一：算术平均法求权重"><a href="#方法一：算术平均法求权重" class="headerlink" title="方法一：算术平均法求权重"></a>方法一：算术平均法求权重</h4><p>算术平均法求得的权重向量：</p>
+<script type="math/tex; mode=display">\omega_{i} = \frac{1}{n}\sum_{j=1}^{n}\frac{a_{ij}}{\sum_{k=1}^{n}a_{kj}}(i = 1, 2, \cdots, n)</script><h4 id="方法二：几何平均法求权重"><a href="#方法二：几何平均法求权重" class="headerlink" title="方法二：几何平均法求权重"></a>方法二：几何平均法求权重</h4><p>几何平均法求得的权重向量：</p>
+<script type="math/tex; mode=display">\omega_{i} = \frac{(\prod_{j=1}^{n}a_{ij})^{\frac{1}{n}}}{\sum_{k=1}^{n}(\prod_{j=1}^{n}a_{kj})^{\frac{1}{n}}}(i = 1, 2, \cdots, n)</script><h4 id="方法三：特征值法求权重"><a href="#方法三：特征值法求权重" class="headerlink" title="方法三：特征值法求权重"></a>方法三：特征值法求权重</h4><p>假如我们的判断矩阵一致性可以接受，那么我们可以仿照一致矩阵权重的求法：<br>第一步：求出矩阵A的最大特征值以及其对应的特征向量（$Ax = \lambda_{max} x$）<br>第二步：对求出的特征向量进行归一化即可得到权重（对列向量$x$进行归一化处理）</p>
+<blockquote>
+<p>数学建模比赛中建议三种方法都需要计算，在论文中加上这句话：<br>为了保证结果的稳健性，本文采用了三种方法分别求出了权重后计算平均值，再根据得到的权重矩阵计算各方案的得分，并进行排序和综合分析，这样避免了采用单一方法所产生的偏差，得出的结论将更全面、更有效。</p>
+</blockquote>
+<p>最终得到权重矩阵，进行下一步的组合权重计算。</p>
+<h3 id="5-计算组合权重（层次总排序）"><a href="#5-计算组合权重（层次总排序）" class="headerlink" title="5. 计算组合权重（层次总排序）"></a>5. 计算组合权重（层次总排序）</h3><p>通常一个模型有多层因素，每层对目标的影响权重都不一样，所以需要考虑最下层方案对目标的权重。</p>
+<ul>
+<li>计算某一层次所有因素对于最高层（总目标）相对重要性的权值，称为<strong>层次总排序</strong>。</li>
+<li>这一过程是从最高层次到最低层次依次进行的，是在已知单层因素对上一层的<strong>相对重要性排序</strong>的前提下进行。</li>
+</ul>
+<img src="/2023/08/02/01-%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/%E5%A4%9A%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.svg" class="">
+<p>此结构图中：</p>
+<ul>
+<li>A层m个因素$A_{1}, A_{2}, \cdots, A_{m}$对总目标的层次总排序为$a_{1}, a_{2}, \cdots , a_{m}$. </li>
+<li>B层n个因素对上层A中因素为$A_{j}$的层次单排序为$b_{1j}, b_{2j}, \cdots, b_{nj}$. （$b_{ij}$可以理解为$b_{i}$对$a_{j}$的重要性）</li>
+<li>B层的层次总排序：$b_{1}, b_{2}, \cdots, b_{n}$，即B层第i个因素对总目标的权值为$b_{i} = \sum_{j=1}^{m}a_{j}b_{ij}$</li>
+</ul>
+<p>B层的层次总排序一致性检验：设B层$B_{1}, B_{2}, \cdots, B_{3}$对上层A层中因素$A_{j}(j=1,2,\cdots, m)$的层次单排序一致性指标为$CI_{j}$，随机一致性指标为$RI_{j}$，则层次总排序的一致性比率为：</p>
+<script type="math/tex; mode=display">CR = \frac{\sum_{j=1}^{m}a_{j}CI_{j}}{\sum_{j=1}^{m}a_{j}RI_{j}}</script><p>当$CR &lt; 0.1$时，认为层次总排序通过一致性检验。若通过一致性检验，则可按照总排序的权向量表示的结果进行评价，否则需要重新调整一致性比率高的判断矩阵中元素的取值。</p>
+<h2 id="应用实例"><a href="#应用实例" class="headerlink" title="应用实例"></a>应用实例</h2><blockquote>
+<p>小明同学想出去旅游。在查阅了网上的攻略后，他初步选择了苏杭、北戴河和桂林三地之一作为目标景点。请你确定评价指标、形成评价体系来为小明同学选择最佳的方案。</p>
+</blockquote>
+<h3 id="第一步：建立模型"><a href="#第一步：建立模型" class="headerlink" title="第一步：建立模型"></a>第一步：建立模型</h3><pre class="mermaid">graph TB
+
+    J[目标层] --> K[准则层]
+
+    K --> L[方案层]
+
+    A(选择旅游地) --> B(景色)
+
+    A(选择旅游地) --> C(花费)
+
+    A(选择旅游地) --> D(居住)
+
+    A(选择旅游地) --> E(饮食)
+
+    A(选择旅游地) --> F(交通)
+
+    B --> G(苏杭)
+
+    B --> H(北戴河)
+
+    B --> I(桂林)
+
+    C --> G(苏杭)
+
+    C --> H(北戴河)
+
+    C --> I(桂林)
+
+    D --> G(苏杭)
+
+    D --> H(北戴河)
+
+    D --> I(桂林)
+
+    E --> G(苏杭)
+
+    E --> H(北戴河)
+
+    E --> I(桂林)
+
+    F --> G(苏杭)
+
+    F --> H(北戴河)
+
+    F --> I(桂林)</pre>
+
+<h3 id="第二步：构造判断矩阵"><a href="#第二步：构造判断矩阵" class="headerlink" title="第二步：构造判断矩阵"></a>第二步：构造判断矩阵</h3><p>准则层判断矩阵A：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>景色</th>
+<th>花费</th>
+<th>居住</th>
+<th>饮食</th>
+<th>交通</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>景色</td>
+<td>1</td>
+<td>$\frac{1}{2}$</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>花费</td>
+<td>2</td>
+<td>1</td>
+<td>7</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>居住</td>
+<td>$\frac{1}{4}$</td>
+<td>$\frac{1}{7}$</td>
+<td>1</td>
+<td>$\frac{1}{2}$</td>
+<td>$\frac{1}{3}$</td>
+</tr>
+<tr>
+<td>饮食</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{5}$</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>交通</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{5}$</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>景色对方案层的判断矩阵$B_{1}$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>景色</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苏杭</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>北戴河</td>
+<td>$\frac{1}{2}$</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>桂林</td>
+<td>$\frac{1}{5}$</td>
+<td>$\frac{1}{2}$</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>花费对方案层的判断矩阵$B_{2}$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>花费</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苏杭</td>
+<td>1</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{8}$</td>
+</tr>
+<tr>
+<td>北戴河</td>
+<td>3</td>
+<td>1</td>
+<td>$\frac{1}{3}$</td>
+</tr>
+<tr>
+<td>桂林</td>
+<td>8</td>
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>居住对方案层的判断矩阵$B_{3}$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>居住</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苏杭</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>北戴河</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>桂林</td>
+<td>$\frac{1}{3}$</td>
+<td>$\frac{1}{3}$</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>饮食对方案层的判断矩阵$B_4$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>饮食</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苏杭</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>北戴河</td>
+<td>$\frac{1}{3}$</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>桂林</td>
+<td>$\frac{1}{4}$</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>交通对方案层的判断矩阵$B_{5}$：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>交通</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苏杭</td>
+<td>1</td>
+<td>1</td>
+<td>$\frac{1}{4}$</td>
+</tr>
+<tr>
+<td>北戴河</td>
+<td>1</td>
+<td>1</td>
+<td>$\frac{1}{4}$</td>
+</tr>
+<tr>
+<td>桂林</td>
+<td>4</td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="第三步：层次单排序一致性检验"><a href="#第三步：层次单排序一致性检验" class="headerlink" title="第三步：层次单排序一致性检验"></a>第三步：层次单排序一致性检验</h3><p>矩阵A的最大特征值 $\lambda_{max} = 5.073$，该特征值对应的归一化特征向量 $\omega = \{0.263, 0.475, 0.055, 0.099, 0.110\}$.故$CI = \frac{\lambda_{max} - n}{n-1} = \frac{5.073 - 5}{5-1} = 0.018$. 查表得，$RI = 1.12$，则$CR = \frac{CI}{RI} = \frac{0.018}{1.12} = 0.016 &lt; 0.1$，表明判断矩阵 A 通过了一致性检验。</p>
+<p>方案层 B 层对准则层因素$A_{j}$的层次单排序矩阵一致性检验：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\omega_{i1}$</td>
+<td>0.595</td>
+<td>0.082</td>
+<td>0.429</td>
+<td>0.633</td>
+<td>0.166</td>
+</tr>
+<tr>
+<td>$\omega_{i2}$</td>
+<td>0.277</td>
+<td>0.236</td>
+<td>0.429</td>
+<td>0.193</td>
+<td>0.166</td>
+</tr>
+<tr>
+<td>$\omega_{i3}$</td>
+<td>0.129</td>
+<td>0.682</td>
+<td>0.142</td>
+<td>0.175</td>
+<td>0.668</td>
+</tr>
+<tr>
+<td>$\lambda_{i}$</td>
+<td>3.005</td>
+<td>3.002</td>
+<td>3</td>
+<td>3.009</td>
+<td>3</td>
+</tr>
+<tr>
+<td>$CI_{i}$</td>
+<td>0.003</td>
+<td>0.001</td>
+<td>0</td>
+<td>0.005</td>
+<td>0</td>
+</tr>
+<tr>
+<td>$RI_{i}$</td>
+<td>0.58</td>
+<td>0.58</td>
+<td>0.58</td>
+<td>0.58</td>
+<td>0.58</td>
+</tr>
+<tr>
+<td>$CR_{i}$</td>
+<td>0.005</td>
+<td>0.002</td>
+<td>0</td>
+<td>0.009</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由表可知，判断矩阵$B_{1}, B_{2}, B_{3}, B_{4}, B_{5}$通过一致性检验。</p>
+<h3 id="第四步：计算层次单排序的权重"><a href="#第四步：计算层次单排序的权重" class="headerlink" title="第四步：计算层次单排序的权重"></a>第四步：计算层次单排序的权重</h3><p>使用算术平均法、几何平均法、特征值法求权重，得到权重矩阵：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>指标权重</th>
+<th>苏杭</th>
+<th>北戴河</th>
+<th>桂林</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>景色</td>
+<td>0.2636</td>
+<td>0.5954</td>
+<td>0.2764</td>
+<td>0.1283</td>
+</tr>
+<tr>
+<td>花费</td>
+<td>0.4758</td>
+<td>0.0819</td>
+<td>0.2363</td>
+<td>0.6817</td>
+</tr>
+<tr>
+<td>居住</td>
+<td>0.0538</td>
+<td>0.4286</td>
+<td>0.4286</td>
+<td>0.1429</td>
+</tr>
+<tr>
+<td>饮食</td>
+<td>0.0981</td>
+<td>0.6337</td>
+<td>0.1919</td>
+<td>0.1744</td>
+</tr>
+<tr>
+<td>交通</td>
+<td>0.1087</td>
+<td>0.1667</td>
+<td>0.1667</td>
+<td>0.6667</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="第五步：计算层次总排序的权重"><a href="#第五步：计算层次总排序的权重" class="headerlink" title="第五步：计算层次总排序的权重"></a>第五步：计算层次总排序的权重</h3><p>检验总排序的一致性：</p>
+<script type="math/tex; mode=display">CR =\frac{0.2636 \times 0.003 + 0.4758 \times 0.001 +  0.0538 \times 0 + 0.0981 \times 0.005 + 0.1087 \times 0}{0.58} = 0.015 < 0.1</script><p>所以，层次总排序通过一致性检验。</p>
+<p>计算方案层 B 层的层次总排序：</p>
+<ul>
+<li>苏杭 $B_{1}$ 的总目标权值： <script type="math/tex; mode=display">b_{1} = 0.2636 \times 0.5954 + 0.4758 \times 0.0819 + 0.0538 \times 0.4286 + 0.0981 \times 0.6337 + 0.1087 \times 0.1667 = 0.299</script></li>
+<li>北戴河 $B_{2}$ 的总目标权值：<script type="math/tex; mode=display">b_{2} = 0.2636 \times 0.2764 + 0.4758 \times 0.2363 + 0.0538 \times 0.4286 + 0.0981 \times 0.1919 + 0.1087 \times 0.1667 = 0.245</script></li>
+<li>桂林 $B_{3}$ 的总目标权值：<script type="math/tex; mode=display">b_{3} = 0.2636 \times 0.1283 + 0.4758 \times 0.6817 + 0.0538 \times 0.1429 + 0.0981 \times 0.1744 + 0.1087 \times 0.6667 = 0.455</script></li>
+</ul>
+<p>所以，桂林的权重最大，最终决定去桂林。</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>人们在对社会、经济以及管理领域的问题进行系统分析时，面临的经常是一个由相互关联、相互制约的众多因素构成的复杂系统。层次分析法则为研究这类复杂的系统，提供了一种新的、简洁的、实用的决策方法。</p>
+<p>层次分析法的局限性：</p>
+<ol>
+<li>评价的决策层不能太多，太多的话n会很大，判断矩阵和一致矩阵差异可能会很大。</li>
+<li>如果决策层中指标的数据是已知的，不能利用层次分析法来进行评价。</li>
+</ol>
+<h2 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h2><h3 id="SingleAhp-m"><a href="#SingleAhp-m" class="headerlink" title="SingleAhp.m"></a>SingleAhp.m</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y, CI, RI]</span> = <span class="title">SingleAhp</span><span class="params">(A)</span></span></span><br><span class="line"><span class="comment">% 计算层次单排序的权重</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 1.一致性检验</span></span><br><span class="line">n = <span class="built_in">size</span>(A, <span class="number">1</span>); <span class="comment">% 判断矩阵大小</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 判断n是否满足n&lt;15</span></span><br><span class="line"><span class="keyword">if</span> n &gt; <span class="number">15</span></span><br><span class="line">    <span class="built_in">disp</span>(<span class="string">&quot;该模型不能使用层次分析法！&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 计算最大特征值</span></span><br><span class="line">[V, D] = eig(A); <span class="comment">% V是特征向量，D是由特征值组成的对角矩阵</span></span><br><span class="line">max_lambda = <span class="built_in">max</span>(<span class="built_in">max</span>(D));</span><br><span class="line"></span><br><span class="line"><span class="comment">% 计算一致性指标CI</span></span><br><span class="line">CI = (max_lambda - n) / (n - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 得出平均随机一致性指标RI</span></span><br><span class="line">matrix_RI = [<span class="number">0</span> <span class="number">0.0001</span> <span class="number">0.52</span> <span class="number">0.89</span> <span class="number">1.12</span> <span class="number">1.26</span> <span class="number">1.36</span> <span class="number">1.41</span> <span class="number">1.46</span> <span class="number">1.49</span> <span class="number">1.52</span> <span class="number">1.54</span> <span class="number">1.56</span> <span class="number">1.58</span> <span class="number">1.59</span>];</span><br><span class="line">RI = matrix_RI(n);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 计算一致性比例</span></span><br><span class="line">CR = CI / RI;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 显示结果</span></span><br><span class="line">fprintf(<span class="string">&quot;一致性指标为：%.4f \n&quot;</span>, CI);</span><br><span class="line">fprintf(<span class="string">&quot;一致性比例为：%.4f \n&quot;</span>, CR);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 检验一致性</span></span><br><span class="line"><span class="keyword">if</span> CR &lt; <span class="number">0.1</span></span><br><span class="line">	<span class="built_in">disp</span>(<span class="string">&quot;该判断矩阵一致性可以接受！&quot;</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">disp</span>(<span class="string">&quot;CR &gt;= 0.1，需要对判断矩阵进行修正！&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 2.1 算术平均法求权重</span></span><br><span class="line"><span class="comment">% 每一列求和</span></span><br><span class="line">sumA = sum(A);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 将行向量复制n份</span></span><br><span class="line">sumA = <span class="built_in">repmat</span>(sumA, n, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 标准化矩阵</span></span><br><span class="line">stdA = A ./ sumA;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 对每一行求和，除以矩阵大小，得出权重</span></span><br><span class="line">omega_arith = sum(stdA, <span class="number">2</span>) ./ n;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 输出结果</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot;算术平均法计算的权值为：&quot;</span>);</span><br><span class="line">fprintf(<span class="string">&quot;%.4f &quot;</span>, omega_arith);</span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 2.2 几何平均法求权重</span></span><br><span class="line"><span class="comment">% 每一行乘积</span></span><br><span class="line">prodA = prod(A, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 开n次方根</span></span><br><span class="line">nprodA = prodA .^ (<span class="number">1</span>/n);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 求和</span></span><br><span class="line">sumNprodA = sum(nprodA);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘积与总和相除，得出权重</span></span><br><span class="line">omega_geo = nprodA ./ sumNprodA;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 输出结果</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot;几何平均法计算的权值为：&quot;</span>);</span><br><span class="line">fprintf(<span class="string">&quot;%.4f &quot;</span>, omega_geo);</span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 2.3 特征值法求权重</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 找到最大特征值对应的特征向量</span></span><br><span class="line">[~, col] = <span class="built_in">find</span>(D == max_lambda , <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 特征向量归一化</span></span><br><span class="line">omega_eig = V(:, col) ./ sum(V(:, col));</span><br><span class="line"></span><br><span class="line"><span class="comment">% 输出结果</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot;特征值法计算的权值为：&quot;</span>);</span><br><span class="line">fprintf(<span class="string">&quot;%.4f &quot;</span>, omega_eig);</span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 最终选用特征值法求得的权值</span></span><br><span class="line">y = omega_eig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="MultiAhp-m"><a href="#MultiAhp-m" class="headerlink" title="MultiAhp.m"></a>MultiAhp.m</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span> = <span class="title">MultiAhp</span><span class="params">(B, omegaA, CI, RI)</span></span></span><br><span class="line"><span class="comment">% 计算层次总排序的权重</span></span><br><span class="line"><span class="comment">% B : 该层相对于上层因素的层次单排序判断矩阵(b_&#123;ij&#125;行下标i为该层因素，列下标j为上层因素)</span></span><br><span class="line"><span class="comment">% omegaA : 上层的指标权重列向量</span></span><br><span class="line"><span class="comment">% CI ： 该层相对于上层因素的一致性指标列向量</span></span><br><span class="line"><span class="comment">% RI : 该层相对于上层因素的平均随机一致性指标列向量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 1. 一致性检验</span></span><br><span class="line">CR = sum(omegaA .* CI) / sum(omegaA .* RI);</span><br><span class="line">fprintf(<span class="string">&quot;一致性比例为：%.4f \n&quot;</span>, CR);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 检验一致性</span></span><br><span class="line"><span class="keyword">if</span> CR &lt; <span class="number">0.1</span></span><br><span class="line">	<span class="built_in">disp</span>(<span class="string">&quot;层次总排序一致性可以接受！&quot;</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">disp</span>(<span class="string">&quot;CR &gt;= 0.1，需要重新调整一致性比率高的判断矩阵中元素的取值！&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 2. 计算层次总排序权值</span></span><br><span class="line">omegaB = B * omegaA;</span><br><span class="line"></span><br><span class="line"><span class="comment">% 输出结果</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot;计算总目标的权值为：&quot;</span>);</span><br><span class="line">fprintf(<span class="string">&quot;%.4f &quot;</span>, omegaB);</span><br><span class="line"><span class="built_in">disp</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="ahp-m"><a href="#ahp-m" class="headerlink" title="ahp.m"></a>ahp.m</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">clear;clc;close all</span><br><span class="line"><span class="comment">% 层次分析法示例</span></span><br><span class="line"><span class="comment">% 问题：小明同学想出去旅游。在查阅了网上的攻略后，</span></span><br><span class="line"><span class="comment">% 他初步选择了苏杭、北戴河和桂林三地之一作为目标景点。</span></span><br><span class="line"><span class="comment">% 请你确定评价指标、形成评价体系来为小明同学选择最佳的方案。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 1. 建立结构模型</span></span><br><span class="line"><span class="comment">% 目标层：选择旅游地</span></span><br><span class="line"><span class="comment">% 准则层：景色、花费、居住、饮食、交通</span></span><br><span class="line"><span class="comment">% 方案层：苏杭、北戴河、桂林</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 2. 构建判断矩阵</span></span><br><span class="line"><span class="comment">% 准则层判断矩阵A</span></span><br><span class="line">A = [<span class="number">1</span> <span class="number">1</span>/<span class="number">2</span> <span class="number">4</span> <span class="number">3</span> <span class="number">3</span>; <span class="number">2</span> <span class="number">1</span> <span class="number">7</span> <span class="number">5</span> <span class="number">5</span>; <span class="number">1</span>/<span class="number">4</span> <span class="number">1</span>/<span class="number">7</span> <span class="number">1</span> <span class="number">1</span>/<span class="number">2</span> <span class="number">1</span>/<span class="number">3</span>; <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span>/<span class="number">5</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span>; <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span>/<span class="number">5</span> <span class="number">3</span> <span class="number">1</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 景色对方案层的判断矩阵B1</span></span><br><span class="line">B1 = [<span class="number">1</span> <span class="number">2</span> <span class="number">4</span>; <span class="number">1</span>/<span class="number">2</span> <span class="number">1</span> <span class="number">2</span>; <span class="number">1</span>/<span class="number">4</span> <span class="number">1</span>/<span class="number">2</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 花费对方案层的判断矩阵B2</span></span><br><span class="line">B2 = [<span class="number">1</span> <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span>/<span class="number">8</span>; <span class="number">3</span> <span class="number">1</span> <span class="number">1</span>/<span class="number">3</span>; <span class="number">8</span> <span class="number">3</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 居住对方案层的判断矩阵B3</span></span><br><span class="line">B3 = [<span class="number">1</span> <span class="number">1</span> <span class="number">3</span>; <span class="number">1</span> <span class="number">1</span> <span class="number">3</span>; <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 饮食对方案层的判断矩阵B4</span></span><br><span class="line">B4 = [<span class="number">1</span> <span class="number">3</span> <span class="number">4</span>; <span class="number">1</span>/<span class="number">3</span> <span class="number">1</span> <span class="number">1</span>; <span class="number">1</span>/<span class="number">4</span> <span class="number">1</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 交通对方案层的判断矩阵B5</span></span><br><span class="line">B5 = [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>/<span class="number">4</span>; <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>/<span class="number">4</span>; <span class="number">4</span> <span class="number">4</span> <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 3. 单层排序权重计算和一致性检验</span></span><br><span class="line">B = <span class="built_in">zeros</span>(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">CI = <span class="built_in">zeros</span>(<span class="number">5</span>, <span class="number">1</span>);</span><br><span class="line">RI = <span class="built_in">zeros</span>(<span class="number">5</span>, <span class="number">1</span>);</span><br><span class="line">[omegaA, ~, ~] = SingleAhp(A);</span><br><span class="line">[B(:, <span class="number">1</span>), CI(<span class="number">1</span>), RI(<span class="number">1</span>)] = SingleAhp(B1);</span><br><span class="line">[B(:, <span class="number">2</span>), CI(<span class="number">2</span>), RI(<span class="number">2</span>)] = SingleAhp(B2);</span><br><span class="line">[B(:, <span class="number">3</span>), CI(<span class="number">3</span>), RI(<span class="number">3</span>)] = SingleAhp(B3);</span><br><span class="line">[B(:, <span class="number">4</span>), CI(<span class="number">4</span>), RI(<span class="number">4</span>)] = SingleAhp(B4);</span><br><span class="line">[B(:, <span class="number">5</span>), CI(<span class="number">5</span>), RI(<span class="number">5</span>)] = SingleAhp(B5);</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 4. 层次总排序计算</span></span><br><span class="line">MultiAhp(B, omegaA, CI, RI);</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" rel="tag">数学建模</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%84%E4%BB%B7%E7%B1%BB/" rel="tag">评价类</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-03-分支"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/31/03-%E5%88%86%E6%94%AF/"
+    >03 分支</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/31/03-%E5%88%86%E6%94%AF/" class="article-date">
+  <time datetime="2023-07-31T09:26:50.000Z" itemprop="datePublished">2023-07-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>创建一个新的分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>查看分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch    # 查看所有本地分支，有*标记的代表当前所处的分支</span><br><span class="line">$ git branch -r    # 查看远程的分支</span><br><span class="line"># git branch -a    # 查看所有的分支</span><br></pre></td></tr></table></figure></p>
+<h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><p>切换分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout &lt;branch-name&gt;</span><br><span class="line">$ git switch &lt;branch-name&gt;    # 推荐使用，不会产生歧义 </span><br></pre></td></tr></table></figure><br>创建新分支并立即切换到该分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git cheackout -b &lt;branch-name&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h2><p>将某个分支合并到当前分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge -m message &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>合并冲突解决方法：</p>
+<ol>
+<li>手工修改冲突文件，合并冲突内容</li>
+<li>添加暂存区<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;file&gt;</span><br></pre></td></tr></table></figure></li>
+<li>提交修改<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;message&quot;</span><br></pre></td></tr></table></figure>
+如果想终止合并的话：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge --abort</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h2><p>删除已合并的分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d &lt;branch-name&gt;</span><br></pre></td></tr></table></figure><br>强制删除指定分支：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D &lt;branch-name&gt;</span><br></pre></td></tr></table></figure></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
+  id="post-02-远程仓库"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"
+    >02 远程仓库</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/07/31/02-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/" class="article-date">
+  <time datetime="2023-07-31T09:25:15.000Z" itemprop="datePublished">2023-07-31</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="连接仓库"><a href="#连接仓库" class="headerlink" title="连接仓库"></a>连接仓库</h2><p>连接仓库有两种方法：</p>
+<ul>
+<li>通过Https协议连接仓库，需要用户名和密码（不推荐，现已失效）</li>
+<li>通过配置SSH密钥连接仓库</li>
+</ul>
+<h3 id="配置SSH密钥的方法"><a href="#配置SSH密钥的方法" class="headerlink" title="配置SSH密钥的方法"></a>配置SSH密钥的方法</h3><ol>
+<li><p>生成SSH密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;example@mail.com&quot;</span><br></pre></td></tr></table></figure>
+<p><code>example@mail.com</code>填入注册github的邮箱地址。</p>
+</li>
+<li><p>之后会要求确认路径和输入密码，如果是第一次生成的话，我们使用默认的一路回车就行。（已经生成过就需要改文件名）</p>
+</li>
+<li><p>如果成功的话，会在用户根目录<code>/User/username/.ssh/</code>下生成<code>id_rsa</code>文件。复制SSH公钥至剪切板：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在Github的Account —&gt; Settings —&gt; SSH and GPG keys中新建SSH keys，输入名称以及复制的SSH公钥，保存即可</p>
+</li>
+<li><p>验证是否成功，出现以下信息则表示配置成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">The authenticity of host &#x27;github.com (52.74.223.119)&#x27; can&#x27;t be established.</span><br><span class="line">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes                   # 输入 yes</span><br><span class="line">Warning: Permanently added &#x27;github.com,52.74.223.119&#x27; (RSA) to the list of known hosts.</span><br><span class="line">Hi YxxNorman! You&#x27;ve successfully authenticated, but GitHub does not provide shell access. # 成功信息</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="关联本地仓库和远程仓库"><a href="#关联本地仓库和远程仓库" class="headerlink" title="关联本地仓库和远程仓库"></a>关联本地仓库和远程仓库</h2><p>添加远程仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add &lt;remote-name&gt; &lt;remote-url&gt;</span><br></pre></td></tr></table></figure>
+<p>这里<code>remote-name</code>可以填<code>origin</code>为远程仓库的默认名称<br>查看远程仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure>
+<p>将本地仓库和远程仓库关联起来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull -u origin main</span><br></pre></td></tr></table></figure>
+<h2 id="拉取和推送仓库文件"><a href="#拉取和推送仓库文件" class="headerlink" title="拉取和推送仓库文件"></a>拉取和推送仓库文件</h2><p>将本地仓库的文件更新到远程仓库中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<p>将远程仓库的文件更新至本地仓库中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git pull</span><br><span class="line">$ git pull origin &lt;branch-name&gt;    # 拉取远程仓库指定分支的内容</span><br></pre></td></tr></table></figure> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-01-Git入门教程"
   class="article article-type-post"
   itemscope
@@ -444,412 +1714,13 @@ x_n^{(k+1)} = \frac{1}{a_{nn}}(-a_{n1}x_1^{(k+1)} - a_{n2}x_2^{(k+1)} - \cdots -
 </article>
 
     
-    <article
-  id="post-Chapter8-Diodes"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/Chapter8-Diodes/"
-    >Chapter8 Diodes</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/Chapter8-Diodes/" class="article-date">
-  <time datetime="2023-07-30T03:50:09.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%A8%A1%E7%94%B5/">模电</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Chapter8-Diodes"><a href="#Chapter8-Diodes" class="headerlink" title="Chapter8 Diodes"></a>Chapter8 Diodes</h1><h2 id="8-1-二极管导电原理"><a href="#8-1-二极管导电原理" class="headerlink" title="8.1 二极管导电原理"></a>8.1 二极管导电原理</h2><h3 id="8-1-1-PN结（PN-junction）"><a href="#8-1-1-PN结（PN-junction）" class="headerlink" title="8.1.1 PN结（PN junction）"></a>8.1.1 PN结（PN junction）</h3><p>P型半导体（positive）：掺杂了一些硼（B）元素，使半导体存在许多空穴，呈正电性</p>
-<p>N型半导体（negative）：掺杂了一些磷（P）元素，使半导体存在许多自由电子，呈负电性</p>
-<p>PN结拼接在一起，自由电子和空穴就会自发的进行<strong>扩散运动</strong>，从而由于电子的移动，会在PN结内部产生内电场，阻碍自由电子和空穴的扩散运动。</p>
-<p>而P型半导体中存在的极少量自由电子，N型半导体中存在的极少量空穴能够在内电场的作用下发生<strong>漂移运动</strong>，电子向N型半导体移动，空穴向N型半导体移动。</p>
-<h3 id="8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）"><a href="#8-1-2-二极管的伏安特性（Volt-Ampere-characteristic）" class="headerlink" title="8.1.2 二极管的伏安特性（Volt-Ampere characteristic）"></a>8.1.2 二极管的伏安特性（Volt-Ampere characteristic）</h3><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%89%B9%E6%80%A7%E6%9B%B2%E7%BA%BF.png" class="" title="二极管曲线">
-<h3 id="8-1-3-二极管的三种模型"><a href="#8-1-3-二极管的三种模型" class="headerlink" title="8.1.3 二极管的三种模型"></a>8.1.3 二极管的三种模型</h3><ol>
-<li><p>实际模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E5%AE%9E%E9%99%85%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-<li><p>理想模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E7%90%86%E6%83%B3%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-<li><p>恒压降低模型</p>
-<img src="/2023/07/30/Chapter8-Diodes/%E6%81%92%E5%8E%8B%E9%99%8D%E6%A8%A1%E5%9E%8B.png" class="">
-</li>
-</ol>
-<h2 id="8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）"><a href="#8-2-二极管的图解法——负载线分析法（Load-line-analysis-method）" class="headerlink" title="8.2 二极管的图解法——负载线分析法（Load-line analysis method）"></a>8.2 二极管的图解法——负载线分析法（Load-line analysis method）</h2><img src="/2023/07/30/Chapter8-Diodes/%E4%BA%8C%E6%9E%81%E7%AE%A1%E7%94%B5%E8%B7%AF%E5%9B%BE.png" class="">
-<script type="math/tex; mode=display">V_{SS} = Ri_{D} + v_{D}</script><img src="/2023/07/30/Chapter8-Diodes/%E8%B4%9F%E8%BD%BD%E7%BA%BF%E5%88%86%E6%9E%90%E6%B3%95.png" class="">
-<h2 id="8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）"><a href="#8-3-二极管的假定状态分析法（Assunmed-states-for-analysis-of-ideal-diode-circuits）" class="headerlink" title="8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）"></a>8.3 二极管的假定状态分析法（Assunmed states for analysis of ideal-diode circuits）</h2><ol>
-<li>假设每个二极管的状态为开路或短路（on&amp;off）,即 n 个二极管开路有 $2^{n}$ 种可能的二极管状态组合</li>
-<li>分析电路以确定流过假设导通（on）的二极管的电流和假设关闭（off）的二极管两端的电压</li>
-<li>检查结果是否与每个二极管的假定状态一致。对于假定为<mark>导通</mark>的二极管，<mark>电流</mark>必须沿<mark>正向</mark>流动；假定为<mark>断开</mark>的二极管两端的<mark>电压</mark>在<mark>阴极处必须为正</mark>，即反向偏置</li>
-<li>如果结果与假定状态一致，则分析完成；否则返回步骤1并选择不同的二极管状态组合</li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A8%A1%E7%94%B5/" rel="tag">模电</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-Chapter2-拉伸和压缩"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/"
-    >Chapter2 拉伸和压缩</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/" class="article-date">
-  <time datetime="2023-07-30T03:26:52.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Chapter2-拉伸和压缩"><a href="#Chapter2-拉伸和压缩" class="headerlink" title="Chapter2 拉伸和压缩"></a>Chapter2 拉伸和压缩</h1><h2 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h2><p>杆件上外力合力的<strong>作用线与轴线重合</strong>，杆件变形是沿轴线方向的伸长或缩短</p>
-<h2 id="2-2-轴向拉伸或压缩横截面上的内力与应力"><a href="#2-2-轴向拉伸或压缩横截面上的内力与应力" class="headerlink" title="2.2 轴向拉伸或压缩横截面上的内力与应力"></a>2.2 轴向拉伸或压缩横截面上的内力与应力</h2><p>因为外力F的作用线与杆件轴线重合，内力的合力$F_{N}$的作用线也必然与杆件的轴线重合，所以$F_{N}$称为<strong>轴力</strong></p>
-<p>拉伸为正，压缩为负</p>
-<p>轴力图一般用来描述轴力沿轴线变化的情况</p>
-<img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E8%BD%B4%E5%8A%9B%E5%9B%BE.png" class="">
-<p><strong>拉伸或压缩的平面假设</strong>：变形前原为平面的横截面，变形后仍保持为平面且仍垂直于轴线</p>
-<p><strong>圣维南原理</strong>：如用与外力系静力等效的合力来代替原力系，则除在原力系作用区域内有明显差别外，在离外力作用区域略远处（例如距离约等于横截面尺寸处），上述代替的影响就非常微小，可以不计</p>
-<img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E5%9C%A3%E7%BB%B4%E5%8D%97%E5%8E%9F%E7%90%86.png" class="">
-<p>由平面假设可推出，<strong>均匀分布：正应力在轴向拉伸直杆横截面上均匀分布</strong>，前提条件是杆件上外力合力的作用线与轴线重合</p>
-<script type="math/tex; mode=display">\sigma = \frac{F_{N}}{A}</script><p>当轴力和横截面面积都沿x轴变化时，</p>
-<script type="math/tex; mode=display">\sigma(x) = \frac{F_{N}(x)}{A(x)}</script><h2 id="2-3-直杆轴向拉伸或压缩斜截面上的应力"><a href="#2-3-直杆轴向拉伸或压缩斜截面上的应力" class="headerlink" title="2.3 直杆轴向拉伸或压缩斜截面上的应力"></a>2.3 直杆轴向拉伸或压缩斜截面上的应力</h2><img src="/2023/07/30/Chapter2-%E6%8B%89%E4%BC%B8%E5%92%8C%E5%8E%8B%E7%BC%A9/%E8%BD%B4%E5%8A%9B.png" class="">
-<script type="math/tex; mode=display">\begin{matrix}p_{\alpha} = \sigma \cos\alpha  \\ \sigma_{\alpha} = p_{\alpha}\cos\alpha = \sigma \cos^{2}\alpha  \\ \tau_{\alpha} = p_{\alpha}\sin\alpha = \frac{\sigma}{2}\sin2\alpha \end{matrix}</script> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag">力学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/" rel="tag">材料力学</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-Chapter1-绪论"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/"
-    >Chapter1 绪论</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/Chapter1-%E7%BB%AA%E8%AE%BA/" class="article-date">
-  <time datetime="2023-07-30T01:11:55.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">材料力学</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Chapter1-绪论"><a href="#Chapter1-绪论" class="headerlink" title="Chapter1 绪论"></a>Chapter1 绪论</h1><h2 id="1-1-材料力学任务"><a href="#1-1-材料力学任务" class="headerlink" title="1.1 材料力学任务"></a>1.1 材料力学任务</h2><ol>
-<li>强度要求：在规定载荷下，构件不破坏</li>
-<li>刚度要求：在规定载荷下，构件变形不影响正常工作</li>
-<li>稳定性要求：在规定载荷下，构件保持原有平衡状态</li>
-</ol>
-<h2 id="1-2-研究对象与变形固体假设"><a href="#1-2-研究对象与变形固体假设" class="headerlink" title="1.2 研究对象与变形固体假设"></a>1.2 研究对象与变形固体假设</h2><p>研究对象：可变形固体</p>
-<p>变形固体假设：</p>
-<ul>
-<li>连续性假设：认为物质毫无空隙地充满了物体的几何空间，结构是密实的</li>
-<li>均匀性假设：物体内任两点物质构成与性质完全相同</li>
-<li>各向同性假设：材料内各点沿着任意方向的性质完全相同</li>
-<li><strong>小变形假设</strong>：最大变形量远小于构件的最小尺寸时，在研究构件的平衡和运动时按变形前的原始尺寸  进行计算，以保证问题在几何上是线性的。在求某  一小变形值时，其高阶小量就可舍去</li>
-</ul>
-<p>材料力学中将实际材料看作<mark>均匀</mark>、<mark>连续</mark>和<mark>各向同性</mark>的变形固体，并且只限于在<mark>弹性变形和小变形条件</mark>下进行研究</p>
-<h2 id="1-3-内力、截面法和应力的概念"><a href="#1-3-内力、截面法和应力的概念" class="headerlink" title="1.3 内力、截面法和应力的概念"></a>1.3 内力、截面法和应力的概念</h2><p>内力：无外力作用时，物体内部各质点间存在相互作用力，当物体受到外力作用时，产生变形，引起物体内部各质点间相互作用力发生改变，此改变量称为内力</p>
-<p>截面法：</p>
-<ul>
-<li>截开：欲求某一截面上的内力时，先沿该截面假想地把构件分成两部分，然后任意地取出一部分作为研究对象，并弃去另一部分。</li>
-<li>代替：用作用于截面上的内力代替弃去部分对取出部分的作用</li>
-<li>平衡：建立取出部分的平衡方程，确定未知的内力</li>
-</ul>
-<p>应力：单位面积内力系的集度</p>
-<script type="math/tex; mode=display">p = \lim_{\Delta A \to 0} p_{m} = \lim_{\Delta A \to 0}\frac{\Delta F}{\Delta A}</script><p>正应力$\sigma$：应力垂直于截面的分量</p>
-<p>切应力$\tau$：应力切于截面的分量</p>
-<h2 id="1-4-应变"><a href="#1-4-应变" class="headerlink" title="1.4 应变"></a>1.4 应变</h2><h3 id="线应变"><a href="#线应变" class="headerlink" title="线应变"></a>线应变</h3><p>M点沿x轴方向的线应变：</p>
-<script type="math/tex; mode=display">\varepsilon = \lim_{\overline{MN}\to 0}\frac{\overline{M'N'}-\overline{MN}}{\overline{MN}}</script><p>正应力与线应变的关系：</p>
-<script type="math/tex; mode=display">\sigma_{x} = E\varepsilon_{x}</script><h3 id="切应变"><a href="#切应变" class="headerlink" title="切应变"></a>切应变</h3><p>M点在x-y平面内的切应变或角应变：</p>
-<script type="math/tex; mode=display">\gamma = \lim_{\overline{MN}\to 0, \overline{ML}\to 0}\left(\frac{\pi}{2}-\angle L'M'N'\right)</script><p>切应力与切应变的关系：</p>
-<script type="math/tex; mode=display">\tau_{xy} = G\gamma_{xy}</script><h2 id="1-5-杆件变形的基本形式"><a href="#1-5-杆件变形的基本形式" class="headerlink" title="1.5 杆件变形的基本形式"></a>1.5 杆件变形的基本形式</h2><p>拉伸或压缩：这类变形形式是由大小相等、方向相反、作用线与杆件轴线重合的一对力引起的，表现为杆件的长度发生伸长或缩短</p>
-<p>剪切：这类变形形式是由大小相等、方向相反、相互平行的力引起的，表现为受剪杆件的两部分沿外力作用方向发生相对错动</p>
-<p>扭转：这类变形形式是由大小相等、方向相反、作用面都垂直于杆轴的两个力偶引起的，表现为杆件的任意两个横截面发生绕轴线的相对转动</p>
-<p>弯曲：这类变形形式是由垂直于杆件轴线的横向力，或由作用于包含杆轴的纵向平面内的一对大小相等、方向相反的力偶引起的，表现为杆件轴线由直线变为曲线</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag">力学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/" rel="tag">材料力学</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-从零开始搭建博客教程"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"
-    >从零搭建自己的博客教程</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" class="article-date">
-  <time datetime="2023-07-30T01:02:05.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a class="article-category-link" href="/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2/">博客</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h1><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>前往<a target="_blank" rel="noopener" href="https://nodejs.org/en/download">官网</a>下载，选择合适的版本，按照默认安装即可。</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/NodejsDownload.png" class="">
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>前往<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">官网</a>下载，选择合适的版本，按照默认安装即可。</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/GitDownload.png" class="">
-<h3 id="检验软件是否安装成功"><a href="#检验软件是否安装成功" class="headerlink" title="检验软件是否安装成功"></a>检验软件是否安装成功</h3><p>同时按下 Win + R 键打开运行窗口，输入 cmd ，然后输入以下命令，有相应版本信息显示则安装成功，若不正确可以卸载软件重新安装。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ $node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/TestVersion.png" class="">
-<p>此外，若Git安装成功，则在鼠标右键菜单中会出现Git GUI Here 和 Git Bash Here两个选项。其中，Git GUI Here 是图形界面的Git操作，Git Bash Here 命令行终端。</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/RightKeyMenu.png" class="">
-<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>选择一个新建的文件夹，右键点击 Git Bash Here 打开命令行终端。输入以下命令即可安装Hexo，第一个命令表示安装 hexo，第二个命令表示安装 hexo 部署到 git page 的 deployer，如图所示即为安装成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo-deployer-git -S</span><br></pre></td></tr></table></figure>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/HexoDownload.png" class="">
-<h3 id="初始化Hexo配置"><a href="#初始化Hexo配置" class="headerlink" title="初始化Hexo配置"></a>初始化Hexo配置</h3><p>在刚才新建的文件夹里面再次新建一个 Hexo 文件夹，进入该 Hexo 文件夹右键鼠标，点击 Git Bash Here，输入以下命令，如图所示则安装成功</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/HexoInit.png" class="">
-<p>Hexo 安装完成后，将会在指定文件夹中新建所需要的文件，Hexo 文件夹下的目录如下：</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/HexoFilesContent.png" class="">
-<h3 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h3><p>运行以下命令即可登录<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost:4000/</a>查看效果</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-<p>显示如下信息表示操作成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>登录<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost:4000/</a>查看效果：</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/Hexo.png" class="">
-<h2 id="部署至Github-Pages"><a href="#部署至Github-Pages" class="headerlink" title="部署至Github Pages"></a>部署至Github Pages</h2><p>到目前为止，我们的本地博客就成功搭建了，但是现在我们只能通过本地连接查看博客，我们要做的是让其他人也能够访问我们的博客，这就需要我们将博客部署到 Github Pages 上。</p>
-<h3 id="注册-Github-账户"><a href="#注册-Github-账户" class="headerlink" title="注册 Github 账户"></a>注册 Github 账户</h3><p>访问<a target="_blank" rel="noopener" href="https://github.com/">Github</a>官网，点击Sign Up注册账户。</p>
-<h3 id="创建-Github-Pages-仓库"><a href="#创建-Github-Pages-仓库" class="headerlink" title="创建 Github Pages 仓库"></a>创建 Github Pages 仓库</h3><p>点击 New repository 开始创建，步骤如下图：</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CreateRepository.png" class="">
-<h3 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h3><p> 只有配置好 SSH 密钥后，我们才可以通过 git 操作实现本地代码库与 Github 代码库同步。</p>
-<h4 id="1-创建SSH密钥"><a href="#1-创建SSH密钥" class="headerlink" title="1. 创建SSH密钥"></a>1. 创建SSH密钥</h4><p> 在第一次新建的文件夹里面 Git Bash Here 输入以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;email@example.com&quot;</span><br><span class="line">//引号里面填写自己的邮箱地址</span><br></pre></td></tr></table></figure>
-<p>之后会出现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa):</span><br><span class="line">//到这里可以直接回车将密钥按默认文件进行存储</span><br></pre></td></tr></table></figure>
-<p>然后会出现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">//这里是要你输入密码，其实不需要输什么密码，直接回车就行</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
-<p>接下来会显示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">这里是各种字母数字组成的字符串，结尾是你的邮箱</span><br><span class="line">The key&#x27;s randomart image is:</span><br><span class="line">这里也是各种字母数字符号组成的字符串</span><br></pre></td></tr></table></figure>
-<p>运行以下命令，将公钥的内容复制到系统粘贴板上：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<h4 id="2-在Github账户添加自己的公钥"><a href="#2-在Github账户添加自己的公钥" class="headerlink" title="2. 在Github账户添加自己的公钥"></a>2. 在Github账户添加自己的公钥</h4><img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CreateSSH_1.png" class="">
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CreateSSH_2.png" class="">
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CreateSSH_3.png" class="">
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CreateSSH_456.png" class="">
-<h4 id="3-测试公钥"><a href="#3-测试公钥" class="headerlink" title="3. 测试公钥"></a>3. 测试公钥</h4><p>输入以下命令，注意: git@github.com不要做任何更改！</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>出现如下图所示信息，则表示配置成功！</p>
-<img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/SSHtest.png" class="">
-<h3 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h3><p>Git 会根据用户的名字和邮箱来记录提交，GitHub 也是用这些信息来做权限的处理，输入以下命令进行个人信息的设置，把名称和邮箱替换成自己的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;此处填你的用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;此处填你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>到此为止 SSH Key 配置成功，本机已成功连接到 Github</p>
-<h3 id="将本地文件更新到Github库中"><a href="#将本地文件更新到Github库中" class="headerlink" title="将本地文件更新到Github库中"></a>将本地文件更新到Github库中</h3><h4 id="1-打开自己创建的仓库yourname-github-io"><a href="#1-打开自己创建的仓库yourname-github-io" class="headerlink" title="1. 打开自己创建的仓库yourname.github.io"></a>1. 打开自己创建的仓库<ins>yourname.github.io</ins></h4><h4 id="2-复制SSH地址"><a href="#2-复制SSH地址" class="headerlink" title="2. 复制SSH地址"></a>2. 复制SSH地址</h4><img src="/2023/07/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/CopySSH.png" class="">
-<h4 id="3-修改配置文件：打开你创建的-Hexo-文件夹，右键用记事本打开该文件夹下的-config-yml文件，找到Deployment代码部分，按照如下代码修改配置文件。"><a href="#3-修改配置文件：打开你创建的-Hexo-文件夹，右键用记事本打开该文件夹下的-config-yml文件，找到Deployment代码部分，按照如下代码修改配置文件。" class="headerlink" title="3. 修改配置文件：打开你创建的 Hexo 文件夹，右键用记事本打开该文件夹下的 _config.yml文件，找到Deployment代码部分，按照如下代码修改配置文件。"></a>3. 修改配置文件：打开你创建的 Hexo 文件夹，右键用记事本打开该文件夹下的 <em>_config.yml</em>文件，找到Deployment代码部分，按照如下代码修改配置文件。</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:YxxNorman/YxxNorman.github.io.git</span>    <span class="comment"># 刚刚复制的SSH地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<h4 id="4-部署博客：运行以下命令，博客就会部署到Github上了。"><a href="#4-部署博客：运行以下命令，博客就会部署到Github上了。" class="headerlink" title="4. 部署博客：运行以下命令，博客就会部署到Github上了。"></a>4. 部署博客：运行以下命令，博客就会部署到Github上了。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-<h4 id="5-查看博客：你的博客地址：https-你的用户名-github-io。现在每个人都可以通过此链接访问你的博客了。"><a href="#5-查看博客：你的博客地址：https-你的用户名-github-io。现在每个人都可以通过此链接访问你的博客了。" class="headerlink" title="5. 查看博客：你的博客地址：https://你的用户名.github.io。现在每个人都可以通过此链接访问你的博客了。"></a>5. 查看博客：你的博客地址：<ins><a target="_blank" rel="noopener" href="https://你的用户名.github.io">https://你的用户名.github.io</a></ins>。现在每个人都可以通过此链接访问你的博客了。</h4> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
-    <article
-  id="post-Chapter1-流体及其物理性质"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/"
-    >Chapter1 流体及其物理性质</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/07/30/Chapter1-%E6%B5%81%E4%BD%93%E5%8F%8A%E5%85%B6%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8/" class="article-date">
-  <time datetime="2023-07-30T00:42:21.000Z" itemprop="datePublished">2023-07-30</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/">流体力学</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="Chapter1-流体及其物理性质"><a href="#Chapter1-流体及其物理性质" class="headerlink" title="Chapter1 流体及其物理性质"></a>Chapter1 流体及其物理性质</h1><h2 id="1-1-流体的定义和特征"><a href="#1-1-流体的定义和特征" class="headerlink" title="1.1 流体的定义和特征"></a>1.1 流体的定义和特征</h2><p>定义：流体是一种受任何<strong>微小剪切力作用</strong>都能<strong>连续变形</strong>的物质</p>
-<p>流体可以分为液体和气体</p>
-<h2 id="1-2-流体的连续介质假设"><a href="#1-2-流体的连续介质假设" class="headerlink" title="1.2 流体的连续介质假设"></a>1.2 流体的连续介质假设</h2><p>将流体视为由无数连续分布的流体质点所组成的<strong>连续介质</strong></p>
-<p>连续介质：由微观无穷大、宏观无穷小的流体质点组成的连续介质。</p>
-<h2 id="1-3-流体的可压缩性"><a href="#1-3-流体的可压缩性" class="headerlink" title="1.3 流体的可压缩性"></a>1.3 流体的可压缩性</h2><h3 id="1-3-1-流体的密度"><a href="#1-3-1-流体的密度" class="headerlink" title="1.3.1 流体的密度"></a>1.3.1 流体的密度</h3><p>绝对密度：</p>
-<script type="math/tex; mode=display">\rho = \frac{m}{V}</script><p>相对密度：</p>
-<script type="math/tex; mode=display">\begin{matrix}S_{l}= \frac{\rho_{l}}{\rho_{w_{0}}} \\ S_{g} = \frac{\rho_{g}}{\rho_{a_{0}}}\end{matrix}</script><h3 id="1-3-2-流体的压缩性"><a href="#1-3-2-流体的压缩性" class="headerlink" title="1.3.2 流体的压缩性"></a>1.3.2 流体的压缩性</h3><p>体积压缩系数$\beta_{p}$：单位压强增量所引起的流体体积变化率</p>
-<script type="math/tex; mode=display">\beta_{p} = - \frac{1}{\delta p}\frac{\delta V}{V}</script><p>体积模量：$K_{p}=\frac{1}{\beta_{p}}$</p>
-<h3 id="1-3-3-流体的膨胀性"><a href="#1-3-3-流体的膨胀性" class="headerlink" title="1.3.3 流体的膨胀性"></a>1.3.3 流体的膨胀性</h3><p>温度膨胀系数$\beta_{T}$：单位温度增量所引起的流体体积变化率</p>
-<script type="math/tex; mode=display">\beta_{T} = \frac{1}{\delta T}\frac{\delta V}{V}</script><h2 id="1-4-流体的黏性"><a href="#1-4-流体的黏性" class="headerlink" title="1.4 流体的黏性"></a>1.4 流体的黏性</h2><p>黏性：流体质点运动发生相对滑移时产生切向阻力</p>
-<h3 id="1-4-1-牛顿内摩擦定律"><a href="#1-4-1-牛顿内摩擦定律" class="headerlink" title="1.4.1 牛顿内摩擦定律"></a>1.4.1 牛顿内摩擦定律</h3><script type="math/tex; mode=display">F = \mu \frac{AV}{h}</script><p>F即为牛顿内摩擦力，A为流体与平板接触面积，h为运动平板与静止平板间的垂直距离，V为运动平板的移动速度，$\mu$为<strong>动力黏度</strong></p>
-<p>切向应力$\tau$：单位面积上的摩擦阻力</p>
-<script type="math/tex; mode=display">\tau = \frac{F}{A} = \mu \frac{V}{h} = \mu \frac{du}{dy}</script><p>动力黏度$\mu$：作用在流程上的切向应力与速度梯度成正比，其比例系数为流体的动力黏度</p>
-<script type="math/tex; mode=display">\mu = \frac{\tau}{du/dy}</script><h3 id="1-4-2-运动黏度"><a href="#1-4-2-运动黏度" class="headerlink" title="1.4.2 运动黏度"></a>1.4.2 运动黏度</h3><script type="math/tex; mode=display">v = \frac{\mu}{\rho}</script> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9B%E5%AD%A6/" rel="tag">力学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%81%E4%BD%93/" rel="tag">流体</a></li></ul>
-
-    </footer>
-  </div>
-
-   
-   
-  
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>
